@@ -11,6 +11,8 @@
 		5CE49C3F2836B00E0033D5CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE49C3E2836B00E0033D5CD /* ContentView.swift */; };
 		5CE49C412836B00F0033D5CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE49C402836B00F0033D5CD /* Assets.xcassets */; };
 		5CE49C442836B00F0033D5CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE49C432836B00F0033D5CD /* Preview Assets.xcassets */; };
+		5CE49C4D2836B0430033D5CD /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE49C4C2836B0430033D5CD /* LocationsDataService.swift */; };
+		5CE49C4F2836B04B0033D5CD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE49C4E2836B04B0033D5CD /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		5CE49C3E2836B00E0033D5CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5CE49C402836B00F0033D5CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CE49C432836B00F0033D5CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5CE49C4C2836B0430033D5CD /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
+		5CE49C4E2836B04B0033D5CD /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */,
 				5CE49C3E2836B00E0033D5CD /* ContentView.swift */,
+				5CE49C4A2836B0210033D5CD /* DataServices */,
+				5CE49C4B2836B0290033D5CD /* Models */,
 				5CE49C402836B00F0033D5CD /* Assets.xcassets */,
 				5CE49C422836B00F0033D5CD /* Preview Content */,
 			);
@@ -65,6 +71,22 @@
 				5CE49C432836B00F0033D5CD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5CE49C4A2836B0210033D5CD /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				5CE49C4C2836B0430033D5CD /* LocationsDataService.swift */,
+			);
+			path = DataServices;
+			sourceTree = "<group>";
+		};
+		5CE49C4B2836B0290033D5CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5CE49C4E2836B04B0033D5CD /* Location.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,8 @@
 			files = (
 				5CE49C3F2836B00E0033D5CD /* ContentView.swift in Sources */,
 				5CE49C3D2836B00E0033D5CD /* ParkInnApp.swift in Sources */,
+				5CE49C4F2836B04B0033D5CD /* Location.swift in Sources */,
+				5CE49C4D2836B0430033D5CD /* LocationsDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
