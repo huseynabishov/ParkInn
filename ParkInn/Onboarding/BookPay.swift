@@ -1,26 +1,25 @@
 //
-//  MapDirect.swift
+//  BookPay.swift
 //  ParkInn
 //
-//  Created by Huseyn Abishov on 19.05.2022.
+//  Created by Huseyn Abishov on 20.05.2022.
 //
 
 import SwiftUI
 
-struct MapDirect: View {
+struct BookPay: View {
     
     let ButtonColor = Color("ButtonColor")
     
     var body: some View {
-        
         VStack(alignment: .center, spacing: 0, content: {
-        Image("Map1")
+        Image("BookPayy")
             .resizable()
             .scaledToFill()
             .frame(width: 300, height: 300, alignment: .center)
             
             
-            Text("Find Parking Places Around You Easily")
+            Text("Book and Pay Parking Quickly & Safely")
                 .foregroundColor(.black)
                 .font(.system(size: 30, weight: .semibold, design: .rounded))
                 .padding()
@@ -28,16 +27,17 @@ struct MapDirect: View {
                 .minimumScaleFactor(0.1)
             
             VStack(alignment: .center, spacing: 40, content: {
-            Text("Find your perfect parking space using our growing database of thousands of car parks, street and metered parking and even private garages!")
+                
+            Text("Saving time & money with a guaranteed space waiting just for you: pre-book parking and say goodbye to space hunting and overpaying.")
                 .foregroundColor(.black)
                 .font(.system(size: 18, weight: .regular, design: .rounded))
                 .padding()
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.1)
             
-            VStack(alignment: .center, spacing: 10, content: {
             
-                Text("Next")
+            VStack(alignment: .center, spacing: 10, content: {
+            Text("Next")
                 .foregroundColor(.white)
                 .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .fontWeight(.semibold)
@@ -58,8 +58,8 @@ struct MapDirect: View {
     }
 }
 
-struct MapDirect_Previews: PreviewProvider {
+struct BookPay_Previews: PreviewProvider {
     static var previews: some View {
-        MapDirect()
+        BookPay()
     }
 }
