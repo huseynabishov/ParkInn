@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C8B9E742836B66B00B3757B /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8B9E732836B66B00B3757B /* LocationView.swift */; };
+		5C9A3D212836D64F00A3D428 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A3D202836D64F00A3D428 /* Welcome.swift */; };
+		5CD6E65D2836E22600C6E592 /* MapDirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E65C2836E22600C6E592 /* MapDirect.swift */; };
 		5CE49C3D2836B00E0033D5CD /* ParkInnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */; };
 		5CE49C3F2836B00E0033D5CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE49C3E2836B00E0033D5CD /* ContentView.swift */; };
 		5CE49C412836B00F0033D5CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE49C402836B00F0033D5CD /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C8B9E732836B66B00B3757B /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		5C9A3D202836D64F00A3D428 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		5CD6E65C2836E22600C6E592 /* MapDirect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDirect.swift; sourceTree = "<group>"; };
 		5CE49C392836B00E0033D5CD /* ParkInn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkInn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkInnApp.swift; sourceTree = "<group>"; };
 		5CE49C3E2836B00E0033D5CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +42,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C8B9E722836B64400B3757B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5C8B9E732836B66B00B3757B /* LocationView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		5C8B9E752836BC5D00B3757B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5C8B9E762836D5FD00B3757B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				5C9A3D202836D64F00A3D428 /* Welcome.swift */,
+				5CD6E65C2836E22600C6E592 /* MapDirect.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		5CE49C302836B00E0033D5CD = {
 			isa = PBXGroup;
 			children = (
@@ -57,7 +87,10 @@
 			children = (
 				5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */,
 				5CE49C3E2836B00E0033D5CD /* ContentView.swift */,
+				5C8B9E762836D5FD00B3757B /* Onboarding */,
+				5C8B9E722836B64400B3757B /* Map */,
 				5CE49C4A2836B0210033D5CD /* DataServices */,
+				5C8B9E752836BC5D00B3757B /* Views */,
 				5CE49C4B2836B0290033D5CD /* Models */,
 				5CE49C402836B00F0033D5CD /* Assets.xcassets */,
 				5CE49C422836B00F0033D5CD /* Preview Content */,
@@ -161,8 +194,11 @@
 			files = (
 				5CE49C3F2836B00E0033D5CD /* ContentView.swift in Sources */,
 				5CE49C3D2836B00E0033D5CD /* ParkInnApp.swift in Sources */,
+				5C8B9E742836B66B00B3757B /* LocationView.swift in Sources */,
 				5CE49C4F2836B04B0033D5CD /* Location.swift in Sources */,
+				5C9A3D212836D64F00A3D428 /* Welcome.swift in Sources */,
 				5CE49C4D2836B0430033D5CD /* LocationsDataService.swift in Sources */,
+				5CD6E65D2836E22600C6E592 /* MapDirect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -273,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,6 +330,10 @@
 				DEVELOPMENT_TEAM = PW78GG62RA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -323,6 +363,10 @@
 				DEVELOPMENT_TEAM = PW78GG62RA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
