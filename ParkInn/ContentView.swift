@@ -13,13 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         
-        TabView {
-            MapDirect()
-            BookPay()
-            ExtendTime()
-        }
-        .tabViewStyle(PageTabViewStyle())
-        
+        OnboardingScreenView()
         
     }
 }

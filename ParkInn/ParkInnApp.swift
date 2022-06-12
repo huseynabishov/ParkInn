@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import NavigationStack
 
 @main
 struct ParkInnApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStackView(transitionType: .custom(AnyTransition.opacity.animation(.easeInOut(duration:0.7)))){
+                ContentView()
+            }
         }
     }
 }

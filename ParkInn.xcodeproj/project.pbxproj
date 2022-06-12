@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C26357F2854004F003C68AD /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26357E2854004F003C68AD /* OnboardingScreenView.swift */; };
+		5C263584285405C4003C68AD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C263583285405C4003C68AD /* CustomButton.swift */; };
+		5C263586285408B8003C68AD /* CustomButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C263585285408B8003C68AD /* CustomButton2.swift */; };
+		5C263589285423AE003C68AD /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 5C263588285423AE003C68AD /* NavigationStack */; };
+		5C26358C28553E86003C68AD /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26358B28553E86003C68AD /* SignIn.swift */; };
+		5C26358E28553F99003C68AD /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26358D28553F99003C68AD /* SignInButton.swift */; };
+		5C263590285544C7003C68AD /* SignInGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26358F285544C7003C68AD /* SignInGoogle.swift */; };
+		5C26359228554525003C68AD /* SignInApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26359128554525003C68AD /* SignInApple.swift */; };
+		5C7BAA3528372C4E00BCE38F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BAA3428372C4E00BCE38F /* LoginView.swift */; };
 		5C8B9E742836B66B00B3757B /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8B9E732836B66B00B3757B /* LocationView.swift */; };
 		5C9A3D212836D64F00A3D428 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A3D202836D64F00A3D428 /* Welcome.swift */; };
 		5CD6E65D2836E22600C6E592 /* MapDirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E65C2836E22600C6E592 /* MapDirect.swift */; };
@@ -21,6 +30,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C26357E2854004F003C68AD /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
+		5C263583285405C4003C68AD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		5C263585285408B8003C68AD /* CustomButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton2.swift; sourceTree = "<group>"; };
+		5C26358B28553E86003C68AD /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		5C26358D28553F99003C68AD /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
+		5C26358F285544C7003C68AD /* SignInGoogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInGoogle.swift; sourceTree = "<group>"; };
+		5C26359128554525003C68AD /* SignInApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInApple.swift; sourceTree = "<group>"; };
+		5C7BAA3428372C4E00BCE38F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5C8B9E732836B66B00B3757B /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		5C9A3D202836D64F00A3D428 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		5CD6E65C2836E22600C6E592 /* MapDirect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDirect.swift; sourceTree = "<group>"; };
@@ -40,12 +57,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C263589285423AE003C68AD /* NavigationStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C26357B2853FFFB003C68AD /* LaunchScreeen */ = {
+			isa = PBXGroup;
+			children = (
+				5C9A3D202836D64F00A3D428 /* Welcome.swift */,
+			);
+			path = LaunchScreeen;
+			sourceTree = "<group>";
+		};
+		5C263582285405AE003C68AD /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5C263583285405C4003C68AD /* CustomButton.swift */,
+				5C263585285408B8003C68AD /* CustomButton2.swift */,
+				5C26358D28553F99003C68AD /* SignInButton.swift */,
+				5C26358F285544C7003C68AD /* SignInGoogle.swift */,
+				5C26359128554525003C68AD /* SignInApple.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		5C26358A28553E6C003C68AD /* SignInScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5C26358B28553E86003C68AD /* SignIn.swift */,
+			);
+			path = SignInScreen;
+			sourceTree = "<group>";
+		};
+		5C7BAA3328372BA200BCE38F /* LetIn */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BAA3428372C4E00BCE38F /* LoginView.swift */,
+			);
+			path = LetIn;
+			sourceTree = "<group>";
+		};
 		5C8B9E722836B64400B3757B /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +118,10 @@
 		5C8B9E762836D5FD00B3757B /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				5C9A3D202836D64F00A3D428 /* Welcome.swift */,
 				5CD6E65C2836E22600C6E592 /* MapDirect.swift */,
 				5CD6E65E2836F2CA00C6E592 /* BookPay.swift */,
 				5CD6E6602836F44100C6E592 /* ExtendTime.swift */,
+				5C26357E2854004F003C68AD /* OnboardingScreenView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -91,13 +145,17 @@
 		5CE49C3B2836B00E0033D5CD /* ParkInn */ = {
 			isa = PBXGroup;
 			children = (
-				5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */,
-				5CE49C3E2836B00E0033D5CD /* ContentView.swift */,
+				5C26358A28553E6C003C68AD /* SignInScreen */,
+				5C263582285405AE003C68AD /* Objects */,
+				5C26357B2853FFFB003C68AD /* LaunchScreeen */,
 				5C8B9E762836D5FD00B3757B /* Onboarding */,
+				5C7BAA3328372BA200BCE38F /* LetIn */,
 				5C8B9E722836B64400B3757B /* Map */,
 				5CE49C4A2836B0210033D5CD /* DataServices */,
 				5C8B9E752836BC5D00B3757B /* Views */,
 				5CE49C4B2836B0290033D5CD /* Models */,
+				5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */,
+				5CE49C3E2836B00E0033D5CD /* ContentView.swift */,
 				5CE49C402836B00F0033D5CD /* Assets.xcassets */,
 				5CE49C422836B00F0033D5CD /* Preview Content */,
 			);
@@ -144,6 +202,9 @@
 			dependencies = (
 			);
 			name = ParkInn;
+			packageProductDependencies = (
+				5C263588285423AE003C68AD /* NavigationStack */,
+			);
 			productName = ParkInn;
 			productReference = 5CE49C392836B00E0033D5CD /* ParkInn.app */;
 			productType = "com.apple.product-type.application";
@@ -172,6 +233,9 @@
 				Base,
 			);
 			mainGroup = 5CE49C302836B00E0033D5CD;
+			packageReferences = (
+				5C263587285423AE003C68AD /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
+			);
 			productRefGroup = 5CE49C3A2836B00E0033D5CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -198,14 +262,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C26357F2854004F003C68AD /* OnboardingScreenView.swift in Sources */,
 				5CE49C3F2836B00E0033D5CD /* ContentView.swift in Sources */,
+				5C263590285544C7003C68AD /* SignInGoogle.swift in Sources */,
 				5CE49C3D2836B00E0033D5CD /* ParkInnApp.swift in Sources */,
 				5C8B9E742836B66B00B3757B /* LocationView.swift in Sources */,
 				5CD6E6612836F44100C6E592 /* ExtendTime.swift in Sources */,
+				5C26358E28553F99003C68AD /* SignInButton.swift in Sources */,
 				5CE49C4F2836B04B0033D5CD /* Location.swift in Sources */,
+				5C26359228554525003C68AD /* SignInApple.swift in Sources */,
 				5C9A3D212836D64F00A3D428 /* Welcome.swift in Sources */,
+				5C263586285408B8003C68AD /* CustomButton2.swift in Sources */,
 				5CD6E65F2836F2CA00C6E592 /* BookPay.swift in Sources */,
+				5C263584285405C4003C68AD /* CustomButton.swift in Sources */,
 				5CE49C4D2836B0430033D5CD /* LocationsDataService.swift in Sources */,
+				5C26358C28553E86003C68AD /* SignIn.swift in Sources */,
+				5C7BAA3528372C4E00BCE38F /* LoginView.swift in Sources */,
 				5CD6E65D2836E22600C6E592 /* MapDirect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +487,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C263587285423AE003C68AD /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C263588285423AE003C68AD /* NavigationStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C263587285423AE003C68AD /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
+			productName = NavigationStack;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5CE49C312836B00E0033D5CD /* Project object */;
 }

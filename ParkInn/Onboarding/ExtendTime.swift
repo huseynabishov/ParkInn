@@ -25,7 +25,7 @@ struct ExtendTime: View {
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.1)
             
-            VStack(alignment: .center, spacing: 122, content: {
+            VStack(alignment: .center, spacing: 62, content: {
                 
             Text("Running late? No problem. If you need more time, you can extend your parking via phone, SMS or the app.")
                 .foregroundColor(.black)

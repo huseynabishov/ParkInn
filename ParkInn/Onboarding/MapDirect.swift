@@ -45,6 +45,8 @@ struct MapDirect: View {
                 .background(Color.accentColor)
                 .cornerRadius(90)
             
+//                skipButton
+                
             Text("Skip")
                 .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .fontWeight(.semibold)
@@ -63,3 +65,33 @@ struct MapDirect_Previews: PreviewProvider {
         MapDirect()
     }
 }
+
+//extension MapDirect {
+//    private var skipButton: some View {
+//
+//        NavigationView{
+//            ScrollView{
+//
+////                NavigationLink("Skip", destination: LoginView())
+//
+//                NavigationLink(destination: LoginView(),
+//                               label: {
+//                Text("Skip")
+//                    .font(.system(size: 20, weight: .semibold, design: .rounded))
+//                    .fontWeight(.semibold)
+//                    .foregroundColor(Color.accentColor)
+//                    .frame(maxWidth: 370, maxHeight: 60, alignment: .center)
+//                    .background(ButtonColor)
+//                    .cornerRadius(90)
+//
+//
+//                })
+//
+//            }
+//            .navigationTitle("Back")
+//            .navigationBarHidden(true)
+//
+//        }
+//
+//    }
+//}
