@@ -15,8 +15,15 @@ struct LoginView: View {
     
     var body: some View {
         
+        
         VStack(alignment: .center, content: {
-            
+            HStack(){
+                Arrow(title: "arrow.left", action: {
+                    self.navigationStack.push(OnboardingScreenView())
+                })
+                Spacer()
+                    .frame(width: 350)
+            }
             Text("Let's you in")
                 .foregroundColor(.black)
                 .font(.system(size: 50, weight: .semibold, design: .rounded))
@@ -60,17 +67,31 @@ struct LoginView: View {
                         .frame(height: 1)
                         .background(Color("ButtonColor"))
                     Text("or")
-                        .padding(30)
+                        .padding(20)
                     Spacer()
                         .frame(height: 1)
                         .background(Color("ButtonColor"))
                 }
-//                CustomButton(title: "Sign in with password ", action: {
-//                    self.navigationStack.push(LoginView())
-//                    
-//                })
                 .padding()
+                CustomButton(title: "Sign in with password ", action: {
+                    self.navigationStack.push(CreateAcc())
+                    
+                })
+                Spacer()
                 
+                HStack(){
+                    Text("Don't have an account?")
+                        .opacity(0.3)
+                    
+                    
+                    Button(action: {
+                        self.navigationStack.push(CreateAcc())
+                    }) {
+                        Text("Sign Up")
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundColor(Color("AccentColor"))
+                    }
+                }
             }).padding(.top, 100)
             
             Spacer()

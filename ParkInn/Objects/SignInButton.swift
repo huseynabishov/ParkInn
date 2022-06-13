@@ -7,50 +7,6 @@
 //
 import SwiftUI
 //
-//struct SignInButton: View {
-//    let title: String
-//    let action: () -> Void
-//    var buttonColor: Color = Color("ButtonColor")
-//    var buttonTextColor: Color = Color.white
-//    var iconPath: String?
-//    var iconBGColorOpacity: Double = 1
-//
-//
-//    var body: some View {
-//        Button(action: action) {
-//            HStack(){
-//                if(iconPath != nil){
-//                    Image(iconPath!)
-//                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-//                        .background(Color("IconBackground"))
-//                        .opacity(iconBGColorOpacity)
-//                        .clipShape(Capsule())
-//                }
-//
-//                Text(title)
-//                    .foregroundColor(.black)
-//                    .font(.system(size: 18, weight: .semibold, design: .rounded))
-//                    .fontWeight(.semibold)
-//                    .frame(maxWidth: 370, maxHeight: 60, alignment: .center)
-//                    .background(Color.white)
-//                    .overlay(RoundedRectangle(cornerRadius: 20)
-//                        .stroke(Color("ButtonColor"), lineWidth:1))
-//
-//
-//                if(iconPath != nil){
-//                    Spacer(minLength: 20)
-//                }
-//
-//            }
-//        }
-//    }
-//
-//    struct SignInButton_Previews: PreviewProvider {
-//        static var previews: some View {
-//            SignInButton(title: "Continue with Facebook", action: {})    }
-//
-//    }
-//}
 
 
 struct LargeButtonStyle: ButtonStyle {

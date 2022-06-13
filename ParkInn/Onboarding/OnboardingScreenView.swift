@@ -60,7 +60,7 @@ struct OnboardingScreenView: View {
                            .padding()
                            .multilineTextAlignment(.center)
                            .minimumScaleFactor(0.1)
-                       VStack(alignment: .center, spacing: 30, content: {
+                       VStack(alignment: .center, spacing: 50, content: {
                        Text(description)
                            .foregroundColor(.black)
                            .font(.system(size: 18, weight: .regular, design: .rounded))
@@ -70,7 +70,7 @@ struct OnboardingScreenView: View {
                            
                            Spacer()
                            
-                           VStack(alignment: .center, spacing: 10, content: {
+                           VStack(alignment: .center, content: {
                        
                        CustomButton(title: buttonText, action: {
                            if currentIndex < 2 {
