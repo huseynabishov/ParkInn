@@ -9,7 +9,7 @@ import SwiftUI
 import NavigationStack
 
 
-struct CreateAcc: View {
+struct LoginAcc: View {
     
     @State var textFieldText: String = ""
     @EnvironmentObject private var navigationStack: NavigationStack
@@ -28,14 +28,14 @@ struct CreateAcc: View {
             }
             .padding()
             HStack() {
-                Text("Create your Account")
+                Text("Login to your Account")
                     .foregroundColor(.black)
                     .font(.system(size: 50, weight: .semibold, design: .rounded))
-                    .frame(width: 300, alignment: .leading)
+                    .frame(width: 400, alignment: .leading)
                     .multilineTextAlignment(.leading)
                     .minimumScaleFactor(0.1)
 //                    .padding(.top, 130)
-                    .padding(.leading, 20)
+                    .padding(.leading, 30)
                 Spacer()
             }
 //            .padding(.bottom,50)
@@ -43,8 +43,14 @@ struct CreateAcc: View {
             VStack(alignment: .center, spacing: 0, content: {
                 VStack() {
                     TypingField()
+                        .padding(.leading, 10)
+                        .padding(.trailing, 10)
                     Spacer()
                     TypingPass()
+                        .padding(.leading, 10)
+                        .padding(.trailing, 10)
+
+
                 }
                 HStack(){
                     CheckView(title: "")
@@ -52,11 +58,21 @@ struct CreateAcc: View {
                     
                 }
                 .padding()
-                CustomButton(title: "Sign up", action: {
-                    self.navigationStack.push(FillProfile())
+                
+                CustomButton(title: "Sign in", action: {
+                    self.navigationStack.push(LoginView())
                 })
                 .opacity(0.7)
                 .padding()
+                
+                    Button(action: {
+                        self.navigationStack.push(LoginView())
+                    }) {
+                        Text("Forgot the password?")
+                            .font(.system(size: 16))
+                            .foregroundColor(Color("AccentColor"))
+                    }
+
                 HStack() {
                     Spacer()
                         .frame(height: 1)
@@ -68,7 +84,7 @@ struct CreateAcc: View {
                         .background(Color("ButtonColor"))
                         .padding()
                 }
-                .padding(.top, 50)
+                .padding(.top, 30)
                 HStack() {
                     ZStack(){
                         LogosButton(title: "", action: {})
@@ -88,13 +104,13 @@ struct CreateAcc: View {
                 }
                 .padding(.top, 30)
                 HStack(){
-                    Text("Already have an account?")
+                    Text("Don't have an account?")
                         .opacity(0.3)
                     
                     Button(action: {
-                        self.navigationStack.push(LoginAcc())
+                        self.navigationStack.push(CreateAcc())
                     }) {
-                        Text("Sign in")
+                        Text("Sign up")
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundColor(Color("AccentColor"))
                     }
@@ -108,26 +124,9 @@ struct CreateAcc: View {
     }
 }
 
-struct CheckView: View {
-   @State var isChecked:Bool = false
-   var title:String
-   func toggle(){isChecked = !isChecked}
-   var body: some View {
-       Button(action: toggle){
-           HStack{
-               Image(systemName: isChecked ? "checkmark.square.fill": "square")
-                   .foregroundColor(Color("AccentColor"))
-                   .font(.system(size: 22))
-           }
-       }
 
-   }
-
-}
-
-
-struct CreateAcc_Previews: PreviewProvider {
+struct LoginAcc_Previews: PreviewProvider {
     static var previews: some View {
-        CreateAcc()
+        LoginAcc()
     }
 }

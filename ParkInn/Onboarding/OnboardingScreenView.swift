@@ -76,6 +76,9 @@ struct OnboardingScreenView: View {
                            if currentIndex < 2 {
                                withAnimation { currentIndex += 1 }
                            }
+                           else if currentIndex < 1 {
+                               self.navigationStack.push(LoginView())
+                           }
                        })
                        CustomButton2(title: "Skip", action: {
                            self.navigationStack.push(LoginView())

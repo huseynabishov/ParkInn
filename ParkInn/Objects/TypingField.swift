@@ -10,6 +10,7 @@ import SwiftUI
 struct TypingField: View {
     
     @State var textFieldText: String = ""
+    @State var email = ""
     
     var buttonColor: Color = Color("ButtonColor")
     var typingcolor: Color = Color("typingcolor")
@@ -17,20 +18,19 @@ struct TypingField: View {
     
     var body: some View {
         
-        NavigationView {
+
             HStack() {
             HStack {
                 Image(systemName: "envelope.fill")
                     .opacity(0.3)
-                
-                TextField("Email", text: $textFieldText)
-                    
+
+                TextField("Email", text: self.$email)
             }
             .padding()
             .background(Color.gray.opacity(0.06).cornerRadius(10))
             }
-            .padding()
-        }
+            .padding(.leading)
+            .padding(.trailing)
     }
 }
 

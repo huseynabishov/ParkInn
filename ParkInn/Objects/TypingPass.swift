@@ -10,6 +10,8 @@ import SwiftUI
 struct TypingPass: View {
     
     @State var textFieldText: String = ""
+    @State var password = ""
+    @State private var isSecured: Bool = true
     
     var buttonColor: Color = Color("ButtonColor")
     var typingcolor: Color = Color("typingcolor")
@@ -17,20 +19,41 @@ struct TypingPass: View {
     
     var body: some View {
         
-        NavigationView {
-            HStack() {
+        HStack() {
             HStack {
-                Image(systemName: "lock.fill")
-                    .opacity(0.3)
                 
-                TextField("Password", text: $textFieldText)
+                if isSecured{
+                    Image(systemName: "lock.fill")
+                        .opacity(0.3)
                     
+                    SecureField("Password", text: self.$password)
+                    
+                    Button(action: {
+                        isSecured.toggle()
+                    }) {
+                        Image(systemName: "eye.slash")
+                            .foregroundColor(.gray)
+                            .opacity(0.5)
+                    }
+                } else {
+                    Image(systemName: "lock.fill")
+                        .opacity(0.3)
+                    
+                    TextField("Password", text: self.$password)
+                    
+                    Button(action: {
+                        isSecured.toggle()
+                    }) {
+                        Image(systemName: "eye")
+                            .foregroundColor(.gray)
+                    }
+                }
             }
             .padding()
             .background(Color.gray.opacity(0.06).cornerRadius(10))
-            }
-            .padding()
         }
+        .padding(.leading)
+        .padding(.trailing)
     }
 }
 

@@ -29,11 +29,10 @@ struct CustomButton: View {
                 }
                 
                 Text(title)
-                    .foregroundColor(.white)
                     .font(.system(size: 20, weight: .semibold, design: .rounded))
                     .fontWeight(.semibold)
+                    .foregroundColor(Color.white)
                     .frame(maxWidth: 370, maxHeight: 60, alignment: .center)
-                    .background(Color.accentColor)
                     .cornerRadius(90)
                 
                 
@@ -42,9 +41,10 @@ struct CustomButton: View {
                 }
                 
             }
+            .padding(8)
             .background(buttonColor)
             .cornerRadius(90)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .frame(maxWidth: 370, maxHeight: 60, alignment: .center)
         }
     }
     

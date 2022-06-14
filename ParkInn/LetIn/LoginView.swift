@@ -24,10 +24,11 @@ struct LoginView: View {
                 Spacer()
                     .frame(width: 350)
             }
+            .padding()
             Text("Let's you in")
                 .foregroundColor(.black)
                 .font(.system(size: 50, weight: .semibold, design: .rounded))
-                .frame(width: 300, alignment: .top)
+                .frame(width: 350, alignment: .top)
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.1)
                 .padding(.top, 130)
@@ -37,7 +38,7 @@ struct LoginView: View {
                     LargeButton(title: "Continue with Facebook",
                                 backgroundColor: Color.white,
                                 foregroundColor: Color("ButtonColor")) {
-                        print("Hello World")
+                        
                     }
                     Image("facebook")
                         .frame(width: 290, height: 30, alignment: .leading)
@@ -46,17 +47,14 @@ struct LoginView: View {
                     LargeButton(title: "Continue with Google",
                                 backgroundColor: Color.white,
                                 foregroundColor: Color("ButtonColor")) {
-                        print("Hello World")
                     }
                     Image("Google")
                         .frame(width: 265, height: 30, alignment: .leading)
-                    
                 }
                 ZStack(){
                     LargeButton(title: "Continue with Apple",
                                 backgroundColor: Color.white,
                                 foregroundColor: Color("ButtonColor")) {
-                        print("Hello World")
                     }
                     Image(systemName: "applelogo")
                         .font(.system(size: 27))
@@ -74,7 +72,7 @@ struct LoginView: View {
                 }
                 .padding()
                 CustomButton(title: "Sign in with password ", action: {
-                    self.navigationStack.push(CreateAcc())
+                    self.navigationStack.push(LoginAcc())
                     
                 })
                 Spacer()
@@ -92,8 +90,8 @@ struct LoginView: View {
                             .foregroundColor(Color("AccentColor"))
                     }
                 }
-            }).padding(.top, 100)
-            
+            })
+            .padding(.top, 100)
             Spacer()
         })
     }
