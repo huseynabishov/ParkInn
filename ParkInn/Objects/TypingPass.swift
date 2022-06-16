@@ -25,7 +25,8 @@ struct TypingPass: View {
                 if isSecured{
                     Image(systemName: "lock.fill")
                         .opacity(0.3)
-                    
+                        .padding(.leading, 05)
+
                     SecureField("Password", text: self.$password)
                     
                     Button(action: {
@@ -38,6 +39,7 @@ struct TypingPass: View {
                 } else {
                     Image(systemName: "lock.fill")
                         .opacity(0.3)
+                        .padding(.leading, 05)
                     
                     TextField("Password", text: self.$password)
                     

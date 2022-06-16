@@ -1,28 +1,23 @@
 //
-//  TypingField.swift
+//  Nickname.swift
 //  ParkInn
 //
-//  Created by Huseyn Abishov on 13.06.2022.
+//  Created by Huseyn Abishov on 14.06.2022.
 //
 
 import SwiftUI
 
-struct TypingField: View {
-    
+struct Nickname: View {
     @State var textFieldText: String = ""
-    @State var email = ""
+    
+
     
     
     var body: some View {
         
 
             HStack() {
-            HStack {
-                Image(systemName: "envelope.fill")
-                    .opacity(0.3)
-
-                TextField("Email", text: self.$email)
-            }
+                TextField("Nickname", text: self.$textFieldText)
             .padding()
             .background(Color.gray.opacity(0.06).cornerRadius(10))
             }
@@ -31,8 +26,8 @@ struct TypingField: View {
     }
 }
 
-struct TypingField_Previews: PreviewProvider {
+struct Nickname_Previews: PreviewProvider {
     static var previews: some View {
-        TypingField()
+        Nickname()
     }
 }

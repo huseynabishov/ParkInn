@@ -66,7 +66,7 @@ struct LoginAcc: View {
                 .padding()
                 
                     Button(action: {
-                        self.navigationStack.push(LoginView())
+                        self.navigationStack.push(ForgotPassword())
                     }) {
                         Text("Forgot the password?")
                             .font(.system(size: 16))
