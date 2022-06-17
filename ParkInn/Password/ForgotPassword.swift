@@ -10,23 +10,22 @@ import NavigationStack
 
 struct ForgotPassword: View {
     
-    
-    private static let childID = "childID"
     @EnvironmentObject private var navigationStack: NavigationStack
     
     
     var body: some View {
         VStack(alignment: .center, content: {
             HStack(){
+                
                 Arrow(title: "arrow.left", action: {
-                    PushView(destination: LoginAcc(), destinationId: Self.childID)
+                    self.navigationStack.pop()
                 })
                                 .padding(.trailing,4)
                 Text("Forgot Password")
                     .foregroundColor(.black)
-                    .font(.system(size: 30, weight: .semibold, design: .rounded))
+                    .font(.system(size: 25, weight: .semibold, design: .rounded))
                 Spacer()
-                    .frame(width: 110)
+                    .frame(width: 148)
             }
             Image("Password")
                 .resizable()
@@ -50,7 +49,7 @@ struct ForgotPassword: View {
                 self.navigationStack.push(ForgotFill())
             })
             .opacity(0.7)
-            .padding(.bottom,20)
+            .padding(.bottom,22)
         })
         .padding(.top,16)
     }

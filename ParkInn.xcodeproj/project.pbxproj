@@ -22,12 +22,12 @@
 		5C55CE06285A8CED00C259E0 /* ForgotFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C55CE05285A8CED00C259E0 /* ForgotFill.swift */; };
 		5C55CE08285A8FEF00C259E0 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C55CE07285A8FEF00C259E0 /* Verification.swift */; };
 		5C55CE0A285AAF2B00C259E0 /* CreatePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C55CE09285AAF2B00C259E0 /* CreatePass.swift */; };
+		5C55CE0C285B7C5500C259E0 /* PassFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C55CE0B285B7C5500C259E0 /* PassFill.swift */; };
 		5C630C7B2857B426004C77BE /* CreateAcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C7A2857B426004C77BE /* CreateAcc.swift */; };
 		5C630C7D2857B691004C77BE /* TypingField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C7C2857B691004C77BE /* TypingField.swift */; };
 		5C630C7F2857C27E004C77BE /* TypingPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C7E2857C27E004C77BE /* TypingPass.swift */; };
 		5C630C832857DD9F004C77BE /* LogosButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C822857DD9E004C77BE /* LogosButton.swift */; };
 		5C630C8528581C11004C77BE /* LoginAcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C8428581C11004C77BE /* LoginAcc.swift */; };
-		5C630C8828581EEB004C77BE /* ForgotPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C8728581EEB004C77BE /* ForgotPass.swift */; };
 		5C630C8A28582143004C77BE /* FillProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C8928582143004C77BE /* FillProfile.swift */; };
 		5C630C8D28582BC5004C77BE /* ImageUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C8C28582BC5004C77BE /* ImageUpload.swift */; };
 		5C630C9128582C88004C77BE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C9028582C88004C77BE /* ImagePicker.swift */; };
@@ -36,6 +36,7 @@
 		5C630C9728583E80004C77BE /* DateofBirth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C9628583E80004C77BE /* DateofBirth.swift */; };
 		5C630C992858B297004C77BE /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C982858B297004C77BE /* PopUpView.swift */; };
 		5C7BAA3528372C4E00BCE38F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BAA3428372C4E00BCE38F /* LoginView.swift */; };
+		5C7BC02F285BE43800C9DA72 /* AlertPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BC02E285BE43700C9DA72 /* AlertPass.swift */; };
 		5C8B9E742836B66B00B3757B /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8B9E732836B66B00B3757B /* LocationView.swift */; };
 		5C9A3D212836D64F00A3D428 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A3D202836D64F00A3D428 /* Welcome.swift */; };
 		5CB2E83A2858E48D00874F28 /* EmailFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E8392858E48D00874F28 /* EmailFill.swift */; };
@@ -65,12 +66,12 @@
 		5C55CE05285A8CED00C259E0 /* ForgotFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotFill.swift; sourceTree = "<group>"; };
 		5C55CE07285A8FEF00C259E0 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 		5C55CE09285AAF2B00C259E0 /* CreatePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePass.swift; sourceTree = "<group>"; };
+		5C55CE0B285B7C5500C259E0 /* PassFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassFill.swift; sourceTree = "<group>"; };
 		5C630C7A2857B426004C77BE /* CreateAcc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAcc.swift; sourceTree = "<group>"; };
 		5C630C7C2857B691004C77BE /* TypingField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingField.swift; sourceTree = "<group>"; };
 		5C630C7E2857C27E004C77BE /* TypingPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingPass.swift; sourceTree = "<group>"; };
 		5C630C822857DD9E004C77BE /* LogosButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogosButton.swift; sourceTree = "<group>"; };
 		5C630C8428581C11004C77BE /* LoginAcc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAcc.swift; sourceTree = "<group>"; };
-		5C630C8728581EEB004C77BE /* ForgotPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPass.swift; sourceTree = "<group>"; };
 		5C630C8928582143004C77BE /* FillProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillProfile.swift; sourceTree = "<group>"; };
 		5C630C8C28582BC5004C77BE /* ImageUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUpload.swift; sourceTree = "<group>"; };
 		5C630C9028582C88004C77BE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		5C630C9628583E80004C77BE /* DateofBirth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateofBirth.swift; sourceTree = "<group>"; };
 		5C630C982858B297004C77BE /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		5C7BAA3428372C4E00BCE38F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5C7BC02E285BE43700C9DA72 /* AlertPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPass.swift; sourceTree = "<group>"; };
 		5C8B9E732836B66B00B3757B /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		5C9A3D202836D64F00A3D428 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		5CB2E8392858E48D00874F28 /* EmailFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFill.swift; sourceTree = "<group>"; };
@@ -112,6 +114,8 @@
 				5C02669828591CD20026E462 /* ViaButtons.swift */,
 				5C55CE03285A7BA400C259E0 /* ViaEmail.swift */,
 				5C55CE07285A8FEF00C259E0 /* Verification.swift */,
+				5C55CE0B285B7C5500C259E0 /* PassFill.swift */,
+				5C7BC02E285BE43700C9DA72 /* AlertPass.swift */,
 			);
 			path = ObjectsPassword;
 			sourceTree = "<group>";
@@ -151,7 +155,9 @@
 		5C630C8628581EB9004C77BE /* Password */ = {
 			isa = PBXGroup;
 			children = (
-				5C630C8728581EEB004C77BE /* ForgotPass.swift */,
+				5C0266952859167A0026E462 /* ForgotPassword.swift */,
+				5C55CE05285A8CED00C259E0 /* ForgotFill.swift */,
+				5C55CE09285AAF2B00C259E0 /* CreatePass.swift */,
 			);
 			path = Password;
 			sourceTree = "<group>";
@@ -179,9 +185,6 @@
 				5C630C7A2857B426004C77BE /* CreateAcc.swift */,
 				5C630C8428581C11004C77BE /* LoginAcc.swift */,
 				5C630C8928582143004C77BE /* FillProfile.swift */,
-				5C0266952859167A0026E462 /* ForgotPassword.swift */,
-				5C55CE05285A8CED00C259E0 /* ForgotFill.swift */,
-				5C55CE09285AAF2B00C259E0 /* CreatePass.swift */,
 			);
 			path = LetIn;
 			sourceTree = "<group>";
@@ -333,7 +336,6 @@
 				5C630C9528583C71004C77BE /* Nickname.swift in Sources */,
 				5C630C8A28582143004C77BE /* FillProfile.swift in Sources */,
 				5C630C9128582C88004C77BE /* ImagePicker.swift in Sources */,
-				5C630C8828581EEB004C77BE /* ForgotPass.swift in Sources */,
 				5C02668A2858FDAF0026E462 /* GenderPick.swift in Sources */,
 				5C26357F2854004F003C68AD /* OnboardingScreenView.swift in Sources */,
 				5C630C8D28582BC5004C77BE /* ImageUpload.swift in Sources */,
@@ -342,6 +344,7 @@
 				5C55CE08285A8FEF00C259E0 /* Verification.swift in Sources */,
 				5C630C8528581C11004C77BE /* LoginAcc.swift in Sources */,
 				5C263590285544C7003C68AD /* SignInGoogle.swift in Sources */,
+				5C7BC02F285BE43800C9DA72 /* AlertPass.swift in Sources */,
 				5CE49C3D2836B00E0033D5CD /* ParkInnApp.swift in Sources */,
 				5C630C7B2857B426004C77BE /* CreateAcc.swift in Sources */,
 				5C8B9E742836B66B00B3757B /* LocationView.swift in Sources */,
@@ -355,6 +358,7 @@
 				5C263586285408B8003C68AD /* CustomButton2.swift in Sources */,
 				5C630C992858B297004C77BE /* PopUpView.swift in Sources */,
 				5CD6E65F2836F2CA00C6E592 /* BookPay.swift in Sources */,
+				5C55CE0C285B7C5500C259E0 /* PassFill.swift in Sources */,
 				5C263584285405C4003C68AD /* CustomButton.swift in Sources */,
 				5C26358C28553E86003C68AD /* SignIn.swift in Sources */,
 				5C7BAA3528372C4E00BCE38F /* LoginView.swift in Sources */,

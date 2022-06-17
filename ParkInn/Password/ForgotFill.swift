@@ -22,11 +22,11 @@ struct ForgotFill: View {
                 .padding(.trailing,4)
                 Text("Forgot Password")
                     .foregroundColor(.black)
-                    .font(.system(size: 30, weight: .semibold, design: .rounded))
+                    .font(.system(size: 25, weight: .semibold, design: .rounded))
                 Spacer()
-                    .frame(width: 110)
+                    .frame(width: 148)
             }
-            .padding(.top, 11)
+            .padding(.top, 14)
             Spacer()
             Text("Code has been send to +1 111 ******99")
                 .foregroundColor(.black)
@@ -51,10 +51,10 @@ struct ForgotFill: View {
             .padding(.top,50)
             Spacer()
             CustomButton(title: "Verify", action: {
-                self.navigationStack.push(ForgotFill())
+                self.navigationStack.push(CreatePass())
             })
             .opacity(0.7)
-            .padding(.bottom,15)
+            .padding(.bottom,21)
         })
     }
 }

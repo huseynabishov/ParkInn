@@ -13,7 +13,8 @@ struct LoginAcc: View {
     
     @State var textFieldText: String = ""
     @EnvironmentObject private var navigationStack: NavigationStack
-    
+    private static let childID = "ForgetPasswordId"
+
     @State var email = ""
     @State var password = ""
     
@@ -65,13 +66,13 @@ struct LoginAcc: View {
                 .opacity(0.7)
                 .padding()
                 
-                    Button(action: {
-                        self.navigationStack.push(ForgotPassword())
-                    }) {
-                        Text("Forgot the password?")
-                            .font(.system(size: 16))
-                            .foregroundColor(Color("AccentColor"))
-                    }
+                
+                PushView(destination: ForgotPassword(), destinationId: Self.childID) {
+                    Text("Forgot the password?")
+                        .font(.system(size: 16))
+                        .foregroundColor(Color("AccentColor"))
+                            }
+                
 
                 HStack() {
                     Spacer()
