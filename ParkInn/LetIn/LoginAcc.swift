@@ -61,7 +61,7 @@ struct LoginAcc: View {
                 .padding()
                 
                 CustomButton(title: "Sign in", action: {
-                    self.navigationStack.push(LoginView())
+                    self.navigationStack.push(MainMenu())
                 })
                 .opacity(0.7)
                 .padding()

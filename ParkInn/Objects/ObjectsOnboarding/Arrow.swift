@@ -20,7 +20,7 @@ struct Arrow: View {
     var body: some View {
         Button(action: action) {
         Image(systemName: "arrow.left")
-            .font(.system(size: 30))
+            .font(.system(size: 25))
             .foregroundColor(.primary)
         }
     }

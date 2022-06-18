@@ -21,7 +21,7 @@ struct FillProfile: View {
         VStack(alignment: .center, content: {
             HStack(){
                 Arrow(title: "arrow.left", action: {
-                    self.navigationStack.push(LoginView())
+                    self.navigationStack.push(LoginAcc())
                 })
                 Text("Fill Your Profile")
                     .foregroundColor(.black)

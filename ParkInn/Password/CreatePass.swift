@@ -16,7 +16,6 @@ struct CreatePass: View {
     @State var customAlert = false
     @State private var showingPopover = false
     
-    
     var body: some View {
         ZStack{
         

@@ -45,8 +45,6 @@ struct OnboardingScreenView: View {
 
            var body: some View {
                VStack(){
-                   
-                   
                    Spacer()
                    VStack (alignment: .center, spacing: 0, content:{
                        Image(imageName)
@@ -76,7 +74,7 @@ struct OnboardingScreenView: View {
                            if currentIndex < 2 {
                                withAnimation { currentIndex += 1 }
                            }
-                           else if currentIndex < 1 {
+                           else if currentIndex == 2 {
                                self.navigationStack.push(LoginView())
                            }
                        })
