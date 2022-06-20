@@ -13,7 +13,6 @@
 		5C26357F2854004F003C68AD /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26357E2854004F003C68AD /* OnboardingScreenView.swift */; };
 		5C263584285405C4003C68AD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C263583285405C4003C68AD /* CustomButton.swift */; };
 		5C263586285408B8003C68AD /* CustomButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C263585285408B8003C68AD /* CustomButton2.swift */; };
-		5C263589285423AE003C68AD /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 5C263588285423AE003C68AD /* NavigationStack */; };
 		5C26358C28553E86003C68AD /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26358B28553E86003C68AD /* SignIn.swift */; };
 		5C26358E28553F99003C68AD /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26358D28553F99003C68AD /* SignInButton.swift */; };
 		5C263590285544C7003C68AD /* SignInGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26358F285544C7003C68AD /* SignInGoogle.swift */; };
@@ -50,6 +49,7 @@
 		5CB2E83A2858E48D00874F28 /* EmailFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E8392858E48D00874F28 /* EmailFill.swift */; };
 		5CB2E83C2858EF8700874F28 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E83B2858EF8600874F28 /* PhoneNumber.swift */; };
 		5CBC7E3928560C7100746072 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC7E3828560C7100746072 /* Arrow.swift */; };
+		5CC5DCAC2860ECBE0023789F /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 5CC5DCAB2860ECBE0023789F /* NavigationStack */; };
 		5CD6E65D2836E22600C6E592 /* MapDirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E65C2836E22600C6E592 /* MapDirect.swift */; };
 		5CD6E65F2836F2CA00C6E592 /* BookPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E65E2836F2CA00C6E592 /* BookPay.swift */; };
 		5CD6E6612836F44100C6E592 /* ExtendTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E6602836F44100C6E592 /* ExtendTime.swift */; };
@@ -117,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C263589285423AE003C68AD /* NavigationStack in Frameworks */,
+				5CC5DCAC2860ECBE0023789F /* NavigationStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +317,7 @@
 			);
 			name = ParkInn;
 			packageProductDependencies = (
-				5C263588285423AE003C68AD /* NavigationStack */,
+				5CC5DCAB2860ECBE0023789F /* NavigationStack */,
 			);
 			productName = ParkInn;
 			productReference = 5CE49C392836B00E0033D5CD /* ParkInn.app */;
@@ -348,7 +348,7 @@
 			);
 			mainGroup = 5CE49C302836B00E0033D5CD;
 			packageReferences = (
-				5C263587285423AE003C68AD /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
+				5CC5DCAA2860ECBE0023789F /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 			);
 			productRefGroup = 5CE49C3A2836B00E0033D5CD /* Products */;
 			projectDirPath = "";
@@ -633,7 +633,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5C263587285423AE003C68AD /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
+		5CC5DCAA2860ECBE0023789F /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack.git";
 			requirement = {
@@ -644,9 +644,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5C263588285423AE003C68AD /* NavigationStack */ = {
+		5CC5DCAB2860ECBE0023789F /* NavigationStack */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5C263587285423AE003C68AD /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
+			package = 5CC5DCAA2860ECBE0023789F /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
 			productName = NavigationStack;
 		};
 /* End XCSwiftPackageProductDependency section */

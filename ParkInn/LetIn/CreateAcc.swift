@@ -14,8 +14,6 @@ struct CreateAcc: View {
     @State var textFieldText: String = ""
     @EnvironmentObject private var navigationStack: NavigationStack
     
-    
-    
     @State var email = ""
     @State var password = ""
     
