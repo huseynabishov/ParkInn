@@ -111,7 +111,9 @@ struct NotifCircle: View {
                 .stroke(Color.white, lineWidth:1))
             .background(Color.white.cornerRadius(20))
 
-            //                .shadow(color: .black, radius: 5, x: 0, y: 0))
+            .shadow(
+                color: Color.gray.opacity(0.20),
+                radius: 10, x: 0, y: 0)
         }
     }
 }

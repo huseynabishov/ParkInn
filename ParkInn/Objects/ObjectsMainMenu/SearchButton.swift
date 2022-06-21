@@ -22,7 +22,7 @@ struct SearchButton: View {
             Circle()
                 .frame(width: 50, height: 50)
                 .foregroundColor(Color.white)
-                .padding()
+//                .padding()
                 .overlay(
                     Image(systemName: "magnifyingglass")
                         .font(.system(size:25))

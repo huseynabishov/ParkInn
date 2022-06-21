@@ -20,9 +20,9 @@ struct NotificationButton: View {
         ZStack() {
             Button(action: action) {
             Circle()
-                .frame(width: 50, height: 50)
+                .frame(width: 60, height: 50)
                 .foregroundColor(Color.white)
-                .padding()
+//                .padding()
                 .overlay(
                     Image(systemName: "bell")
                         .font(.system(size:25))

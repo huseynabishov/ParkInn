@@ -12,26 +12,55 @@ struct MainMenu: View {
     
     @EnvironmentObject private var navigationStack: NavigationStack
     private static let childID = "ForgetPasswordId"
+    @State var selectedTab: Int = 4
 
     var body: some View {
         
         VStack(spacing: 20, content:{
             ZStack{
-                Text("")
-                    .frame(width: 500, height: 1000)
-                    .background(Color.gray)
-                
-                HStack(spacing: 13, content: {
-                    
+                HStack(content: {
+                    Spacer()
                     SearchButton(title: "magnifyingglass", action: {
                         self.navigationStack.push(SearchScreen())
                     })
                     NotificationButton(title: "bell", action: {
                         self.navigationStack.push(NotificationMenu())
                     })
+                    .padding(.trailing)
                 })
             }
-            Spacer()            
+            Spacer()
+//            Divider()
+            TabView(selection: $selectedTab) {
+                
+                Text("ds")
+                .tabItem{
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+                .tag(0)
+                SavedScreen()
+                .tabItem{
+                    Image(systemName: "bookmark")
+                    Text("Saved")
+                }
+                .tag(1)
+
+                ReservationScreen()
+                .tabItem{
+                    Image(systemName: "note.text")
+                    Text("Booking")
+                }
+                .tag(2)
+
+                SavedScreen()
+                .tabItem{
+                    Image(systemName: "person.crop.circle")
+                    Text("Profile")
+                }
+                .tag(3)
+
+            }
         })
     }
 }

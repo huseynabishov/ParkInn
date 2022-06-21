@@ -44,7 +44,7 @@ struct NotificationMenu: View {
                                 .frame(width: 330)
                         }
                         
-                        NotifCircle(title: "", action: {})
+                        NotifWall(title: "", action: {})
                         NotifCircle(title: "", action: {})
 
 //                        NotifCircle()
@@ -59,7 +59,7 @@ struct NotificationMenu: View {
                         Spacer()
                                 .frame(width: 290)
                         }
-                        NotifCircle(title: "", action: {})
+                        NotifWall(title: "", action: {})
                         NotifCircle(title: "", action: {})
 
                     }
@@ -72,16 +72,12 @@ struct NotificationMenu: View {
                                 .frame(width: 200)
                         }
                         NotifCircle(title: "", action: {})
-                        NotifCircle(title: "", action: {})
+                        NotifWall(title: "", action: {})
 
                     }
                 })
         }
         .scrollOnlyOnOverflow()
-        .padding(.top, 50)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("Background"))
-        .ignoresSafeArea()
     }
 }
 
