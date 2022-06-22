@@ -14,6 +14,8 @@
 		5C03903928615BC50023585A /* NotifWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03903828615BC50023585A /* NotifWall.swift */; };
 		5C03903C286168C60023585A /* SavedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03903B286168C60023585A /* SavedScreen.swift */; };
 		5C03903F286169210023585A /* ReservationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03903E286169210023585A /* ReservationScreen.swift */; };
+		5C0390772863CB0D0023585A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0390762863CB0D0023585A /* MapView.swift */; };
+		5C0390792863D14A0023585A /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0390782863D14A0023585A /* TabBarPage.swift */; };
 		5C26357F2854004F003C68AD /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26357E2854004F003C68AD /* OnboardingScreenView.swift */; };
 		5C263584285405C4003C68AD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C263583285405C4003C68AD /* CustomButton.swift */; };
 		5C263586285408B8003C68AD /* CustomButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C263585285408B8003C68AD /* CustomButton2.swift */; };
@@ -47,7 +49,6 @@
 		5C7BC03C285D335500C9DA72 /* NotificationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BC03B285D335500C9DA72 /* NotificationScreen.swift */; };
 		5C7BC03E285D3E1D00C9DA72 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BC03D285D3E1D00C9DA72 /* SearchButton.swift */; };
 		5C7BC040285D429E00C9DA72 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BC03F285D429E00C9DA72 /* SearchScreen.swift */; };
-		5C8B9E742836B66B00B3757B /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8B9E732836B66B00B3757B /* LocationView.swift */; };
 		5C9A3D212836D64F00A3D428 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A3D202836D64F00A3D428 /* Welcome.swift */; };
 		5CB2E83A2858E48D00874F28 /* EmailFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E8392858E48D00874F28 /* EmailFill.swift */; };
 		5CB2E83C2858EF8700874F28 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E83B2858EF8600874F28 /* PhoneNumber.swift */; };
@@ -68,6 +69,8 @@
 		5C03903828615BC50023585A /* NotifWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifWall.swift; sourceTree = "<group>"; };
 		5C03903B286168C60023585A /* SavedScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScreen.swift; sourceTree = "<group>"; };
 		5C03903E286169210023585A /* ReservationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationScreen.swift; sourceTree = "<group>"; };
+		5C0390762863CB0D0023585A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		5C0390782863D14A0023585A /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
 		5C26357E2854004F003C68AD /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		5C263583285405C4003C68AD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5C263585285408B8003C68AD /* CustomButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton2.swift; sourceTree = "<group>"; };
@@ -101,7 +104,6 @@
 		5C7BC03B285D335500C9DA72 /* NotificationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScreen.swift; sourceTree = "<group>"; };
 		5C7BC03D285D3E1D00C9DA72 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		5C7BC03F285D429E00C9DA72 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
-		5C8B9E732836B66B00B3757B /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		5C9A3D202836D64F00A3D428 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		5CB2E8392858E48D00874F28 /* EmailFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFill.swift; sourceTree = "<group>"; };
 		5CB2E83B2858EF8600874F28 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
@@ -242,12 +244,12 @@
 				5C263582285405AE003C68AD /* ObjectsOnboarding */,
 				5C630C8B28582BA4004C77BE /* ObjectsProfile */,
 				5C02669728591CB30026E462 /* ObjectsPassword */,
-				5C7BC038285D321900C9DA72 /* ObjectsMainMenu */,
+				5C7BC038285D321900C9DA72 /* ObjectsHomeMenu */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
 		};
-		5C7BC038285D321900C9DA72 /* ObjectsMainMenu */ = {
+		5C7BC038285D321900C9DA72 /* ObjectsHomeMenu */ = {
 			isa = PBXGroup;
 			children = (
 				5C7BC039285D324E00C9DA72 /* NotificationButton.swift */,
@@ -255,13 +257,13 @@
 				5C6908BD285D5D1D00676417 /* NotifSucc.swift */,
 				5C03903828615BC50023585A /* NotifWall.swift */,
 			);
-			path = ObjectsMainMenu;
+			path = ObjectsHomeMenu;
 			sourceTree = "<group>";
 		};
 		5C8B9E722836B64400B3757B /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				5C8B9E732836B66B00B3757B /* LocationView.swift */,
+				5C0390762863CB0D0023585A /* MapView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -308,6 +310,7 @@
 				5C8B9E722836B64400B3757B /* Map */,
 				5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */,
 				5CE49C3E2836B00E0033D5CD /* ContentView.swift */,
+				5C0390782863D14A0023585A /* TabBarPage.swift */,
 				5CE49C402836B00F0033D5CD /* Assets.xcassets */,
 				5CE49C422836B00F0033D5CD /* Preview Content */,
 			);
@@ -412,9 +415,11 @@
 				5C7BC03C285D335500C9DA72 /* NotificationScreen.swift in Sources */,
 				5C26357F2854004F003C68AD /* OnboardingScreenView.swift in Sources */,
 				5C03903928615BC50023585A /* NotifWall.swift in Sources */,
+				5C0390772863CB0D0023585A /* MapView.swift in Sources */,
 				5C630C8D28582BC5004C77BE /* ImageUpload.swift in Sources */,
 				5C7BC034285D313500C9DA72 /* MainMenu.swift in Sources */,
 				5CE49C3F2836B00E0033D5CD /* ContentView.swift in Sources */,
+				5C0390792863D14A0023585A /* TabBarPage.swift in Sources */,
 				5C630C932858399F004C77BE /* UsernameObj.swift in Sources */,
 				5C55CE08285A8FEF00C259E0 /* Verification.swift in Sources */,
 				5C7BC031285D2E5200C9DA72 /* CustomScrollView.swift in Sources */,
@@ -424,7 +429,6 @@
 				5C7BC02F285BE43800C9DA72 /* AlertPass.swift in Sources */,
 				5CE49C3D2836B00E0033D5CD /* ParkInnApp.swift in Sources */,
 				5C630C7B2857B426004C77BE /* CreateAcc.swift in Sources */,
-				5C8B9E742836B66B00B3757B /* LocationView.swift in Sources */,
 				5CD6E6612836F44100C6E592 /* ExtendTime.swift in Sources */,
 				5CB2E83C2858EF8700874F28 /* PhoneNumber.swift in Sources */,
 				5C26358E28553F99003C68AD /* SignInButton.swift in Sources */,

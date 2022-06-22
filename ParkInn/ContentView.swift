@@ -6,15 +6,28 @@
 //
 
 import SwiftUI
-
+import NavigationStack
 struct ContentView: View {
     
-    @State var selectedTab: Int = 0
+    @State var tabBarPages: [TabBarPage] = [
+        TabBarPage(page: MainMenu(), icon: "house", icon2: "house.fill", tag: "Home"),
+        TabBarPage(page: MainMenu(), icon: "bookmark", icon2: "bookmark.fill", tag: "Bookmark"),
+        TabBarPage(page: MainMenu(), icon: "doc.plaintext", icon2: "doc.plaintext.fill", tag: "Home2"),
+        TabBarPage(page: MainMenu(), icon: "person.crop.circle", icon2: "person.crop.circle.fill", tag: "Home3"),
+    ]
+    
+    var loggedIn: Bool = true
     
     var body: some View {
-        
-        OnboardingScreenView()
-        
+        Group {
+            if loggedIn {
+                TabBarView(pages: $tabBarPages)
+            } else {
+                NavigationStackView(transitionType: .custom(AnyTransition.opacity.animation(.easeInOut(duration:0.7)))){
+                    OnboardingScreenView()
+                }
+            }
+        }
     }
 }
 
