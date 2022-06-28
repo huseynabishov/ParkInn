@@ -16,6 +16,8 @@
 		5C03903F286169210023585A /* ReservationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03903E286169210023585A /* ReservationScreen.swift */; };
 		5C0390772863CB0D0023585A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0390762863CB0D0023585A /* MapView.swift */; };
 		5C0390792863D14A0023585A /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0390782863D14A0023585A /* TabBarPage.swift */; };
+		5C03907B2863E91A0023585A /* LocationPinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03907A2863E91A0023585A /* LocationPinButton.swift */; };
+		5C03907D2863F2720023585A /* LocationNameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03907C2863F2720023585A /* LocationNameButton.swift */; };
 		5C26357F2854004F003C68AD /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26357E2854004F003C68AD /* OnboardingScreenView.swift */; };
 		5C263584285405C4003C68AD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C263583285405C4003C68AD /* CustomButton.swift */; };
 		5C263586285408B8003C68AD /* CustomButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C263585285408B8003C68AD /* CustomButton2.swift */; };
@@ -71,6 +73,8 @@
 		5C03903E286169210023585A /* ReservationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationScreen.swift; sourceTree = "<group>"; };
 		5C0390762863CB0D0023585A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		5C0390782863D14A0023585A /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
+		5C03907A2863E91A0023585A /* LocationPinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPinButton.swift; sourceTree = "<group>"; };
+		5C03907C2863F2720023585A /* LocationNameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNameButton.swift; sourceTree = "<group>"; };
 		5C26357E2854004F003C68AD /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		5C263583285405C4003C68AD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5C263585285408B8003C68AD /* CustomButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton2.swift; sourceTree = "<group>"; };
@@ -256,6 +260,8 @@
 				5C7BC03D285D3E1D00C9DA72 /* SearchButton.swift */,
 				5C6908BD285D5D1D00676417 /* NotifSucc.swift */,
 				5C03903828615BC50023585A /* NotifWall.swift */,
+				5C03907A2863E91A0023585A /* LocationPinButton.swift */,
+				5C03907C2863F2720023585A /* LocationNameButton.swift */,
 			);
 			path = ObjectsHomeMenu;
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 				5C630C9528583C71004C77BE /* Nickname.swift in Sources */,
 				5C630C8A28582143004C77BE /* FillProfile.swift in Sources */,
 				5C7BC03E285D3E1D00C9DA72 /* SearchButton.swift in Sources */,
+				5C03907D2863F2720023585A /* LocationNameButton.swift in Sources */,
 				5C630C9128582C88004C77BE /* ImagePicker.swift in Sources */,
 				5C02668A2858FDAF0026E462 /* GenderPick.swift in Sources */,
 				5C7BC03C285D335500C9DA72 /* NotificationScreen.swift in Sources */,
@@ -449,6 +456,7 @@
 				5C7BC040285D429E00C9DA72 /* SearchScreen.swift in Sources */,
 				5CD6E65D2836E22600C6E592 /* MapDirect.swift in Sources */,
 				5CBC7E3928560C7100746072 /* Arrow.swift in Sources */,
+				5C03907B2863E91A0023585A /* LocationPinButton.swift in Sources */,
 				5C0266962859167A0026E462 /* ForgotPassword.swift in Sources */,
 				5C03903C286168C60023585A /* SavedScreen.swift in Sources */,
 			);

@@ -7,13 +7,14 @@
 
 import SwiftUI
 import NavigationStack
+
 struct ContentView: View {
     
     @State var tabBarPages: [TabBarPage] = [
         TabBarPage(page: MainMenu(), icon: "house", icon2: "house.fill", tag: "Home"),
         TabBarPage(page: MainMenu(), icon: "bookmark", icon2: "bookmark.fill", tag: "Bookmark"),
-        TabBarPage(page: MainMenu(), icon: "doc.plaintext", icon2: "doc.plaintext.fill", tag: "Home2"),
-        TabBarPage(page: MainMenu(), icon: "person.crop.circle", icon2: "person.crop.circle.fill", tag: "Home3"),
+        TabBarPage(page: MainMenu(), icon: "doc.plaintext", icon2: "doc.plaintext.fill", tag: "Doc"),
+        TabBarPage(page: MainMenu(), icon: "person.crop.circle", icon2: "person.crop.circle.fill", tag: "Profile"),
     ]
     
     var loggedIn: Bool = true

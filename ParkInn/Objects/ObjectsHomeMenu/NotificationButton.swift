@@ -22,7 +22,6 @@ struct NotificationButton: View {
             Circle()
                 .frame(width: 60, height: 50)
                 .foregroundColor(Color.white)
-//                .padding()
                 .overlay(
                     Image(systemName: "bell")
                         .font(.system(size:25))
