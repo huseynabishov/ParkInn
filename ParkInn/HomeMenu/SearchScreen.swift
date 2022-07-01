@@ -6,41 +6,31 @@
 //
 
 import SwiftUI
+import NavigationStack
 
 struct SearchScreen: View {
-    @State var textFieldText: String = ""
-    @State var showView: Bool = false
+    
+    @EnvironmentObject private var navigationStack: NavigationStack
+//    @State var showView: Bool = false
+    
+    @State private var showModal = false
     
     var body: some View {
-        VStack(){
-            HStack() {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                        .opacity(0.3)
-                        .font(.system(size: 20))
-                    
-                    TextField("Search", text: self.$textFieldText)
-                    
-                    Button(action: {
-                        showView.toggle()
-                    }) {
-                        Image(systemName: "slider.horizontal.3")
-                            .opacity(0.3)
-                            .font(.system(size: 20))
-                    }
-                }
-                .padding()
-                .background(Color.gray.opacity(0.06).cornerRadius(10))
+        
+        ZStack{
+            Button(action:{ showModal = true }){
+                Image(systemName: "slider.horizontal.3")
+                    .font(.system(size:40,weight:.heavy,design:.rounded))
+                    .foregroundColor(.black)
+                    .padding(.vertical,20)
+                    .padding(.horizontal,40)
             }
+            .offset(y:-100)
             
-            RoundedRectangle(cornerRadius: 30)
-                .frame(height: UIScreen.main.bounds.height * 0.5)
-                .opacity(showView ? 1.0 : 0.0)
-                .animation(.easeInOut)
-
+            FilterView(isShowing: $showModal)
         }
-        .padding(.leading)
-        .padding(.trailing)
+        .frame(maxWidth:.infinity,maxHeight:.infinity)
+        .statusBar(hidden:true)
     }
 }
 
