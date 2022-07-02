@@ -19,6 +19,7 @@ struct FilterView: View {
     let maxHeight: CGFloat = 700
     
     @State private var isDragging = false
+    @State var toggleIsOn: Bool = false
     
     var body:some View {
         ZStack(alignment: .bottom){
@@ -43,7 +44,9 @@ struct FilterView: View {
         VStack{
             ZStack{
                 Capsule()
-                    .frame(width:40,height:6)
+                    .frame(width:50,height:5)
+                    .foregroundColor(Color("ButtonColor"))
+                    .cornerRadius(1020)
             }
             .frame(height:40)
             .frame(maxWidth:.infinity)
@@ -52,69 +55,102 @@ struct FilterView: View {
             
             ZStack{
                 VStack(){
-                    Text("Filter")
-                        .foregroundColor(.black)
-                        .font(.system(size: 27, weight: .semibold, design: .rounded))
-                    
+                    Group{
+                        Text("Filter")
+                            .foregroundColor(.black)
+                            .font(.system(size: 27, weight: .semibold, design: .rounded))
+                        
+                        Divider()
+                            .background(Color("ButtonColor"))
+                            .padding(.horizontal,20)
+                        
+                        Spacer()
+                        
+                        HStack() {
+                            Text("Sort by")
+                                .foregroundColor(.black)
+                                .font(.system(size: 20, weight: .semibold, design: .rounded))
+                            Spacer()
+                            
+                            Button(action: {
+                            }) {
+                                Text("See All")
+                                    .font(.system(size: 20, weight: .semibold))
+                                    .foregroundColor(Color("AccentColor"))
+                            }
+                        }
+                        .padding(.horizontal,20)
+                        
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack(spacing: 10){
+                                FilterKindButton(title: "Distance", action: {
+                                    self.navigationStack.push(NotificationMenu())
+                                })
+                                FilterKindButton(title: "Slots Available", action: {
+                                    self.navigationStack.push(NotificationMenu())
+                                })
+                                FilterKindButton(title: "Lower Price", action: {
+                                    self.navigationStack.push(NotificationMenu())
+                                })
+                                FilterKindButton(title: "Popular", action: {
+                                    self.navigationStack.push(NotificationMenu())
+                                })
+                            }
+                        }
+                        .padding(.top)
+                        
+                        .padding(.leading, 2)
+                        
+                        HStack{
+                            Text("Distance")
+                                .foregroundColor(.black)
+                                .font(.system(size: 20, weight: .semibold, design: .rounded))
+                                .padding(.bottom, 10)
+                                .padding(.top)
+                            Spacer()
+                        }
+                        .padding(.leading, 20)
+                        
+                        SliderView()
+                        
+                        HStack{
+                            Spacer()
+                            
+                            Toggle(
+                                isOn: $toggleIsOn,
+                                label: {
+                                    Text("Valet Parking")
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 20, weight: .semibold, design: .rounded))
+                                })
+                            .toggleStyle(SwitchToggleStyle(tint: Color("AccentColor")))
+                        }
+                        .padding(.horizontal, 20)
+                        
+                    }
+                    Spacer()
                     Divider()
                         .background(Color("ButtonColor"))
                         .padding(.horizontal,20)
                     
-                    Spacer()
-                    
-                    HStack() {
-                        Text("Sort by")
-                            .foregroundColor(.black)
-                            .font(.system(size: 20, weight: .semibold, design: .rounded))
-                        Spacer()
+                    HStack(spacing: 15){
+                        CustomButton2(title: "Reset", action: {
+                            self.navigationStack.push(NotificationMenu())
+                        })
+                        .frame(width: 175, height: 50, alignment: .leading)
                         
-                        Button(action: {
-                        }) {
-                            Text("See All")
-                                .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(Color("AccentColor"))
-                        }
+                        CustomButton(title: "Apply Filter", action: {
+                            self.navigationStack.push(NotificationMenu())
+                        })
+                        .frame(width: 175, height: 50, alignment: .leading)
                     }
-                    .padding(.horizontal,20)
-                    
-                    Spacer()
-                    ScrollView(.horizontal, showsIndicators: false){
-                        HStack(spacing: 10){
-                            FilterKindButton(title: "Distance", action: {
-                                self.navigationStack.push(NotificationMenu())
-                            })
-                            FilterKindButton(title: "Slots Available", action: {
-                                self.navigationStack.push(NotificationMenu())
-                            })
-                            FilterKindButton(title: "Lower Price", action: {
-                                self.navigationStack.push(NotificationMenu())
-                            })
-                            FilterKindButton(title: "Popular", action: {
-                                self.navigationStack.push(NotificationMenu())
-                            })
-                        }
-                    }
-                    
-                    .padding(.leading, 2)
-                    
-                    Spacer()
-                    HStack{
-                        Text("Distance")
-                            .foregroundColor(.black)
-                            .font(.system(size: 20, weight: .semibold, design: .rounded))
-                        Spacer()
-                    }
-                    .padding(.leading, 20)
-                    Spacer()
-                    
-                    SliderView()
-                    
+                    .padding()
                 }
             }
             .frame(maxHeight:.infinity)
             .padding(.bottom, 35)
         }
-        .frame(height:500)
+        .frame(height:580)
         .frame(maxWidth:.infinity)
         .background(
             // HACK for RoundedCorners only on top
@@ -158,9 +194,6 @@ struct SliderView: View {
     var body: some View {
         
         VStack{
-            
-            
-            
             ZStack(alignment: .leading) {
                 
                 Rectangle()
@@ -186,7 +219,6 @@ struct SliderView: View {
                                 .padding(.bottom, 13)
                         }
                         
-                        
                         ZStack(){
                             Circle()
                                 .fill(Color("AccentColor"))
@@ -197,7 +229,7 @@ struct SliderView: View {
                         }
                         
                     }
-                    .padding(.bottom, 40)
+                    .padding(.bottom,40)
                     .offset(x: self.width)
                     .gesture(
                         
@@ -208,13 +240,12 @@ struct SliderView: View {
                                     
                                     self.width = value.location.x
                                 }
-                                
-                            })
-                    )
+                            }))
                 }
             }
+            .padding(.leading)
+            .padding(.trailing)
         }
-        .padding()
     }
     
     func getValue(val: CGFloat) -> String{
