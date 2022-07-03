@@ -55,6 +55,8 @@
 		5CB2E83C2858EF8700874F28 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E83B2858EF8600874F28 /* PhoneNumber.swift */; };
 		5CB661342870387C001039C4 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB661332870387C001039C4 /* DetailsView.swift */; };
 		5CB6613628703C64001039C4 /* ParkingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB6613528703C64001039C4 /* ParkingDetails.swift */; };
+		5CB661392871DC25001039C4 /* DetailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB661382871DC25001039C4 /* DetailButton.swift */; };
+		5CB6613B2871E36E001039C4 /* SelectYourVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB6613A2871E36E001039C4 /* SelectYourVehicle.swift */; };
 		5CBC7E3928560C7100746072 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC7E3828560C7100746072 /* Arrow.swift */; };
 		5CD6E65D2836E22600C6E592 /* MapDirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E65C2836E22600C6E592 /* MapDirect.swift */; };
 		5CD6E65F2836F2CA00C6E592 /* BookPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E65E2836F2CA00C6E592 /* BookPay.swift */; };
@@ -122,6 +124,8 @@
 		5CB2E83B2858EF8600874F28 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		5CB661332870387C001039C4 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		5CB6613528703C64001039C4 /* ParkingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingDetails.swift; sourceTree = "<group>"; };
+		5CB661382871DC25001039C4 /* DetailButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButton.swift; sourceTree = "<group>"; };
+		5CB6613A2871E36E001039C4 /* SelectYourVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectYourVehicle.swift; sourceTree = "<group>"; };
 		5CBC7E3828560C7100746072 /* Arrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
 		5CD6E65C2836E22600C6E592 /* MapDirect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDirect.swift; sourceTree = "<group>"; };
 		5CD6E65E2836F2CA00C6E592 /* BookPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPay.swift; sourceTree = "<group>"; };
@@ -262,7 +266,8 @@
 				5C630C8B28582BA4004C77BE /* ObjectsProfile */,
 				5C02669728591CB30026E462 /* ObjectsPassword */,
 				5C7BC038285D321900C9DA72 /* ObjectsHomeMenu */,
-				5CFBE39F286C8E05007BF6FD /* SearchObject */,
+				5CFBE39F286C8E05007BF6FD /* ObjectSearch */,
+				5CB661372871DBEE001039C4 /* ObjectDetails */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -305,8 +310,17 @@
 			children = (
 				5CB661332870387C001039C4 /* DetailsView.swift */,
 				5CB6613528703C64001039C4 /* ParkingDetails.swift */,
+				5CB6613A2871E36E001039C4 /* SelectYourVehicle.swift */,
 			);
 			path = "Details&Booking";
+			sourceTree = "<group>";
+		};
+		5CB661372871DBEE001039C4 /* ObjectDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5CB661382871DC25001039C4 /* DetailButton.swift */,
+			);
+			path = ObjectDetails;
 			sourceTree = "<group>";
 		};
 		5CE49C302836B00E0033D5CD = {
@@ -355,7 +369,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5CFBE39F286C8E05007BF6FD /* SearchObject */ = {
+		5CFBE39F286C8E05007BF6FD /* ObjectSearch */ = {
 			isa = PBXGroup;
 			children = (
 				5CFBE39B286C507A007BF6FD /* SearchSampleData.swift */,
@@ -363,7 +377,7 @@
 				5CFBE3A5286C902D007BF6FD /* PersonDataObject.swift */,
 				5CFBE3A7286C9175007BF6FD /* PersonRowView.swift */,
 			);
-			path = SearchObject;
+			path = ObjectSearch;
 			sourceTree = "<group>";
 		};
 		5CFBE3A0286C8E72007BF6FD /* Filter */ = {
@@ -454,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CFBE3A8286C9175007BF6FD /* PersonRowView.swift in Sources */,
+				5CB6613B2871E36E001039C4 /* SelectYourVehicle.swift in Sources */,
 				5C630C9728583E80004C77BE /* DateofBirth.swift in Sources */,
 				5CB2E83A2858E48D00874F28 /* EmailFill.swift in Sources */,
 				5C6908BE285D5D1D00676417 /* NotifSucc.swift in Sources */,
@@ -502,6 +517,7 @@
 				5C55CE0C285B7C5500C259E0 /* PassFill.swift in Sources */,
 				5CFBE39C286C507A007BF6FD /* SearchSampleData.swift in Sources */,
 				5C263584285405C4003C68AD /* CustomButton.swift in Sources */,
+				5CB661392871DC25001039C4 /* DetailButton.swift in Sources */,
 				5C26358C28553E86003C68AD /* SignIn.swift in Sources */,
 				5C7BAA3528372C4E00BCE38F /* LoginView.swift in Sources */,
 				5CFBE39E286C88F2007BF6FD /* SearchObservableObject.swift in Sources */,

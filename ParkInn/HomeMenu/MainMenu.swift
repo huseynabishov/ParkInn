@@ -37,7 +37,7 @@ struct MainMenu: View {
                     
                     ZStack(){
                         LocationPinButton(title: "", action: {
-                            self.navigationStack.push(NotificationMenu())
+                            self.navigationStack.push(ParkingDetails())
                         })
                         Image("location.fill")
                     }

@@ -28,71 +28,124 @@ struct ParkingDetails: View {
             }
             .padding()
             
-            TabView(selection: $currentIndex.animation()) {
-                
-                Image("yellowc")
-                    .resizable()
-                    .frame(width: 370, height: 210, alignment: .center)
-                    .cornerRadius(30)
-                    .tag(0)
-                
-                Image("yellowc")
-                    .resizable()
-                    .frame(width: 370, height: 210, alignment: .center)
-                    .cornerRadius(30)
-                    .tag(1)
-                
-                Image("yellowc")
-                    .resizable()
-                    .frame(width: 370, height: 210, alignment: .center)
-                    .cornerRadius(30)
-                    .tag(2)
-                
-                Image("yellowc")
-                    .resizable()
-                    .frame(width: 370, height: 210, alignment: .center)
-                    .cornerRadius(30)
-                    .tag(3)
-                
-                Image("yellowc")
-                    .resizable()
-                    .frame(width: 370, height: 210, alignment: .center)
-                    .cornerRadius(30)
-                    .tag(4)
-            }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            .overlay(Fancy5DotsIndexView(numberOfPages: 5, currentIndex: currentIndex))
             
-            HStack(){
-                VStack(alignment: .leading, spacing: 10){
-                    Text("Parking Lot of San Manolia")
-                        .foregroundColor(.black)
-                        .font(.system(size: 25, weight: .semibold, design: .rounded))
+            Group{
+                TabView(selection: $currentIndex.animation()) {
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .overlay(
+                            Image("yellowc")
+                                .resizable()
+                                .scaledToFill()
+                        )
+                        .cornerRadius(25)
+                        .padding(.horizontal)
+                        .tag(0)
+
                     
                     
-                    Text("9569, Trantow Courts, San Manolia")
-                        .multilineTextAlignment(.leading)
+                    RoundedRectangle(cornerRadius: 20)
+                        .overlay(
+                            Image("yellowc")
+                                .resizable()
+                                .scaledToFill()
+                        )
+                        .cornerRadius(25)
+                        .padding(.horizontal)
+                        .tag(1)
+
                     
+                    RoundedRectangle(cornerRadius: 20)
+                        .overlay(
+                            Image("yellowc")
+                                .resizable()
+                                .scaledToFill()
+                        )
+                        .cornerRadius(25)
+                        .padding(.horizontal)
+                        .tag(2)
+
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .overlay(
+                            Image("yellowc")
+                                .resizable()
+                                .scaledToFill()
+                        )
+                        .cornerRadius(25)
+                        .padding(.horizontal)
+                        .tag(3)
+
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .overlay(
+                            Image("yellowc")
+                                .resizable()
+                                .scaledToFill()
+                        )
+                        .cornerRadius(25)
+                        .padding(.horizontal)
+                        .tag(4)
+
+                }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                .overlay(Fancy5DotsIndexView(numberOfPages: 5, currentIndex: currentIndex)
+                )
+                
+                
+                
+                
+                HStack(){
+                    VStack(alignment: .leading, spacing: 10){
+                        Text("Parking Lot of San Manolia")
+                            .foregroundColor(.black)
+                            .font(.system(size: 25, weight: .semibold, design: .rounded))
+                        
+                        
+                        Text("9569, Trantow Courts, San Manolia")
+                            .foregroundColor(.black.opacity(0.6))
+                            .font(.system(size: 18, weight: .semibold, design: .rounded))
+                            .multilineTextAlignment(.leading)
+                        
+                    }
+                    .padding()
+                    Button(action: {}) {
+                        Image(systemName: "bookmark.fill")
+                            .font(.system(size: 27))
+                    }
+                }
+                
+                
+                HStack(spacing: 7){
+                    ZStack(){
+                        HStack{
+                        ZStack{
+                            Image(systemName: "drop.fill")
+                                .foregroundColor(Color("AccentColor"))
+                                .rotationEffect(.degrees(180))
+                                .font(.system(size: 17))
+                            Circle()
+                                .frame(width: 6, height: 6)
+                                .foregroundColor(Color.white)
+                                .padding(.bottom, 4)
+                        }
+                        .padding()
+                            Spacer()
+                        }
+                        
+                        FilterKindButton(title: "2 km", action: {
+                            self.navigationStack.push(NotificationMenu())
+                        })
+                    }
+                    FilterKindButton(title: "8 AM - 10 PM", action: {
+                        self.navigationStack.push(NotificationMenu())
+                    })
+                    FilterKindButton(title: "Valet", action: {
+                        self.navigationStack.push(NotificationMenu())
+                    })
                 }
                 .padding()
-                Button(action: {}) {
-                    Image(systemName: "bookmark.fill")
-                        .font(.system(size: 27))
-                }
             }
-            Spacer()
-            HStack(spacing: 7){
-                FilterKindButton(title: "2 km", action: {
-                    self.navigationStack.push(NotificationMenu())
-                })
-                FilterKindButton(title: "8 AM - 10 PM", action: {
-                    self.navigationStack.push(NotificationMenu())
-                })
-                FilterKindButton(title: "Valet", action: {
-                    self.navigationStack.push(NotificationMenu())
-                })
-            }
-            .padding()
             
             HStack{
                 Text("Description")
@@ -103,29 +156,46 @@ struct ParkingDetails: View {
             .padding()
             
             HStack{
-                Text("Lorem ipsum dolar sit amet, consectetur adispiscing elit, sed do eiusmad tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolar in cillum pariatur. Duis aute irure dolar in cillum pariatur. Ut enim ad minim veriam, quis nastrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." )
-                    .foregroundColor(.gray)
+                Text("Lorem ipsum dolar sit amet, consectetur adispiscing elit, sed do eiusmad tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolar in cillum pariatur. Duis aute irure dolar in cillum pariatur. Ut enim ad minim veriam, quis nastrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..." )
+                    .foregroundColor(.black.opacity(0.6))
                     .font(.system(size: 15, weight: .semibold, design: .rounded))
                     .multilineTextAlignment(.leading)
                     .padding()
-                
-                Text("Read more...")
-                    .onTapGesture {
-                        UIApplication.shared.open(URL(string: "https://chargehub.com/en/stations/ca/san-anselmo/parking-lot-at-magnolia-ave-and-kientz-lan.html?locId=41128")!)
-                    }
-                    .foregroundColor(Color("AccentColor"))
-                    .font(.system(size: 15, weight: .semibold, design: .rounded))
-                    .multilineTextAlignment(.leading)
-                    .padding()
-                
-                
             }
-        })
-        
-        
-        //        .ignoresSafeArea()
-        
-        
+            
+            Spacer()
+            
+            VStack(spacing: 7){
+                Text("$2.00")
+                    .foregroundColor(Color("AccentColor"))
+                    .font(.system(size: 25, weight: .semibold, design: .rounded))
+                Text("per hour")
+                    .foregroundColor(.black.opacity(0.6))
+                    .font(.system(size: 15, weight: .semibold, design: .rounded))
+            }
+            .frame(maxWidth: 380, maxHeight: 80, alignment: .center)
+            .overlay(RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.white, lineWidth:1))
+            .background(Color("ButtonColor").opacity(0.6).cornerRadius(20))
+            
+            Spacer()
+            
+            HStack(spacing: 15){
+                CustomButton2(title: "Cancel", action: {
+                    self.navigationStack.push(NotificationMenu())
+                })
+                .frame(width: 180, height: 70, alignment: .leading)
+                
+                CustomButton(title: "Book Parking", action: {
+                    self.navigationStack.push(NotificationMenu())
+                })
+                .frame(width: 180, height: 70, alignment: .leading)
+            }
+            .frame(maxWidth: .infinity, maxHeight: 130, alignment: .center)
+            .overlay(RoundedRectangle(cornerRadius: 20)
+                .stroke(Color("ButtonColor"), lineWidth:2))
+            
+        }).ignoresSafeArea(.all, edges: .bottom)
     }
     struct Boarding: View {
         let imageName: String
@@ -147,15 +217,10 @@ struct ParkingDetails: View {
             }
         }
     }
-}
-struct text: View {
     
-    @State private var pd = "Lorem ipsum dolar sit amet, consectetur adispiscing elit, sed do eiusmad tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolar in cillum pariatur. Duis aute irure dolar in cillum pariatur. Ut enim ad minim veriam, quis nastrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Read more..."
     
-    var attrString: AttributedString {
-        var attrS = AttributedString(pd)
-    }
 }
+
 struct Fancy5DotsIndexView: View {
     let numberOfPages: Int
     let currentIndex: Int
@@ -178,7 +243,7 @@ struct Fancy5DotsIndexView: View {
                     .transition(AnyTransition.opacity.combined(with: .scale))
                     .id(index)
             }
-        }.padding(.top, 170)
+        }.padding(.top, 140)
     }
 }
 
