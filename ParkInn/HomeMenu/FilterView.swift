@@ -86,6 +86,7 @@ struct FilterView: View {
                                 FilterKindButton(title: "Distance", action: {
                                     self.navigationStack.push(NotificationMenu())
                                 })
+                                .padding(.leading)
                                 FilterKindButton(title: "Slots Available", action: {
                                     self.navigationStack.push(NotificationMenu())
                                 })
@@ -189,7 +190,7 @@ struct SliderView: View {
     
     @State var width: CGFloat = 0
     //    @State var width1: CGFloat = 15
-    var totalWidth = UIScreen.main.bounds.width - 40
+    var totalWidth = UIScreen.main.bounds.width - 60
     
     var body: some View {
         
@@ -211,7 +212,7 @@ struct SliderView: View {
                         
                         ZStack{
                             DistanceField()
-                            Text("\(self.getValue(val: self.width / self.totalWidth)) km")
+                            Text("\(self.getValue(val: self.width)) km")
                                 .foregroundColor(Color.white)
                                 .font(.system(size: 13, weight: .semibold, design: .rounded))
                                 .fixedSize(horizontal: true, vertical: false)
@@ -230,15 +231,14 @@ struct SliderView: View {
                         
                     }
                     .padding(.bottom,40)
-                    .offset(x: self.width)
+                    .offset(x: self.width - 20)
                     .gesture(
                         
                         DragGesture()
                             .onChanged({ (value) in
                                 
                                 if value.location.x >= 0 && value.location.x <= self.totalWidth{
-                                    
-                                    self.width = value.location.x
+                                        self.width = value.location.x
                                 }
                             }))
                 }

@@ -22,7 +22,7 @@ struct DistanceField: View {
                     
 
             }
-            .frame(maxWidth: 60, maxHeight: 25, alignment: .center)
+            .frame(maxWidth: 55, maxHeight: 25, alignment: .center)
             .overlay(RoundedRectangle(cornerRadius: 6)
                 .stroke(Color("AccentColor")))
             .background(Color("AccentColor"))

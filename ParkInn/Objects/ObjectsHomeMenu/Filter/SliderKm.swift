@@ -28,6 +28,7 @@ struct SliderKm: View {
                         .frame(width: .infinity, height: 10, alignment: .center)
                         .foregroundColor(Color("ButtonColor"))
                         .cornerRadius(20)
+//
                         .padding([.leading, .trailing])
                     }
                 }
