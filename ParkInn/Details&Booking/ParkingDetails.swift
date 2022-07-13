@@ -187,7 +187,7 @@ struct ParkingDetails: View {
                 .frame(width: 180, height: 70, alignment: .leading)
                 
                 CustomButton(title: "Book Parking", action: {
-                    self.navigationStack.push(NotificationMenu())
+                    self.navigationStack.push(SelectYourVehicle())
                 })
                 .frame(width: 180, height: 70, alignment: .leading)
             }
