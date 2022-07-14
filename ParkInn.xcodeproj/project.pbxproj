@@ -29,6 +29,7 @@
 		5C55CE08285A8FEF00C259E0 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C55CE07285A8FEF00C259E0 /* Verification.swift */; };
 		5C55CE0A285AAF2B00C259E0 /* CreatePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C55CE09285AAF2B00C259E0 /* CreatePass.swift */; };
 		5C55CE0C285B7C5500C259E0 /* PassFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C55CE0B285B7C5500C259E0 /* PassFill.swift */; };
+		5C5FD03E2880591F004F740F /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5FD03D2880591F004F740F /* TaskData.swift */; };
 		5C630C7B2857B426004C77BE /* CreateAcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C7A2857B426004C77BE /* CreateAcc.swift */; };
 		5C630C7D2857B691004C77BE /* TypingField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C7C2857B691004C77BE /* TypingField.swift */; };
 		5C630C7F2857C27E004C77BE /* TypingPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C7E2857C27E004C77BE /* TypingPass.swift */; };
@@ -102,6 +103,7 @@
 		5C55CE07285A8FEF00C259E0 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 		5C55CE09285AAF2B00C259E0 /* CreatePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePass.swift; sourceTree = "<group>"; };
 		5C55CE0B285B7C5500C259E0 /* PassFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassFill.swift; sourceTree = "<group>"; };
+		5C5FD03D2880591F004F740F /* TaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
 		5C630C7A2857B426004C77BE /* CreateAcc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAcc.swift; sourceTree = "<group>"; };
 		5C630C7C2857B691004C77BE /* TypingField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingField.swift; sourceTree = "<group>"; };
 		5C630C7E2857C27E004C77BE /* TypingPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingPass.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				5CB6613E28748688001039C4 /* SelectVehicle.swift */,
 				5CB66142287BD1FF001039C4 /* CustomDatePicker.swift */,
 				5CAE42C6287F4BF800FC7DFF /* DateValue.swift */,
+				5C5FD03D2880591F004F740F /* TaskData.swift */,
 			);
 			path = ObjectDetails;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				5CAE42C7287F4BF800FC7DFF /* DateValue.swift in Sources */,
 				5C0266962859167A0026E462 /* ForgotPassword.swift in Sources */,
 				5C03903C286168C60023585A /* SavedScreen.swift in Sources */,
+				5C5FD03E2880591F004F740F /* TaskData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
