@@ -15,23 +15,25 @@ struct CustomDatePicker: View {
     @State var currentMonth: Int = 0
     
     var body: some View {
-        VStack(spacing: 35){
+        VStack(spacing: 15){
             
             // Days...
             let days: [String] =
-            ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+            ["Mo","Tu","We","Th","Fr","Sa","Su"]
             
             
             HStack(spacing: 20){
                 
                 VStack(alignment: .leading, spacing: 10) {
                     
-                    Text(extraDate()[0])
-                        .font(.caption)
-                        .fontWeight(.semibold)
+//                    Text("Select Date")
+//                        .foregroundColor(.black)
+//                        .font(.system(size: 20, weight: .bold, design: .rounded))
                     
-                    Text(extraDate()[1])
-                        .font(.title.bold())
+                    
+                    Text(extraDate()[1] + extraDate()[0])
+                        .foregroundColor(.black)
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
                 }
                 
                 Spacer(minLength: 0)
@@ -47,7 +49,7 @@ struct CustomDatePicker: View {
                 
                 Button {
                     withAnimation{
-                        currentMonth -= 1
+                        currentMonth += 1
                     }
                 } label: {
                     Image(systemName: "chevron.right")
@@ -57,7 +59,7 @@ struct CustomDatePicker: View {
             .padding(.horizontal)
             // Day View...
             
-            HStack(spacing: 0){
+            HStack(spacing: 10){
                 ForEach(days,id: \.self){day in
                     
                     Text(day)
@@ -78,9 +80,10 @@ struct CustomDatePicker: View {
                     CardView(value: value)
                         .background(
                         
-                        Capsule()
-                            .fill(Color("Pink"))
-                            .padding(.horizontal,8)
+                        Circle()
+                            .fill(Color("AccentColor"))
+                            .frame(width: 40, height: 40)
+                            .padding(.horizontal)
                             .opacity(isSameDay(date1: value.date, date2: currentDate) ? 1 : 0)
                         )
                         .onTapGesture {
@@ -89,52 +92,56 @@ struct CustomDatePicker: View {
                 }
             }
             
-            VStack(spacing: 15){
-                
-                Text("Tasks")
-                    .font(.title2.bold())
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                if let task = tasks.first(where: { task in
-                    return isSameDay(date1: task.taskDate, date2: currentDate)
-                }){
-                    
-                    ForEach(task.task){task in
-                        
-                        VStack(alignment: .leading, spacing: 10){
-                            
-                            // For Custom Timing...
-                            Text(task.time
-                                .addingTimeInterval(CGFloat
-                                    .random(in: 0...5000)),style:
-                                    .time)
-                            
-                            Text(task.title)
-                                .font(.title2.bold())
-                        }
-                        .padding(.vertical,10)
-                        .padding(.horizontal)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(
-                        
-                            Color("Pink")
-                                .opacity(0.5)
-                                .clipShape(Capsule())
-                        )
-                    }
-                    
-                }else{
-                    Text("No Task Found")
-                }
-            }
-            .padding()
-            .padding(.top,25)
+            Spacer()
         }
+        .padding()
+        
+        
         .onChange(of: currentMonth) { newValue in
             
             // updating Month...
             currentDate = getCurrentMonth()
         }
+        
+        VStack(spacing: 15){
+            
+            Text("Duration")
+                .font(.title2.bold())
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            if let task = tasks.first(where: { task in
+                return isSameDay(date1: task.taskDate, date2: currentDate)
+            }){
+                
+                ForEach(task.task){task in
+                    
+                    VStack(alignment: .leading, spacing: 10){
+                        
+                        // For Custom Timing...
+                        Text(task.time
+                            .addingTimeInterval(CGFloat
+                                .random(in: 0...5000)),style:
+                                .time)
+                        
+                        Text(task.title)
+                            .font(.title2.bold())
+                    }
+                    .padding(.vertical,10)
+                    .padding(.horizontal)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(
+                    
+                        Color("Pink")
+                            .opacity(0.5)
+                            .clipShape(Capsule())
+                    )
+                }
+                
+            }else{
+                Text("No Task Found")
+            }
+        }
+        Spacer()
     }
     
     @ViewBuilder
@@ -149,28 +156,23 @@ struct CustomDatePicker: View {
                     return isSameDay(date1: task.taskDate, date2: currentDate)
                 }){
                     Text("\(value.day)")
-                        .font(.title3.bold())
+//                        .font(.title3.bold())
                         .foregroundColor(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : .primary)
                         .frame(maxWidth: .infinity)
                     
-                    Spacer()
-                    
-                    Circle()
-                        .fill(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : Color("Pink"))
-                        .frame(width: 8,height: 8)
                 }else{
                     
+                    
                     Text("\(value.day)")
-                        .font(.title3.bold())
-                        .foregroundColor(isSameDay(date1: value.date, date2: currentDate) ? .white : .primary)
+//                        .font(.title3.bold())
+                        .foregroundColor(isSameDay(date1: value.date, date2: currentDate) ? .white : Color.black.opacity(0.6))
                         .frame(maxWidth: .infinity)
                     
-                    Spacer()
                 }
             }
         }
-        .padding(.vertical,9)
-        .frame(height: 60, alignment: .top)
+        .padding(.vertical)
+        .frame(height: 20, alignment: .center)
     }
     
     // checking dates...

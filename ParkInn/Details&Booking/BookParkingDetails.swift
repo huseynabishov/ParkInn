@@ -30,6 +30,7 @@ struct BookParkingDetails: View {
                 
                 CustomDatePicker(currentDate: $currentDate)
             }
+            .padding(.vertical)
             
             HStack(spacing: 15){
                 
