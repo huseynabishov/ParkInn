@@ -18,6 +18,9 @@ struct CustomDatePicker: View {
     //    @State var width1: CGFloat = 15
     var totalWidth = UIScreen.main.bounds.width - 45
     
+    @State private var pickinn = Date()
+    @State private var pickinn1 = Date()
+    
     var body: some View {
         VStack(spacing: 0){
             
@@ -103,103 +106,126 @@ struct CustomDatePicker: View {
             currentDate = getCurrentMonth()
         }
         
-        VStack(spacing: 15){
+        VStack(spacing: 3){
             
             Text("Duration")
                 .font(.title2.bold())
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading)
             
-            ZStack(alignment: .leading) {
-                
-                Rectangle()
-                    .fill(Color.black.opacity(0.1))
-                    .frame(height: 7)
-                    .cornerRadius(15)
-                
-                Rectangle()
-                    .fill(Color("AccentColor"))
-                    .frame(width: self.width, height: 7)
-                    .cornerRadius(15)
-                
-                HStack(){
-                    VStack(spacing: 0){
-                        
-                        ZStack{
-                            DistanceField()
-                            Text("\(self.getValue(val: self.width)) hrs")
-                                .foregroundColor(Color.white)
-                                .font(.system(size: 13, weight: .semibold, design: .rounded))
-                                .fixedSize(horizontal: true, vertical: false)
-                                .frame(alignment: .center)
-                                .padding(.bottom, 13)
+            ZStack(alignment: .bottom){
+                ZStack(alignment: .leading) {
+                    
+                    Rectangle()
+                        .fill(Color.black.opacity(0.1))
+                        .frame(height: 7)
+                        .cornerRadius(15)
+                    
+                    Rectangle()
+                        .fill(Color("AccentColor"))
+                        .frame(width: self.width, height: 7)
+                        .cornerRadius(15)
+                    
+                    HStack(){
+                        VStack(spacing: 0){
+                            
+                            ZStack{
+                                DistanceField()
+                                Text("\(self.getValue(val: self.width)) hrs")
+                                    .foregroundColor(Color.white)
+                                    .font(.system(size: 13, weight: .semibold, design: .rounded))
+                                    .fixedSize(horizontal: true, vertical: false)
+                                    .frame(alignment: .center)
+                                    .padding(.bottom, 13)
+                            }
+                            
+                            ZStack(){
+                                Circle()
+                                    .fill(Color("AccentColor"))
+                                    .frame(width: 25, height: 25)
+                                Circle()
+                                    .fill(Color.white)
+                                    .frame(width: 15, height: 15)
+                            }
+                            
                         }
-                        
-                        ZStack(){
-                            Circle()
-                                .fill(Color("AccentColor"))
-                                .frame(width: 25, height: 25)
-                            Circle()
-                                .fill(Color.white)
-                                .frame(width: 15, height: 15)
-                        }
-                        
+                        .padding(.bottom,40)
+                        .offset(x: self.width - 20)
+                        .gesture(
+                            
+                            DragGesture()
+                                .onChanged({ (value) in
+                                    
+                                    if value.location.x >= 0 && value.location.x <= self.totalWidth{
+                                        self.width = value.location.x
+                                    }
+                                }))
                     }
-                    .padding(.bottom,40)
-                    .offset(x: self.width - 20)
-                    .gesture(
-                        
-                        DragGesture()
-                            .onChanged({ (value) in
-                                
-                                if value.location.x >= 0 && value.location.x <= self.totalWidth{
-                                    self.width = value.location.x
-                                }
-                            }))
+                }
+                .padding(.leading)
+                .padding(.trailing)
+                
+                
+                HStack(spacing: 0){
+                    Text("Start Hour")
+                        .foregroundColor(.black)
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
+                        .padding([.top,.leading])
+                    Spacer()
+                    Text("End Hour")
+                        .foregroundColor(.black)
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
+                        .padding(.top)
+                        .padding(.trailing, 80)
                 }
             }
-            .padding(.leading)
-            .padding(.trailing)
-            
-            //            if let task = tasks.first(where: { task in
-            //                return isSameDay(date1: task.taskDate, date2: currentDate)
-            //            }){
-            //
-            //                ForEach(task.task){task in
-            //
-            //                    VStack(alignment: .leading, spacing: 10){
-            //
-            //                        // For Custom Timing...
-            //                        Text(task.time
-            //                            .addingTimeInterval(CGFloat
-            //                                .random(in: 0...5000)),style:
-            //                                .time)
-            //
-            //                        Text(task.title)
-            //                            .font(.title2.bold())
-            //                    }
-            //                    .padding(.vertical,10)
-            //                    .padding(.horizontal)
-            //                    .frame(maxWidth: .infinity, alignment: .leading)
-            //                    .background(
-            //
-            //                        Color("Pink")
-            //                            .opacity(0.5)
-            //                            .clipShape(Capsule())
-            //                    )
-            //                }
-            //
-            //            }else{
-            //                Text("No Task Found")
-            //            }
         }
         Spacer()
-        HStack(spacing: 0){
-            Text("Start Hour")
-                .padding()
+        
+        HStack{
+        DatePicker("", selection: $pickinn, displayedComponents: .hourAndMinute)
+            .labelsHidden()
+            .transformEffect(.init(scaleX: 1.1, y: 1.0))
+            .padding(.leading)
+            
+                Image(systemName: "clock")
+                .font(.system(size: 20))
+                .padding(.leading)
             Spacer()
-            Text("Start Hour")
-                .padding()
+            
+            Image(systemName: "arrowtriangle.forward.fill")
+                .padding(.trailing)
+            
+            
+            DatePicker("", selection: $pickinn1, displayedComponents: .hourAndMinute)
+                .labelsHidden()
+                .transformEffect(.init(scaleX: 1.1, y: 1.0))
+                .padding(.leading)
+                
+                    Image(systemName: "clock")
+                    .font(.system(size: 20))
+                    .padding(.leading)
+                    .padding(.trailing)
         }
+        Spacer()
+        
+        HStack{
+        Text("Total")
+            .foregroundColor(.black)
+            .font(.system(size: 20, weight: .bold, design: .rounded))
+            .padding()
+            Spacer()
+        }
+        HStack{
+        Text("$8.00")
+                .foregroundColor(Color("AccentColor"))
+                .font(.system(size: 30, weight: .semibold, design: .rounded))
+            Text("/ 4 hours")
+                .foregroundColor(.black.opacity(0.6))
+                .font(.system(size: 15, weight: .semibold, design: .rounded))
+            Spacer()
+        }
+        .padding(.leading)
     }
     
     @ViewBuilder

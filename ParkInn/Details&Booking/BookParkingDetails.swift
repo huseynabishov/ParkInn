@@ -24,13 +24,11 @@ struct BookParkingDetails: View {
                     .font(.system(size: 25, weight: .semibold, design: .rounded))
                 Spacer()
             }
-            Spacer()
-            
-            VStack(spacing: 20) {
+            VStack(spacing: 0) {
                 
                 CustomDatePicker(currentDate: $currentDate)
             }
-            .padding(.vertical)
+//            .padding(.vertical)
             
             HStack(spacing: 15){
                 

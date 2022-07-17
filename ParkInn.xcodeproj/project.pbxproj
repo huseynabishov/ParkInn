@@ -331,9 +331,9 @@
 			children = (
 				5CB661382871DC25001039C4 /* DetailButton.swift */,
 				5CB6613E28748688001039C4 /* SelectVehicle.swift */,
-				5CB66142287BD1FF001039C4 /* CustomDatePicker.swift */,
 				5CAE42C6287F4BF800FC7DFF /* DateValue.swift */,
 				5C5FD03D2880591F004F740F /* TaskData.swift */,
+				5CB66142287BD1FF001039C4 /* CustomDatePicker.swift */,
 			);
 			path = ObjectDetails;
 			sourceTree = "<group>";
