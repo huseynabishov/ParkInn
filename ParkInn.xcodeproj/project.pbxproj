@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C01A44F2889991500DBAFD7 /* PickParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C01A44E2889991500DBAFD7 /* PickParkingSpot.swift */; };
+		5C01A45128899A0700DBAFD7 /* FloorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C01A45028899A0700DBAFD7 /* FloorButton.swift */; };
 		5C02668A2858FDAF0026E462 /* GenderPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0266892858FDAF0026E462 /* GenderPick.swift */; };
 		5C0266962859167A0026E462 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0266952859167A0026E462 /* ForgotPassword.swift */; };
 		5C02669928591CD20026E462 /* ViaButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C02669828591CD20026E462 /* ViaButtons.swift */; };
@@ -82,6 +84,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C01A44E2889991500DBAFD7 /* PickParkingSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickParkingSpot.swift; sourceTree = "<group>"; };
+		5C01A45028899A0700DBAFD7 /* FloorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorButton.swift; sourceTree = "<group>"; };
 		5C0266892858FDAF0026E462 /* GenderPick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderPick.swift; sourceTree = "<group>"; };
 		5C0266952859167A0026E462 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		5C02669828591CD20026E462 /* ViaButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaButtons.swift; sourceTree = "<group>"; };
@@ -322,6 +326,7 @@
 				5CB6613528703C64001039C4 /* ParkingDetails.swift */,
 				5CB6613A2871E36E001039C4 /* SelectYourVehicle.swift */,
 				5CB66140287BCE89001039C4 /* BookParkingDetails.swift */,
+				5C01A44E2889991500DBAFD7 /* PickParkingSpot.swift */,
 			);
 			path = "Details&Booking";
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				5CAE42C6287F4BF800FC7DFF /* DateValue.swift */,
 				5C5FD03D2880591F004F740F /* TaskData.swift */,
 				5CB66142287BD1FF001039C4 /* CustomDatePicker.swift */,
+				5C01A45028899A0700DBAFD7 /* FloorButton.swift */,
 			);
 			path = ObjectDetails;
 			sourceTree = "<group>";
@@ -490,6 +496,7 @@
 				5C55CE0A285AAF2B00C259E0 /* CreatePass.swift in Sources */,
 				5C55CE04285A7BA400C259E0 /* ViaEmail.swift in Sources */,
 				5C630C832857DD9F004C77BE /* LogosButton.swift in Sources */,
+				5C01A45128899A0700DBAFD7 /* FloorButton.swift in Sources */,
 				5C630C9528583C71004C77BE /* Nickname.swift in Sources */,
 				5C630C8A28582143004C77BE /* FillProfile.swift in Sources */,
 				5C7BC03E285D3E1D00C9DA72 /* SearchButton.swift in Sources */,
@@ -531,6 +538,7 @@
 				5C630C992858B297004C77BE /* PopUpView.swift in Sources */,
 				5CD6E65F2836F2CA00C6E592 /* BookPay.swift in Sources */,
 				5CFBE3AE286D53BF007BF6FD /* SliderKm.swift in Sources */,
+				5C01A44F2889991500DBAFD7 /* PickParkingSpot.swift in Sources */,
 				5C55CE0C285B7C5500C259E0 /* PassFill.swift in Sources */,
 				5CFBE39C286C507A007BF6FD /* SearchSampleData.swift in Sources */,
 				5C263584285405C4003C68AD /* CustomButton.swift in Sources */,
