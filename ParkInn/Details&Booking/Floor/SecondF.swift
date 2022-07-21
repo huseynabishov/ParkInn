@@ -1,18 +1,19 @@
 //
-//  PickParkingSpot.swift
+//  SecondF.swift
 //  ParkInn
 //
-//  Created by Huseyn Abishov on 21.07.2022.
+//  Created by Huseyn Abishov on 22.07.2022.
 //
 
 import SwiftUI
 import NavigationStack
 
-struct PickParkingSpot: View {
+struct SecondF: View {
     
     @EnvironmentObject private var navigationStack: NavigationStack
-
+    @State var isSelected: Bool = false
     
+
     var body: some View {
         VStack(spacing: 0, content: {
             HStack(){
@@ -26,8 +27,9 @@ struct PickParkingSpot: View {
             }
             Spacer()
             HStack{
+                
                 FloorButton(title: "1st Floor", action: {
-                    self.navigationStack.push(SecondF()),
+                    self.navigationStack.push(SecondF())
                 })
                 
                 FloorButton(title: "2nd Floor", action: {})
@@ -55,8 +57,8 @@ struct PickParkingSpot: View {
     }
 }
 
-struct PickParkingSpot_Previews: PreviewProvider {
+struct SecondF_Previews: PreviewProvider {
     static var previews: some View {
-        PickParkingSpot()
+        SecondF()
     }
 }

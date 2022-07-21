@@ -33,7 +33,7 @@ struct BookParkingDetails: View {
             HStack(spacing: 15){
                 
                 CustomButton(title: "Continue", action: {
-                    self.navigationStack.push(SelectYourVehicle())
+                    self.navigationStack.push(PickParkingSpot())
                 })
             }
             

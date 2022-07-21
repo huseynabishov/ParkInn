@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C01A44F2889991500DBAFD7 /* PickParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C01A44E2889991500DBAFD7 /* PickParkingSpot.swift */; };
 		5C01A45128899A0700DBAFD7 /* FloorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C01A45028899A0700DBAFD7 /* FloorButton.swift */; };
+		5C01A458288A009500DBAFD7 /* SecondF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C01A457288A009500DBAFD7 /* SecondF.swift */; };
 		5C02668A2858FDAF0026E462 /* GenderPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0266892858FDAF0026E462 /* GenderPick.swift */; };
 		5C0266962859167A0026E462 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0266952859167A0026E462 /* ForgotPassword.swift */; };
 		5C02669928591CD20026E462 /* ViaButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C02669828591CD20026E462 /* ViaButtons.swift */; };
@@ -86,6 +87,7 @@
 /* Begin PBXFileReference section */
 		5C01A44E2889991500DBAFD7 /* PickParkingSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickParkingSpot.swift; sourceTree = "<group>"; };
 		5C01A45028899A0700DBAFD7 /* FloorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorButton.swift; sourceTree = "<group>"; };
+		5C01A457288A009500DBAFD7 /* SecondF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondF.swift; sourceTree = "<group>"; };
 		5C0266892858FDAF0026E462 /* GenderPick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderPick.swift; sourceTree = "<group>"; };
 		5C0266952859167A0026E462 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		5C02669828591CD20026E462 /* ViaButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaButtons.swift; sourceTree = "<group>"; };
@@ -172,6 +174,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C01A456288A008300DBAFD7 /* Floor */ = {
+			isa = PBXGroup;
+			children = (
+				5C01A457288A009500DBAFD7 /* SecondF.swift */,
+			);
+			path = Floor;
+			sourceTree = "<group>";
+		};
 		5C02669728591CB30026E462 /* ObjectsPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +337,7 @@
 				5CB6613A2871E36E001039C4 /* SelectYourVehicle.swift */,
 				5CB66140287BCE89001039C4 /* BookParkingDetails.swift */,
 				5C01A44E2889991500DBAFD7 /* PickParkingSpot.swift */,
+				5C01A456288A008300DBAFD7 /* Floor */,
 			);
 			path = "Details&Booking";
 			sourceTree = "<group>";
@@ -506,6 +517,7 @@
 				5C02668A2858FDAF0026E462 /* GenderPick.swift in Sources */,
 				5C7BC03C285D335500C9DA72 /* NotificationScreen.swift in Sources */,
 				5C26357F2854004F003C68AD /* OnboardingScreenView.swift in Sources */,
+				5C01A458288A009500DBAFD7 /* SecondF.swift in Sources */,
 				5C03903928615BC50023585A /* NotifWall.swift in Sources */,
 				5C0390772863CB0D0023585A /* MapView.swift in Sources */,
 				5C630C8D28582BC5004C77BE /* ImageUpload.swift in Sources */,
