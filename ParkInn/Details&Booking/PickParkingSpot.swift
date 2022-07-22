@@ -11,7 +11,7 @@ import NavigationStack
 struct PickParkingSpot: View {
     
     @EnvironmentObject private var navigationStack: NavigationStack
-
+    
     
     var body: some View {
         VStack(spacing: 0, content: {
@@ -27,7 +27,7 @@ struct PickParkingSpot: View {
             Spacer()
             HStack{
                 FloorButton(title: "1st Floor", action: {
-                    self.navigationStack.push(SecondF()),
+                    //                    self.navigationStack.push(SecondF())
                 })
                 
                 FloorButton(title: "2nd Floor", action: {})
@@ -35,10 +35,10 @@ struct PickParkingSpot: View {
                 FloorButton(title: "3rd Floor", action: {})
             }
             .padding()
-            
             Spacer()
-            
-            Divider()
+             SpotScheme()
+            Spacer()
+            SpotScheme()
             
             Spacer()
             
