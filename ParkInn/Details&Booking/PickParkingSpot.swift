@@ -15,6 +15,7 @@ struct PickParkingSpot: View {
     
     var body: some View {
         VStack(spacing: 0, content: {
+            
             HStack(){
                 Arrow(title: "arrow.left", action: {
                     self.navigationStack.pop()
@@ -25,6 +26,7 @@ struct PickParkingSpot: View {
                 Spacer()
             }
             Spacer()
+            
             HStack{
                 FloorButton(title: "1st Floor", action: {
                     //                    self.navigationStack.push(SecondF())
@@ -35,11 +37,34 @@ struct PickParkingSpot: View {
                 FloorButton(title: "3rd Floor", action: {})
             }
             .padding()
-            Spacer()
-             SpotScheme()
-            Spacer()
-            SpotScheme()
             
+            Spacer()
+            HStack(spacing: 20){
+                Text("2 WAY TRAFFIC").kerning(15)
+                    .fixedSize()
+                    .frame(width: 20, height: 180)
+                    .font(.system(size: 19, weight: .semibold, design: .rounded))
+                    .foregroundColor(Color.gray.opacity(0.7))
+                    .rotationEffect(.degrees(-90))
+                
+                VStack(spacing: 20){
+                    Text("Entry")
+                        .font(.system(size: 19, weight: .semibold, design: .rounded))
+                    WayLine()
+                }
+                
+                VStack(spacing:25){
+                    ZStack{
+                        
+                    SpotScheme()
+                        .padding([.leading,.bottom,.top])
+                    }
+                    horizontalWay()
+                    
+                    SpotScheme()
+                        .padding([.leading,.bottom,.top])
+                }
+            }
             Spacer()
             
             HStack(spacing: 15){
@@ -52,6 +77,40 @@ struct PickParkingSpot: View {
                 .stroke(Color("ButtonColor"), lineWidth:2))
         })
         .ignoresSafeArea(.all, edges: .bottom)
+    }
+}
+
+struct horizontalWay: View {
+    var body: some View {
+        HStack(spacing: 20){
+            Image(systemName: "arrow.right")
+                .font(.system(size: 30))
+                .foregroundColor(Color.gray.opacity(0.6))
+            VStack(spacing: 0){
+                Divider()
+                    .frame(height: 2)
+                    .frame(width: 37)
+                    .background(Color.gray.opacity(0.3))
+            }
+            VStack(spacing: 0){
+                Divider()
+                    .frame(height: 2)
+                    .frame(width: 37)
+                    .background(Color.gray.opacity(0.3))
+            }
+            VStack(spacing: 0){
+                Divider()
+                    .frame(height: 2)
+                    .frame(width: 37)
+                    .background(Color.gray.opacity(0.3))
+            }
+            VStack(spacing: 0){
+                Divider()
+                    .frame(height: 2)
+                    .frame(width: 37)
+                    .background(Color.gray.opacity(0.3))
+            }
+        }
     }
 }
 

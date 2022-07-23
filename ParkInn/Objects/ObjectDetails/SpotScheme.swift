@@ -17,32 +17,29 @@ struct SpotScheme: View {
                 .frame(height: 2)
                 .background(Color.gray.opacity(0.3))
             ZStack{
-                
-            HStack{
+                HStack{
                     Divider()
-                        .frame(height: 185)
+                        .frame(height: 200)
                         .frame(width: 2)
                         .background(Color.gray.opacity(0.3))
-            }
-                VStack(spacing: 60){
-                Divider()
-                        .frame(width: 240)
-                        .frame(height: 2)
-                        .background(Color.gray.opacity(0.3))
-                Divider()
-                        .frame(width: 240)
-                        .frame(height: 2)
-                        .background(Color.gray.opacity(0.3))
+                }
+                ZStack{
+                    VStack(spacing: 67){
+                        Divider()
+                            .frame(width: 240)
+                            .frame(height: 2)
+                            .background(Color.gray.opacity(0.3))
+                        Divider()
+                            .frame(width: 240)
+                            .frame(height: 2)
+                            .background(Color.gray.opacity(0.3))
+                    }
                 }
             }
             Divider()
                 .frame(width: 240)
                 .frame(height: 2)
                 .background(Color.gray.opacity(0.3))
-//            Image("vehicle")
-//                .resizable()
-//                .frame(width: 100, height: 50)
-//                .padding(.trailing, 110)
         }
     }
 }

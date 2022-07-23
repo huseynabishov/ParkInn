@@ -45,6 +45,7 @@
 		5C630C9528583C71004C77BE /* Nickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C9428583C70004C77BE /* Nickname.swift */; };
 		5C630C9728583E80004C77BE /* DateofBirth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C9628583E80004C77BE /* DateofBirth.swift */; };
 		5C630C992858B297004C77BE /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C630C982858B297004C77BE /* PopUpView.swift */; };
+		5C68A35B288C5FBB00FDE457 /* WayLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C68A35A288C5FBB00FDE457 /* WayLine.swift */; };
 		5C6908BE285D5D1D00676417 /* NotifSucc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6908BD285D5D1D00676417 /* NotifSucc.swift */; };
 		5C7BAA3528372C4E00BCE38F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BAA3428372C4E00BCE38F /* LoginView.swift */; };
 		5C7BC02F285BE43800C9DA72 /* AlertPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BC02E285BE43700C9DA72 /* AlertPass.swift */; };
@@ -123,6 +124,7 @@
 		5C630C9428583C70004C77BE /* Nickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nickname.swift; sourceTree = "<group>"; };
 		5C630C9628583E80004C77BE /* DateofBirth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateofBirth.swift; sourceTree = "<group>"; };
 		5C630C982858B297004C77BE /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		5C68A35A288C5FBB00FDE457 /* WayLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayLine.swift; sourceTree = "<group>"; };
 		5C6908BD285D5D1D00676417 /* NotifSucc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifSucc.swift; sourceTree = "<group>"; };
 		5C7BAA3428372C4E00BCE38F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5C7BC02E285BE43700C9DA72 /* AlertPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPass.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				5CB66142287BD1FF001039C4 /* CustomDatePicker.swift */,
 				5C01A45028899A0700DBAFD7 /* FloorButton.swift */,
 				5CAEB85C288B574100D76E45 /* SpotScheme.swift */,
+				5C68A35A288C5FBB00FDE457 /* WayLine.swift */,
 			);
 			path = ObjectDetails;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				5C630C9128582C88004C77BE /* ImagePicker.swift in Sources */,
 				5C02668A2858FDAF0026E462 /* GenderPick.swift in Sources */,
 				5C7BC03C285D335500C9DA72 /* NotificationScreen.swift in Sources */,
+				5C68A35B288C5FBB00FDE457 /* WayLine.swift in Sources */,
 				5C26357F2854004F003C68AD /* OnboardingScreenView.swift in Sources */,
 				5C01A458288A009500DBAFD7 /* SecondF.swift in Sources */,
 				5C03903928615BC50023585A /* NotifWall.swift in Sources */,

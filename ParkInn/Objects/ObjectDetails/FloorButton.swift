@@ -40,6 +40,6 @@ struct FloorButton: View {
 
 struct FloorButton_Previews: PreviewProvider {
     static var previews: some View {
-        FloorButton(title: "1st Floor", action: {})
+        FloorButton(title: "", action: {})
     }
 }
