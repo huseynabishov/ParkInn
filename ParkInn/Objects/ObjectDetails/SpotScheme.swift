@@ -13,7 +13,7 @@ struct SpotScheme: View {
         
         VStack(spacing: 0){
             Divider()
-                .frame(width: 240)
+                .frame(width: 260)
                 .frame(height: 2)
                 .background(Color.gray.opacity(0.3))
             ZStack{
@@ -23,21 +23,22 @@ struct SpotScheme: View {
                         .frame(width: 2)
                         .background(Color.gray.opacity(0.3))
                 }
+                
                 ZStack{
                     VStack(spacing: 67){
                         Divider()
-                            .frame(width: 240)
+                            .frame(width: 260)
                             .frame(height: 2)
                             .background(Color.gray.opacity(0.3))
                         Divider()
-                            .frame(width: 240)
+                            .frame(width: 260)
                             .frame(height: 2)
                             .background(Color.gray.opacity(0.3))
                     }
                 }
             }
             Divider()
-                .frame(width: 240)
+                .frame(width: 260)
                 .frame(height: 2)
                 .background(Color.gray.opacity(0.3))
         }

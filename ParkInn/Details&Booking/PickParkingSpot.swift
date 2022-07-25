@@ -56,8 +56,24 @@ struct PickParkingSpot: View {
                 VStack(spacing:25){
                     ZStack{
                         
-                    SpotScheme()
-                        .padding([.leading,.bottom,.top])
+                        SpotScheme()
+                            .padding([.leading,.bottom,.top,.trailing])
+                        
+                        HStack(spacing: 0){
+                            PickPlaceButton(title: "A03", action: {})
+                                .padding()
+                            VStack{
+                                PickPlaceButton(title: "A02", action: {})
+                                    .padding(.top)
+                                Image("vehicle")
+                                    .resizable()
+                                    .frame(width: 110, height: 50)
+                                Image("vehicle")
+                                    .resizable()
+                                    .frame(width: 110, height: 50)
+                                    .padding(.bottom)
+                            }
+                        }
                     }
                     horizontalWay()
                     
