@@ -1,42 +1,34 @@
 //
-//  SelectVehicle.swift
+//  PaymentButton.swift
 //  ParkInn
 //
-//  Created by Huseyn Abishov on 5.07.2022.
+//  Created by Huseyn Abishov on 26.07.2022.
 //
 
 import SwiftUI
 
-struct SelectVehicle: View {
+struct PaymentButton: View {
     
-    @Binding var SelectedVehicle: vehicles
-    @State var CurrentVehicle: vehicles
+    @Binding var SelectedMethod: methods
+    @State var CurrentMethod: methods
     
+    let image: String
     let title: String
-    let title2: String
     let action: () -> Void
-//    let title2: String
-    
     
     var body: some View {
         Button(action: action) {
             HStack(){
-                Image("vehicle")
-                    .resizable()
-                    .frame(width: 90, height: 40)
+                Image(image)
                     .padding()
                 VStack(alignment: .leading,spacing: 10){
-                    Text(String(SelectedVehicle == CurrentVehicle  ? (title) : title))
+                    Text(String(SelectedMethod == CurrentMethod  ? (title) : title))
                         .foregroundColor(.black)
                         .font(.system(size: 20, weight: .semibold, design: .rounded))
-                    
-                    Text(title2)
-                        .foregroundColor(.gray)
-                        .font(.system(size: 15, weight: .semibold, design: .rounded))
                 }
                 Spacer()
                 
-                if SelectedVehicle != CurrentVehicle {
+                if SelectedMethod != CurrentMethod {
                     Image(systemName: "circle")
                         .font(.system(size: 20))
                         .foregroundColor(Color("AccentColor"))
@@ -49,7 +41,7 @@ struct SelectVehicle: View {
             }
             .padding()
         }
-        .frame(maxWidth: 360, maxHeight: 100, alignment: .center)
+        .frame(maxWidth: 360, maxHeight: 80, alignment: .center)
         .overlay(RoundedRectangle(cornerRadius: 20)
             .stroke(Color.white, lineWidth:4))
         .background(Color.white.cornerRadius(20))
@@ -60,8 +52,8 @@ struct SelectVehicle: View {
     }
 }
 
-struct SelectVehicle_Previews: PreviewProvider {
+struct PaymentButton_Previews: PreviewProvider {
     static var previews: some View {
-        SelectYourVehicle()
+        PaymentView()
     }
 }

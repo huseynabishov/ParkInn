@@ -36,22 +36,22 @@ struct SelectYourVehicle: View {
             .padding(.top)
             
             Spacer()
-            SelectVehicle(SelectedVehicle: $SelectedVehicle, CurrentVehicle: .Toyota, title: "Toyota Corolla") {
+            SelectVehicle(SelectedVehicle: $SelectedVehicle, CurrentVehicle: .Toyota, title: "Toyota Corolla", title2: "HG 4676 FH") {
                 SelectedVehicle = .Toyota
             }
             
             Spacer()
-            SelectVehicle(SelectedVehicle: $SelectedVehicle, CurrentVehicle: .Ford, title: "Ford F Series") {
+            SelectVehicle(SelectedVehicle: $SelectedVehicle, CurrentVehicle: .Ford, title: "Ford F Series", title2: "AF 4793 JU") {
                 SelectedVehicle = .Ford
             }
             
             Spacer()
-            SelectVehicle(SelectedVehicle: $SelectedVehicle, CurrentVehicle: .Honda, title: "Honda Civic") {
+            SelectVehicle(SelectedVehicle: $SelectedVehicle, CurrentVehicle: .Honda, title: "Honda Civic", title2: "HU 3691 KO") {
                 SelectedVehicle = .Honda
             }
             
             Spacer()
-            SelectVehicle(SelectedVehicle: $SelectedVehicle, CurrentVehicle: .Tiguan, title: "VW Tiguan") {
+            SelectVehicle(SelectedVehicle: $SelectedVehicle, CurrentVehicle: .Tiguan, title: "VW Tiguan", title2: "GT 2573 YK") {
                 SelectedVehicle = .Tiguan
             }
             

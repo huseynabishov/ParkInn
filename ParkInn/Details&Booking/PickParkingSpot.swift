@@ -11,7 +11,7 @@ import NavigationStack
 struct PickParkingSpot: View {
     
     @EnvironmentObject private var navigationStack: NavigationStack
-    
+
     
     var body: some View {
         VStack(spacing: 0, content: {
@@ -25,6 +25,7 @@ struct PickParkingSpot: View {
                     .font(.system(size: 25, weight: .semibold, design: .rounded))
                 Spacer()
             }
+            
             Spacer()
             
             HStack{
@@ -40,17 +41,19 @@ struct PickParkingSpot: View {
             
             Spacer()
             HStack(spacing: 20){
+                HStack(spacing: 10){
                 Text("2 WAY TRAFFIC").kerning(15)
                     .fixedSize()
                     .frame(width: 20, height: 180)
                     .font(.system(size: 19, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.gray.opacity(0.7))
-                    .rotationEffect(.degrees(-90))
+                    .rotationEffect(.degrees(270))
                 
                 VStack(spacing: 20){
                     Text("Entry")
                         .font(.system(size: 19, weight: .semibold, design: .rounded))
                     WayLine()
+                }
                 }
                 
                 VStack(spacing:25){
@@ -60,32 +63,75 @@ struct PickParkingSpot: View {
                             .padding([.leading,.bottom,.top,.trailing])
                         
                         HStack(spacing: 0){
-                            PickPlaceButton(title: "A03", action: {})
-                                .padding()
-                            VStack{
-                                PickPlaceButton(title: "A02", action: {})
-                                    .padding(.top)
-                                Image("vehicle")
-                                    .resizable()
-                                    .frame(width: 110, height: 50)
-                                Image("vehicle")
-                                    .resizable()
-                                    .frame(width: 110, height: 50)
-                                    .padding(.bottom)
+                            
+                            VStack(spacing: 20){
+                                HStack(spacing: 20){
+                                    Image("vehicle")
+                                        .resizable()
+                                        .frame(width: 110, height: 50)
+                                    PickPlaceButton(title: "A02", action: {})
+                                }
+                                HStack(spacing: 20){
+                                    PickPlaceButton(title: "A03", action: {})
+                                    Image("vehicle")
+                                        .resizable()
+                                        .frame(width: 110, height: 50)
+                                    
+                                }
+                                HStack(spacing: 20){
+                                    PickPlaceButton(title: "A05", action: {})
+                                    Image("vehicle")
+                                        .resizable()
+                                        .frame(width: 110, height: 50)
+                                    
+                                }
                             }
                         }
                     }
                     horizontalWay()
                     
+                    
+                    ZStack{
+
                     SpotScheme()
-                        .padding([.leading,.bottom,.top])
+                            .padding([.leading,.bottom,.top,.trailing])
+
+                        HStack(spacing: 0){
+                            
+                            VStack(spacing: 20){
+                                HStack(spacing: 20){
+                                    Image("vehicle")
+                                        .resizable()
+                                        .frame(width: 110, height: 50)
+                                    PickPlaceButton(title: "A08", action: {})
+                                }
+                                HStack(spacing: 20){
+                                    Image("vehicle")
+                                        .resizable()
+                                        .frame(width: 110, height: 50)
+                                    Image("vehicle")
+                                        .resizable()
+                                        .frame(width: 110, height: 50)
+                                    
+                                }
+                                HStack(spacing: 20){
+                                    PickPlaceButton(title: "A11", action: {})
+                                    Image("vehicle")
+                                        .resizable()
+                                        .frame(width: 110, height: 50)
+                                    
+                                }
+                            }
+                        }
+                    
+                    }
                 }
             }
             Spacer()
             
             HStack(spacing: 15){
                 CustomButton(title: "Continue", action: {
-                    self.navigationStack.push(SelectYourVehicle())
+                    self.navigationStack.push(PaymentView())
                 })
             }
             .frame(maxWidth: .infinity, maxHeight: 130, alignment: .center)

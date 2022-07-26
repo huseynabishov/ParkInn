@@ -19,13 +19,13 @@ struct SpotScheme: View {
             ZStack{
                 HStack{
                     Divider()
-                        .frame(height: 200)
+                        .frame(height: 210)
                         .frame(width: 2)
                         .background(Color.gray.opacity(0.3))
                 }
                 
                 ZStack{
-                    VStack(spacing: 67){
+                    VStack(spacing: 62){
                         Divider()
                             .frame(width: 260)
                             .frame(height: 2)

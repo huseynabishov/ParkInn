@@ -21,7 +21,7 @@ struct PickPlaceButton: View {
         .frame(maxWidth: 110, maxHeight: 45, alignment: .center)
         .overlay(RoundedRectangle(cornerRadius: 10)
             .stroke(Color("AccentColor"), lineWidth:4))
-        .background(Color("ButtonColor").cornerRadius(20))
+        .background(Color("ButtonColor").cornerRadius(10))
     }
 }
 
