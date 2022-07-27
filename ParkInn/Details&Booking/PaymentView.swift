@@ -33,10 +33,9 @@ struct PaymentView: View {
                 Image(systemName: "qrcode.viewfinder")
                     .font(.system(size: 25))
             }
-            .padding()
-            
-            Spacer()
-            
+            .padding([.leading,.trailing])
+                        
+            VStack(spacing: 20){
             HStack{
                 Text("Choose Payment Methods")
                     .foregroundColor(.black)
@@ -45,22 +44,28 @@ struct PaymentView: View {
                 Spacer()
             }
             
-            Spacer()
+            
             Group{
             PaymentButton(SelectedMethod: $SelectedMethod, CurrentMethod: .Paypal, image: "PayPal", title: "Paypal") {
                 SelectedMethod = .Paypal
             }
-            Spacer()
             PaymentButton(SelectedMethod: $SelectedMethod, CurrentMethod: .GoogleP, image: "Google", title: "Google Pay") {
                 SelectedMethod = .GoogleP
             }
-            Spacer()
             PaymentButton(SelectedMethod: $SelectedMethod, CurrentMethod: .AppleP, image: "Apple", title: "Apple Pay") {
                 SelectedMethod = .AppleP
             }
-            Spacer()
+            }
+            ZStack{
+            AddPaymentButton(title: "Add New Card", action: {
+                self.navigationStack.push(SelectYourVehicle())
+            })
+            }
+            .padding()
             }
             
+            
+            Spacer()
             
             HStack(spacing: 15){
                 CustomButton(title: "Continue", action: {

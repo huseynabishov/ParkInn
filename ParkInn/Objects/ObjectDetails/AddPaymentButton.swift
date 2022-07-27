@@ -1,13 +1,13 @@
 //
-//  CustomButton.swift
+//  AddPaymentButton.swift
 //  ParkInn
 //
-//  Created by Huseyn Abishov on 11.06.2022.
+//  Created by Huseyn Abishov on 28.07.2022.
 //
 
 import SwiftUI
 
-struct CustomButton2: View {
+struct AddPaymentButton: View {
     
     let title: String
     let action: () -> Void
@@ -15,7 +15,6 @@ struct CustomButton2: View {
     var buttonTextColor: Color = Color.accentColor
     var iconPath: String?
     var iconBGColorOpacity: Double = 1
-    
     
     var body: some View {
         Button(action: action) {
@@ -29,25 +28,28 @@ struct CustomButton2: View {
                         .clipShape(Capsule())
                 }
                 
+                HStack(spacing: 15){
+                    Image(systemName: "plus.app")
+                        .font(.system(size: 20))
                 Text(title)
-                    .font(.system(size: 20, weight: .semibold, design: .rounded))
+                    .font(.system(size: 17, weight: .semibold, design: .rounded))
                     .fontWeight(.semibold)
-                    .foregroundColor(Color.accentColor)
-                    .frame(maxWidth: 370, maxHeight: 60, alignment: .center)
                     .cornerRadius(90)
                 
-                
+                }
             }
-            .padding(8)
-            .background(buttonColor)
-            .cornerRadius(90)
+            .padding()
             .frame(maxWidth: 370, maxHeight: 60, alignment: .center)
+            .background(Color("ButtonColor"))
+            .cornerRadius(90)
+
+
         }
     }
-    
-    struct CustomButton2_Previews: PreviewProvider {
-        static var previews: some View {
-            CustomButton2(title: "", action: {})    }
-        
+}
+
+struct AddPaymentButton_Previews: PreviewProvider {
+    static var previews: some View {
+        AddPaymentButton(title: "", action: {})
     }
 }
