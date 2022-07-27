@@ -69,7 +69,7 @@ struct PaymentView: View {
             
             HStack(spacing: 15){
                 CustomButton(title: "Continue", action: {
-                    self.navigationStack.push(SelectYourVehicle())
+                    self.navigationStack.push(AddingNewCard())
                 })
             }
             .frame(maxWidth: .infinity, maxHeight: 130, alignment: .center)
