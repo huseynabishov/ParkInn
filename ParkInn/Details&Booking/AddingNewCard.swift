@@ -12,6 +12,8 @@ struct AddingNewCard: View {
     
     @EnvironmentObject private var navigationStack: NavigationStack
     @State var textFieldText: String = ""
+    @State private var degrees: Double = 0
+    @State private var flipped: Bool = false
     
     
     var body: some View {
@@ -28,19 +30,38 @@ struct AddingNewCard: View {
             }
             .padding([.leading,.trailing])
             
-            Image("Debit")
-                .resizable()
-                .frame(width: .infinity, height: 250)
-                .padding()
-            
-            Spacer()
+            // Card view...
+            //            Image("Debit")
+            //                .resizable()
+            //                .frame(width: .infinity, height: 250)
+            //                .padding()
+            CreditCard {
+                
+                VStack{
+                    Group {
+                        if flipped {
+                            CreditCardBack()
+                        } else {
+                            CreditCardFront()
+                        }
+                    }
+                }.rotation3DEffect(.degrees(degrees),
+                                   axis: (x: 0.0, y: 1.0, z: 0.0)
+                )
+                
+            }.onTapGesture {
+                withAnimation{
+                    degrees += 180
+                    flipped.toggle()
+                }
+            }
             
             HStack() {
-            HStack {
-                TextField("NAME", text: self.$textFieldText)
-            }
-            .padding()
-            .background(Color.gray.opacity(0.06).cornerRadius(10))
+                HStack {
+                    TextField("NAME", text: self.$textFieldText)
+                }
+                .padding()
+                .background(Color.gray.opacity(0.06).cornerRadius(10))
             }
             .padding(.leading)
             .padding(.trailing)
@@ -61,8 +82,6 @@ struct AddingNewCard: View {
         })
         .ignoresSafeArea(.all, edges: .bottom)
     }
-    
-    
 }
 
 struct AddingNewCard_Previews: PreviewProvider {
