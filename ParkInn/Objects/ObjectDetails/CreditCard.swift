@@ -17,6 +17,11 @@ struct CreditCard<Content>: View where Content: View {
 }
 
 struct CreditCardFront: View {
+    
+    let name: String
+    let number: String
+    let expires: String
+    
     var body: some View {
         VStack(alignment: .leading) {
             
@@ -28,28 +33,32 @@ struct CreditCardFront: View {
                 
                 Text("VISA")
                     .foregroundColor(Color.white)
-                    .font(.system(size: 24))
+                    .font(.system(size: 27))
                     .fontWeight(.bold)
                 
             }
             
             Spacer()
             
-            Text("**** **** **** 2864")
-                .foregroundColor(Color.white)
-                .font(.system(size: 32))
+            VStack(spacing: 5) {
+            
+                
+                Text(number)
+                    .foregroundColor(Color.white)
+                    .font(.system(size: 27))
+            }
             
             Spacer()
             
             HStack {
                 
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 5) {
                     Text("CARD HOLDER")
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(Color.gray)
                     
-                    Text("JACK WILLIAMS")
+                    Text(name)
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
@@ -57,61 +66,69 @@ struct CreditCardFront: View {
                 
                 Spacer()
                 
-                VStack {
+                VStack(spacing: 5) {
                     Text("EXPIRES")
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(Color.gray)
-                    Text("02/23")
+                    Text(expires)
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                 }
-                
             }
             
             
             
-        }.frame(width: 300, height: 200)
+        }.frame(width: 340, height: 220)
             .padding()
             .background(LinearGradient(gradient: Gradient(colors: [Color("AccentColorP"), Color("AccentColor")] ), startPoint: .topLeading, endPoint: .bottomTrailing))
-            .cornerRadius(10)
+            .cornerRadius(15)
     }
 }
 
 struct CreditCardBack: View {
+    
+    let cvv: String
+
     var body: some View {
         VStack {
             
             Rectangle()
-                .frame(maxWidth: .infinity, maxHeight: 20)
+                .frame(maxWidth: .infinity, maxHeight: 40)
                 .padding([.top])
+                .foregroundColor(Color.gray.opacity(0.8))
             
             Spacer()
             
             HStack {
                 
-                Text("123")
+                Text(cvv)
+                    .keyboardType(.numberPad)
                     .foregroundColor(Color.black)
                     .rotation3DEffect(
                         .degrees(180),
                         axis: (x: 0.0, y: 1.0, z: 0.0))
                     .padding(5)
-                    .frame(width: 100, height: 20)
+                    .frame(width: 100, height: 30)
                     .background(Color.white)
                 
                 
                 Spacer()
+                
             }.padding()
             
-        }.frame(width: 300, height: 200)
-            .background(LinearGradient(gradient: Gradient(colors: [Color.yellow, Color.blue] ), startPoint: .leading, endPoint: .trailing))
-            .cornerRadius(10)
+        }.frame(width: 340, height: 220)
+            .padding()
+            .background(LinearGradient(gradient: Gradient(colors: [Color("AccentColorP"), Color("AccentColor")] ), startPoint: .topLeading, endPoint: .bottomTrailing))
+            .cornerRadius(15)
     }
 }
 
 struct CreditCard_Previews: PreviewProvider {
     static var previews: some View {
-        CreditCard<CreditCardBack>(content:  { CreditCardBack() })
+        CreditCard<CreditCardFront>(content:  { CreditCardFront(name: "", number: "", expires: "") })
+        
+        CreditCard<CreditCardBack>(content:  { CreditCardBack(cvv: "") })
     }
 }

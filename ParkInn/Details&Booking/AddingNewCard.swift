@@ -15,6 +15,11 @@ struct AddingNewCard: View {
     @State private var degrees: Double = 0
     @State private var flipped: Bool = false
     
+    @State private var name: String = ""
+    @State private var number: String = ""
+    @State private var expires: String = ""
+    @State private var cvv: String = ""
+    
     
     var body: some View {
         VStack(spacing: 0, content: {
@@ -40,9 +45,9 @@ struct AddingNewCard: View {
                 VStack{
                     Group {
                         if flipped {
-                            CreditCardBack()
+                            CreditCardBack(cvv: cvv)
                         } else {
-                            CreditCardFront()
+                            CreditCardFront(name: name, number: number, expires: expires)
                         }
                     }
                 }.rotation3DEffect(.degrees(degrees),
@@ -56,16 +61,34 @@ struct AddingNewCard: View {
                 }
             }
             
-            HStack() {
-                HStack {
-                    TextField("NAME", text: self.$textFieldText)
-                }
+            TextField("Name", text: $name)
                 .padding()
                 .background(Color.gray.opacity(0.06).cornerRadius(10))
-            }
-            .padding(.leading)
-            .padding(.trailing)
+                .padding()
             
+            TextField("Number", text: $number)
+                .padding()
+                .background(Color.gray.opacity(0.06).cornerRadius(10))
+                .padding([.trailing,.leading])
+            
+            HStack(spacing: 0) {
+            TextField("Expiration", text: $expires)
+                .padding()
+                .background(Color.gray.opacity(0.06).cornerRadius(10))
+                .padding([.leading,.trailing,.top])
+            
+            TextField("CVV", text: $cvv)
+            { (editingChanged) in
+                withAnimation{
+                    degrees += 180
+                    flipped.toggle()
+                }
+            } onCommit: {}
+                .keyboardType(.numberPad)
+                .padding()
+                .background(Color.gray.opacity(0.06).cornerRadius(10))
+                .padding([.leading,.trailing,.top])
+            }
             Spacer()
             
             
