@@ -27,6 +27,7 @@
 		5C26358E28553F99003C68AD /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26358D28553F99003C68AD /* SignInButton.swift */; };
 		5C263590285544C7003C68AD /* SignInGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26358F285544C7003C68AD /* SignInGoogle.swift */; };
 		5C26359228554525003C68AD /* SignInApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26359128554525003C68AD /* SignInApple.swift */; };
+		5C41178C2896E34A00B512C9 /* CardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C41178B2896E34A00B512C9 /* CardDataModel.swift */; };
 		5C41A7092891F9440048896D /* AddPaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C41A7082891F9440048896D /* AddPaymentButton.swift */; };
 		5C41A70B2891FED80048896D /* AddingNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C41A70A2891FED80048896D /* AddingNewCard.swift */; };
 		5C41A70D28929A560048896D /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C41A70C28929A560048896D /* CreditCard.swift */; };
@@ -112,6 +113,7 @@
 		5C26358D28553F99003C68AD /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
 		5C26358F285544C7003C68AD /* SignInGoogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInGoogle.swift; sourceTree = "<group>"; };
 		5C26359128554525003C68AD /* SignInApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInApple.swift; sourceTree = "<group>"; };
+		5C41178B2896E34A00B512C9 /* CardDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDataModel.swift; sourceTree = "<group>"; };
 		5C41A7082891F9440048896D /* AddPaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentButton.swift; sourceTree = "<group>"; };
 		5C41A70A2891FED80048896D /* AddingNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingNewCard.swift; sourceTree = "<group>"; };
 		5C41A70C28929A560048896D /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 				5C9B3F5E289008D60005AE71 /* PaymentButton.swift */,
 				5C41A7082891F9440048896D /* AddPaymentButton.swift */,
 				5C41A70C28929A560048896D /* CreditCard.swift */,
+				5C41178B2896E34A00B512C9 /* CardDataModel.swift */,
 			);
 			path = ObjectDetails;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				5C01A44F2889991500DBAFD7 /* PickParkingSpot.swift in Sources */,
 				5C55CE0C285B7C5500C259E0 /* PassFill.swift in Sources */,
 				5CFBE39C286C507A007BF6FD /* SearchSampleData.swift in Sources */,
+				5C41178C2896E34A00B512C9 /* CardDataModel.swift in Sources */,
 				5C263584285405C4003C68AD /* CustomButton.swift in Sources */,
 				5CB661392871DC25001039C4 /* DetailButton.swift in Sources */,
 				5C26358C28553E86003C68AD /* SignIn.swift in Sources */,

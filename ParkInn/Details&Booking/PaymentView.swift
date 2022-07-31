@@ -12,12 +12,15 @@ enum methods {
     case Paypal
     case GoogleP
     case AppleP
+    case VisaP
 }
 
 struct PaymentView: View {
     
     @EnvironmentObject private var navigationStack: NavigationStack
     @State private var SelectedMethod: methods = .Paypal
+    
+    @State var cardNumber: String = ""
     
     var body: some View {
         VStack(spacing: 0, content: {
@@ -34,34 +37,39 @@ struct PaymentView: View {
                     .font(.system(size: 25))
             }
             .padding([.leading,.trailing])
-                        
+            
             VStack(spacing: 20){
-            HStack{
-                Text("Choose Payment Methods")
-                    .foregroundColor(.black)
-                    .font(.system(size: 20, weight: .semibold, design: .rounded))
-                    .padding()
-                Spacer()
-            }
-            
-            
-            Group{
-            PaymentButton(SelectedMethod: $SelectedMethod, CurrentMethod: .Paypal, image: "PayPal", title: "Paypal") {
-                SelectedMethod = .Paypal
-            }
-            PaymentButton(SelectedMethod: $SelectedMethod, CurrentMethod: .GoogleP, image: "Google", title: "Google Pay") {
-                SelectedMethod = .GoogleP
-            }
-            PaymentButton(SelectedMethod: $SelectedMethod, CurrentMethod: .AppleP, image: "Apple", title: "Apple Pay") {
-                SelectedMethod = .AppleP
-            }
-            }
-            ZStack{
-            AddPaymentButton(title: "Add New Card", action: {
-                self.navigationStack.push(SelectYourVehicle())
-            })
-            }
-            .padding()
+                HStack{
+                    Text("Choose Payment Methods")
+                        .foregroundColor(.black)
+                        .font(.system(size: 20, weight: .semibold, design: .rounded))
+                        .padding()
+                    Spacer()
+                }
+                
+                
+                Group{
+                    PaymentButton(SelectedMethod: $SelectedMethod, CurrentMethod: .Paypal, image: "PayPal", title: "Paypal") {
+                        SelectedMethod = .Paypal
+                    }
+                    PaymentButton(SelectedMethod: $SelectedMethod, CurrentMethod: .GoogleP, image: "Google", title: "Google Pay") {
+                        SelectedMethod = .GoogleP
+                    }
+                    PaymentButton(SelectedMethod: $SelectedMethod, CurrentMethod: .AppleP, image: "Apple", title: "Apple Pay") {
+                        SelectedMethod = .AppleP
+                    }
+                    if(cardNumber != "") {
+                        PaymentButton(SelectedMethod: $SelectedMethod, CurrentMethod: .VisaP, image: "Visa", title: "**** **** **** " + cardNumber) {
+                            SelectedMethod = .VisaP
+                        }
+                    }
+                }
+                ZStack{
+                    AddPaymentButton(title: "Add New Card", action: {
+                        self.navigationStack.push(AddingNewCard())
+                    })
+                }
+                .padding()
             }
             
             

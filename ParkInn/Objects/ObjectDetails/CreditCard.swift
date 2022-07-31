@@ -22,6 +22,8 @@ struct CreditCardFront: View {
     let number: String
     let expires: String
     
+    @State var cardNumber: String?
+
     var body: some View {
         VStack(alignment: .leading) {
             

@@ -21,6 +21,7 @@ struct AddingNewCard: View {
     @State private var cvv: String = ""
     
     
+    
     var body: some View {
         VStack(spacing: 0, content: {
             HStack(){
@@ -35,11 +36,6 @@ struct AddingNewCard: View {
             }
             .padding([.leading,.trailing])
             
-            // Card view...
-            //            Image("Debit")
-            //                .resizable()
-            //                .frame(width: .infinity, height: 250)
-            //                .padding()
             CreditCard {
                 
                 VStack{
@@ -96,7 +92,8 @@ struct AddingNewCard: View {
             
             HStack(spacing: 15){
                 CustomButton(title: "Add New Card", action: {
-                    self.navigationStack.push(AddingNewCard())
+                    
+                    self.navigationStack.push(PaymentView(cardNumber: number))
                 })
             }
             .frame(maxWidth: .infinity, maxHeight: 130, alignment: .center)
