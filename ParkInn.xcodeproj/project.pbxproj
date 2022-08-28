@@ -82,6 +82,7 @@
 		5CE49C3F2836B00E0033D5CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE49C3E2836B00E0033D5CD /* ContentView.swift */; };
 		5CE49C412836B00F0033D5CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE49C402836B00F0033D5CD /* Assets.xcassets */; };
 		5CE49C442836B00F0033D5CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE49C432836B00F0033D5CD /* Preview Assets.xcassets */; };
+		5CF50ADB28BBEE2200890696 /* ThirdF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF50ADA28BBEE2200890696 /* ThirdF.swift */; };
 		5CFBE39C286C507A007BF6FD /* SearchSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFBE39B286C507A007BF6FD /* SearchSampleData.swift */; };
 		5CFBE39E286C88F2007BF6FD /* SearchObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFBE39D286C88F2007BF6FD /* SearchObservableObject.swift */; };
 		5CFBE3A2286C8E92007BF6FD /* FilterObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFBE3A1286C8E92007BF6FD /* FilterObservableObject.swift */; };
@@ -169,6 +170,7 @@
 		5CE49C3E2836B00E0033D5CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5CE49C402836B00F0033D5CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CE49C432836B00F0033D5CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5CF50ADA28BBEE2200890696 /* ThirdF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdF.swift; sourceTree = "<group>"; };
 		5CFBE39B286C507A007BF6FD /* SearchSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSampleData.swift; sourceTree = "<group>"; };
 		5CFBE39D286C88F2007BF6FD /* SearchObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchObservableObject.swift; sourceTree = "<group>"; };
 		5CFBE3A1286C8E92007BF6FD /* FilterObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterObservableObject.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				5C01A457288A009500DBAFD7 /* SecondF.swift */,
+				5CF50ADA28BBEE2200890696 /* ThirdF.swift */,
 			);
 			path = Floor;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				5C7BC03A285D324E00C9DA72 /* NotificationButton.swift in Sources */,
 				5C7BC02F285BE43800C9DA72 /* AlertPass.swift in Sources */,
 				5CE49C3D2836B00E0033D5CD /* ParkInnApp.swift in Sources */,
+				5CF50ADB28BBEE2200890696 /* ThirdF.swift in Sources */,
 				5CB661342870387C001039C4 /* DetailsView.swift in Sources */,
 				5CB66143287BD1FF001039C4 /* CustomDatePicker.swift in Sources */,
 				5CFBE3A4286C8EA2007BF6FD /* FilterView.swift in Sources */,

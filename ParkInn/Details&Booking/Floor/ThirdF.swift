@@ -1,14 +1,14 @@
 //
-//  SecondF.swift
+//  ThirdF.swift
 //  ParkInn
 //
-//  Created by Huseyn Abishov on 22.07.2022.
+//  Created by Huseyn Abishov on 28.08.2022.
 //
 
 import SwiftUI
 import NavigationStack
 
-struct SecondF: View {
+struct ThirdF: View {
     
     @EnvironmentObject private var navigationStack: NavigationStack
     @State var isSelected: Bool = false
@@ -76,17 +76,19 @@ struct SecondF: View {
                                     
                                 }
                                 HStack(spacing: 20){
-                                    PickPlaceButton(title: "A03", action: {})
+                                    Image("vehicle")
+                                        .resizable()
+                                        .frame(width: 110, height: 50)
                                     Image("vehicle")
                                         .resizable()
                                         .frame(width: 110, height: 50)
                                     
                                 }
                                 HStack(spacing: 20){
-                                    PickPlaceButton(title: "A05", action: {})
                                     Image("vehicle")
                                         .resizable()
                                         .frame(width: 110, height: 50)
+                                    PickPlaceButton(title: "A06", action: {})
                                     
                                 }
                             }
@@ -110,9 +112,7 @@ struct SecondF: View {
                                     PickPlaceButton(title: "A08", action: {})
                                 }
                                 HStack(spacing: 20){
-                                    Image("vehicle")
-                                        .resizable()
-                                        .frame(width: 110, height: 50)
+                                    PickPlaceButton(title: "A09", action: {})
                                     Image("vehicle")
                                         .resizable()
                                         .frame(width: 110, height: 50)
@@ -122,9 +122,7 @@ struct SecondF: View {
                                     Image("vehicle")
                                         .resizable()
                                         .frame(width: 110, height: 50)
-                                    Image("vehicle")
-                                        .resizable()
-                                        .frame(width: 110, height: 50)
+                                    PickPlaceButton(title: "A12", action: {})
                                     
                                 }
                             }
@@ -150,8 +148,8 @@ struct SecondF: View {
     }
 }
 
-struct SecondF_Previews: PreviewProvider {
+struct ThirdF_Previews: PreviewProvider {
     static var previews: some View {
-        SecondF()
+        ThirdF()
     }
 }

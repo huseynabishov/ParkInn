@@ -11,7 +11,7 @@ import NavigationStack
 struct PickParkingSpot: View {
     
     @EnvironmentObject private var navigationStack: NavigationStack
-
+    
     
     var body: some View {
         VStack(spacing: 0, content: {
@@ -29,31 +29,36 @@ struct PickParkingSpot: View {
             Spacer()
             
             HStack{
+                
                 FloorButton(title: "1st Floor", action: {
-                    //                    self.navigationStack.push(SecondF())
+                    self.navigationStack.push(PickParkingSpot())
                 })
                 
-                FloorButton(title: "2nd Floor", action: {})
+                FloorButton(title: "2nd Floor", action: {
+                    self.navigationStack.push(SecondF())
+                })
                 
-                FloorButton(title: "3rd Floor", action: {})
+                FloorButton(title: "3rd Floor", action: {
+                    self.navigationStack.push(ThirdF())
+                })
             }
             .padding()
             
             Spacer()
             HStack(spacing: 20){
                 HStack(spacing: 10){
-                Text("2 WAY TRAFFIC").kerning(15)
-                    .fixedSize()
-                    .frame(width: 20, height: 180)
-                    .font(.system(size: 19, weight: .semibold, design: .rounded))
-                    .foregroundColor(Color.gray.opacity(0.7))
-                    .rotationEffect(.degrees(270))
-                
-                VStack(spacing: 20){
-                    Text("Entry")
+                    Text("2 WAY TRAFFIC").kerning(15)
+                        .fixedSize()
+                        .frame(width: 20, height: 180)
                         .font(.system(size: 19, weight: .semibold, design: .rounded))
-                    WayLine()
-                }
+                        .foregroundColor(Color.gray.opacity(0.7))
+                        .rotationEffect(.degrees(270))
+                    
+                    VStack(spacing: 20){
+                        Text("Entry")
+                            .font(.system(size: 19, weight: .semibold, design: .rounded))
+                        WayLine()
+                    }
                 }
                 
                 VStack(spacing:25){
@@ -92,10 +97,10 @@ struct PickParkingSpot: View {
                     
                     
                     ZStack{
-
-                    SpotScheme()
+                        
+                        SpotScheme()
                             .padding([.leading,.bottom,.top,.trailing])
-
+                        
                         HStack(spacing: 0){
                             
                             VStack(spacing: 20){
@@ -123,7 +128,7 @@ struct PickParkingSpot: View {
                                 }
                             }
                         }
-                    
+                        
                     }
                 }
             }

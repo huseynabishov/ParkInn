@@ -16,6 +16,18 @@ struct CreditCard<Content>: View where Content: View {
     }
 }
 
+//class TFManager:ObservableObject {
+//
+//    let characterLimit = 4
+//     @Published var userInput = ""
+//
+//    func didSet() {
+//        if userInput.count > characterLimit {
+//            userInput = String(userInput.prefix(characterLimit))
+//        }
+//    }
+//}
+
 struct CreditCardFront: View {
     
     let name: String
@@ -23,6 +35,7 @@ struct CreditCardFront: View {
     let expires: String
     
     @State var cardNumber: String?
+//    @ObservedObject var tfManager = TFManager()
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -44,10 +57,11 @@ struct CreditCardFront: View {
             
             VStack(spacing: 5) {
             
-                
                 Text(number)
+//                TextField("", text: $tfManager.userInput)
                     .foregroundColor(Color.white)
                     .font(.system(size: 27))
+
             }
             
             Spacer()
@@ -127,6 +141,11 @@ struct CreditCardBack: View {
     }
 }
 
+
+                    
+                    
+                    
+                    
 struct CreditCard_Previews: PreviewProvider {
     static var previews: some View {
         CreditCard<CreditCardFront>(content:  { CreditCardFront(name: "", number: "", expires: "") })

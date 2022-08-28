@@ -115,6 +115,7 @@ struct PopUpWindow: View {
                         
                     }).buttonStyle(PlainButtonStyle())
                 }
+//                .padding()
                 .frame(width: 310, height: 420)
                 .background(Color.white)
                 .cornerRadius(25)
