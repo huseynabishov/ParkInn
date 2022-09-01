@@ -13,8 +13,10 @@ struct ParkInnApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStackView(transitionType: .custom(AnyTransition.opacity.animation(.easeInOut(duration:0.7)))){
+                
                 ContentView()
             }
         }
     }
 }
+

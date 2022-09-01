@@ -75,6 +75,11 @@
 		5CB66141287BCE8A001039C4 /* BookParkingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB66140287BCE89001039C4 /* BookParkingDetails.swift */; };
 		5CB66143287BD1FF001039C4 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB66142287BD1FF001039C4 /* CustomDatePicker.swift */; };
 		5CBC7E3928560C7100746072 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC7E3828560C7100746072 /* Arrow.swift */; };
+		5CD62B3F28BE95A00033287E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD62B3E28BE95A00033287E /* SearchBarView.swift */; };
+		5CD62B4228BEBBFB0033287E /* ParkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD62B4128BEBBFB0033287E /* ParkingModel.swift */; };
+		5CD62B4428C0FBC20033287E /* AlertPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD62B4328C0FBC20033287E /* AlertPopUp.swift */; };
+		5CD62B4628C0FD950033287E /* ReviewSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD62B4528C0FD950033287E /* ReviewSummary.swift */; };
+		5CD62B4828C104880033287E /* ParkingTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD62B4728C104880033287E /* ParkingTicket.swift */; };
 		5CD6E65D2836E22600C6E592 /* MapDirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E65C2836E22600C6E592 /* MapDirect.swift */; };
 		5CD6E65F2836F2CA00C6E592 /* BookPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E65E2836F2CA00C6E592 /* BookPay.swift */; };
 		5CD6E6612836F44100C6E592 /* ExtendTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E6602836F44100C6E592 /* ExtendTime.swift */; };
@@ -146,6 +151,7 @@
 		5C7BC03B285D335500C9DA72 /* NotificationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScreen.swift; sourceTree = "<group>"; };
 		5C7BC03D285D3E1D00C9DA72 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		5C7BC03F285D429E00C9DA72 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
+		5C9833FE28BD4406004B4C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C9A3D202836D64F00A3D428 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		5C9B3F5A288F21010005AE71 /* PickPlaceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceButton.swift; sourceTree = "<group>"; };
 		5C9B3F5C289003980005AE71 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
@@ -162,6 +168,11 @@
 		5CB66140287BCE89001039C4 /* BookParkingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookParkingDetails.swift; sourceTree = "<group>"; };
 		5CB66142287BD1FF001039C4 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		5CBC7E3828560C7100746072 /* Arrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
+		5CD62B3E28BE95A00033287E /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		5CD62B4128BEBBFB0033287E /* ParkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingModel.swift; sourceTree = "<group>"; };
+		5CD62B4328C0FBC20033287E /* AlertPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPopUp.swift; sourceTree = "<group>"; };
+		5CD62B4528C0FD950033287E /* ReviewSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSummary.swift; sourceTree = "<group>"; };
+		5CD62B4728C104880033287E /* ParkingTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingTicket.swift; sourceTree = "<group>"; };
 		5CD6E65C2836E22600C6E592 /* MapDirect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDirect.swift; sourceTree = "<group>"; };
 		5CD6E65E2836F2CA00C6E592 /* BookPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPay.swift; sourceTree = "<group>"; };
 		5CD6E6602836F44100C6E592 /* ExtendTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendTime.swift; sourceTree = "<group>"; };
@@ -307,6 +318,7 @@
 		5C7BC035285D314500C9DA72 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				5C9833FD28BD4106004B4C45 /* ObjectsMapbox */,
 				5C263582285405AE003C68AD /* ObjectsOnboarding */,
 				5C630C8B28582BA4004C77BE /* ObjectsProfile */,
 				5C02669728591CB30026E462 /* ObjectsPassword */,
@@ -322,6 +334,7 @@
 			children = (
 				5C7BC039285D324E00C9DA72 /* NotificationButton.swift */,
 				5C7BC03D285D3E1D00C9DA72 /* SearchButton.swift */,
+				5CD62B3E28BE95A00033287E /* SearchBarView.swift */,
 				5C6908BD285D5D1D00676417 /* NotifSucc.swift */,
 				5C03903828615BC50023585A /* NotifWall.swift */,
 				5C03907A2863E91A0023585A /* LocationPinButton.swift */,
@@ -350,6 +363,13 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		5C9833FD28BD4106004B4C45 /* ObjectsMapbox */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ObjectsMapbox;
+			sourceTree = "<group>";
+		};
 		5CB6613228703841001039C4 /* Details&Booking */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +381,8 @@
 				5C01A456288A008300DBAFD7 /* Floor */,
 				5C9B3F5C289003980005AE71 /* PaymentView.swift */,
 				5C41A70A2891FED80048896D /* AddingNewCard.swift */,
+				5CD62B4528C0FD950033287E /* ReviewSummary.swift */,
+				5CD62B4728C104880033287E /* ParkingTicket.swift */,
 			);
 			path = "Details&Booking";
 			sourceTree = "<group>";
@@ -381,8 +403,17 @@
 				5C41A7082891F9440048896D /* AddPaymentButton.swift */,
 				5C41A70C28929A560048896D /* CreditCard.swift */,
 				5C41178B2896E34A00B512C9 /* CardDataModel.swift */,
+				5CD62B4328C0FBC20033287E /* AlertPopUp.swift */,
 			);
 			path = ObjectDetails;
+			sourceTree = "<group>";
+		};
+		5CD62B4028BEBBDD0033287E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5CD62B4128BEBBFB0033287E /* ParkingModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5CE49C302836B00E0033D5CD = {
@@ -404,6 +435,8 @@
 		5CE49C3B2836B00E0033D5CD /* ParkInn */ = {
 			isa = PBXGroup;
 			children = (
+				5C9833FE28BD4406004B4C45 /* Info.plist */,
+				5CD62B4028BEBBDD0033287E /* Models */,
 				5C7BC035285D314500C9DA72 /* Objects */,
 				5C26357B2853FFFB003C68AD /* LaunchScreeen */,
 				5C8B9E762836D5FD00B3757B /* Onboarding */,
@@ -529,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CD62B4828C104880033287E /* ParkingTicket.swift in Sources */,
 				5CFBE3A8286C9175007BF6FD /* PersonRowView.swift in Sources */,
 				5CB6613B2871E36E001039C4 /* SelectYourVehicle.swift in Sources */,
 				5C41A7092891F9440048896D /* AddPaymentButton.swift in Sources */,
@@ -539,6 +573,7 @@
 				5C55CE04285A7BA400C259E0 /* ViaEmail.swift in Sources */,
 				5C630C832857DD9F004C77BE /* LogosButton.swift in Sources */,
 				5C01A45128899A0700DBAFD7 /* FloorButton.swift in Sources */,
+				5CD62B4228BEBBFB0033287E /* ParkingModel.swift in Sources */,
 				5C630C9528583C71004C77BE /* Nickname.swift in Sources */,
 				5C630C8A28582143004C77BE /* FillProfile.swift in Sources */,
 				5C7BC03E285D3E1D00C9DA72 /* SearchButton.swift in Sources */,
@@ -562,6 +597,7 @@
 				5C630C932858399F004C77BE /* UsernameObj.swift in Sources */,
 				5C55CE08285A8FEF00C259E0 /* Verification.swift in Sources */,
 				5C7BC031285D2E5200C9DA72 /* CustomScrollView.swift in Sources */,
+				5CD62B4428C0FBC20033287E /* AlertPopUp.swift in Sources */,
 				5C630C8528581C11004C77BE /* LoginAcc.swift in Sources */,
 				5C263590285544C7003C68AD /* SignInGoogle.swift in Sources */,
 				5C7BC03A285D324E00C9DA72 /* NotificationButton.swift in Sources */,
@@ -578,6 +614,7 @@
 				5CB6613628703C64001039C4 /* ParkingDetails.swift in Sources */,
 				5C26358E28553F99003C68AD /* SignInButton.swift in Sources */,
 				5CB6613F28748688001039C4 /* SelectVehicle.swift in Sources */,
+				5CD62B3F28BE95A00033287E /* SearchBarView.swift in Sources */,
 				5C26359228554525003C68AD /* SignInApple.swift in Sources */,
 				5C9A3D212836D64F00A3D428 /* Welcome.swift in Sources */,
 				5C55CE06285A8CED00C259E0 /* ForgotFill.swift in Sources */,
@@ -610,6 +647,7 @@
 				5CAE42C7287F4BF800FC7DFF /* DateValue.swift in Sources */,
 				5C0266962859167A0026E462 /* ForgotPassword.swift in Sources */,
 				5C03903C286168C60023585A /* SavedScreen.swift in Sources */,
+				5CD62B4628C0FD950033287E /* ReviewSummary.swift in Sources */,
 				5C5FD03E2880591F004F740F /* TaskData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,6 +780,7 @@
 				DEVELOPMENT_TEAM = PW78GG62RA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParkInn/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
@@ -775,6 +814,7 @@
 				DEVELOPMENT_TEAM = PW78GG62RA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParkInn/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";

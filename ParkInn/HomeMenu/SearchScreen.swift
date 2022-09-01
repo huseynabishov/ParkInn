@@ -10,27 +10,46 @@ import NavigationStack
 
 struct SearchScreen: View {
     
+    @State var searchText: String = ""
+    
     @EnvironmentObject private var navigationStack: NavigationStack
-//    @State var showView: Bool = false
+    //    @State var showView: Bool = false
     
     @State private var showModal = false
     
+    
     var body: some View {
-        
-        ZStack{
-            Button(action:{ showModal = true }){
-                Image(systemName: "slider.horizontal.3")
-                    .font(.system(size:40,weight:.heavy,design:.rounded))
-                    .foregroundColor(.black)
-                    .padding(.vertical,20)
-                    .padding(.horizontal,40)
+        VStack(){
+            ZStack{
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(
+                            searchText.isEmpty ? Color.gray : Color("AccentColor"))
+                    
+                    
+                    TextField("Search...", text: $searchText)
+                        .foregroundColor(Color("AccentColor"))
+                    Button(action:{ showModal = true }){
+                        Image(systemName: "slider.horizontal.3")
+                            .foregroundColor(Color("AccentColor"))
+                    }
+                }
+                .font(.headline)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color("AccentColor").opacity(0.1))
+                    //                    .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: 0)
+                )
+                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("AccentColor")))
+                
+                .padding()
+                
+                FilterView(isShowing: $showModal)
             }
-            .offset(y:-100)
-            
-            FilterView(isShowing: $showModal)
+            .frame(maxWidth:.infinity,maxHeight:.infinity)
+            .statusBar(hidden:true)
         }
-        .frame(maxWidth:.infinity,maxHeight:.infinity)
-        .statusBar(hidden:true)
     }
 }
 
