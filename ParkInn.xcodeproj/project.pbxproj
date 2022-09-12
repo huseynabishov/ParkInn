@@ -83,6 +83,7 @@
 		5CD6E65D2836E22600C6E592 /* MapDirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E65C2836E22600C6E592 /* MapDirect.swift */; };
 		5CD6E65F2836F2CA00C6E592 /* BookPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E65E2836F2CA00C6E592 /* BookPay.swift */; };
 		5CD6E6612836F44100C6E592 /* ExtendTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E6602836F44100C6E592 /* ExtendTime.swift */; };
+		5CDFF59828CEA34700AE658F /* BookParkingDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFF59728CEA34700AE658F /* BookParkingDetailsModel.swift */; };
 		5CE49C3D2836B00E0033D5CD /* ParkInnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */; };
 		5CE49C3F2836B00E0033D5CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE49C3E2836B00E0033D5CD /* ContentView.swift */; };
 		5CE49C412836B00F0033D5CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE49C402836B00F0033D5CD /* Assets.xcassets */; };
@@ -151,7 +152,6 @@
 		5C7BC03B285D335500C9DA72 /* NotificationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScreen.swift; sourceTree = "<group>"; };
 		5C7BC03D285D3E1D00C9DA72 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		5C7BC03F285D429E00C9DA72 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
-		5C9833FE28BD4406004B4C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C9A3D202836D64F00A3D428 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		5C9B3F5A288F21010005AE71 /* PickPlaceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceButton.swift; sourceTree = "<group>"; };
 		5C9B3F5C289003980005AE71 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
@@ -176,6 +176,7 @@
 		5CD6E65C2836E22600C6E592 /* MapDirect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDirect.swift; sourceTree = "<group>"; };
 		5CD6E65E2836F2CA00C6E592 /* BookPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPay.swift; sourceTree = "<group>"; };
 		5CD6E6602836F44100C6E592 /* ExtendTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendTime.swift; sourceTree = "<group>"; };
+		5CDFF59728CEA34700AE658F /* BookParkingDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookParkingDetailsModel.swift; sourceTree = "<group>"; };
 		5CE49C392836B00E0033D5CD /* ParkInn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkInn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkInnApp.swift; sourceTree = "<group>"; };
 		5CE49C3E2836B00E0033D5CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -318,7 +319,6 @@
 		5C7BC035285D314500C9DA72 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				5C9833FD28BD4106004B4C45 /* ObjectsMapbox */,
 				5C263582285405AE003C68AD /* ObjectsOnboarding */,
 				5C630C8B28582BA4004C77BE /* ObjectsProfile */,
 				5C02669728591CB30026E462 /* ObjectsPassword */,
@@ -363,13 +363,6 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		5C9833FD28BD4106004B4C45 /* ObjectsMapbox */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ObjectsMapbox;
-			sourceTree = "<group>";
-		};
 		5CB6613228703841001039C4 /* Details&Booking */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				5CD62B4128BEBBFB0033287E /* ParkingModel.swift */,
+				5CDFF59728CEA34700AE658F /* BookParkingDetailsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -435,7 +429,6 @@
 		5CE49C3B2836B00E0033D5CD /* ParkInn */ = {
 			isa = PBXGroup;
 			children = (
-				5C9833FE28BD4406004B4C45 /* Info.plist */,
 				5CD62B4028BEBBDD0033287E /* Models */,
 				5C7BC035285D314500C9DA72 /* Objects */,
 				5C26357B2853FFFB003C68AD /* LaunchScreeen */,
@@ -624,6 +617,7 @@
 				5C263586285408B8003C68AD /* CustomButton2.swift in Sources */,
 				5C630C992858B297004C77BE /* PopUpView.swift in Sources */,
 				5CD6E65F2836F2CA00C6E592 /* BookPay.swift in Sources */,
+				5CDFF59828CEA34700AE658F /* BookParkingDetailsModel.swift in Sources */,
 				5CFBE3AE286D53BF007BF6FD /* SliderKm.swift in Sources */,
 				5C01A44F2889991500DBAFD7 /* PickParkingSpot.swift in Sources */,
 				5C55CE0C285B7C5500C259E0 /* PassFill.swift in Sources */,

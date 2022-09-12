@@ -12,6 +12,8 @@ struct PickParkingSpot: View {
     
     @EnvironmentObject private var navigationStack: NavigationStack
     
+    @EnvironmentObject var vm: BookParkingDetailsModel
+
     
     var body: some View {
         VStack(spacing: 0, content: {
@@ -136,7 +138,10 @@ struct PickParkingSpot: View {
             
             HStack(spacing: 15){
                 CustomButton(title: "Continue", action: {
-                    self.navigationStack.push(PaymentView())
+                    self.navigationStack.push(
+                        PaymentView()
+                            .environmentObject(vm)
+                    )
                 })
             }
             .frame(maxWidth: .infinity, maxHeight: 130, alignment: .center)

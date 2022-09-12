@@ -15,6 +15,8 @@ struct ReviewSummary: View {
     @State var customAlert = false
     @State private var showingPopover = false
     
+    @EnvironmentObject var vm: BookParkingDetailsModel
+    
     var body: some View {
         ZStack{
             VStack(spacing: 0, content: {
@@ -27,10 +29,67 @@ struct ReviewSummary: View {
                         .font(.system(size: 25, weight: .semibold, design: .rounded))
                     
                     Spacer()
+                    
                 }
+                
+                VStack(spacing: 0) {
+                    HStack(){
+                        Text("Parking Area")
+                            .padding()
+                            .font(.callout)
+                        Spacer()
+                        Text("Parking Lot of San Manolia")
+                            .foregroundColor(.black)
+                            .font(.system(size: 17).bold())
+
+                    }
+                    
+                    HStack(){
+                        Text("Address")
+                            .padding()
+                            .font(.callout)
+                        Spacer()
+                        
+                        Text("9569, Trantow Courts")
+                            .foregroundColor(.black)
+                            .font(.system(size: 17).bold())
+                    }
+                    
+                    HStack(){
+                        Text("Vehicle")
+                            .padding()
+                            .font(.callout)
+                        Spacer()
+                        
+                        Text("9569, Trantow Courts")
+                            .foregroundColor(.black)
+                            .font(.system(size: 17).bold())
+                    }
+
+                    
+                }
+                .padding()
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                
+                .background(Color.white.cornerRadius(20))
+                
+                .shadow(
+                    color: Color.gray.opacity(0.20),
+                    radius: 10, x: 0, y: 0)
                 .padding()
                 
                 Spacer()
+                
+                
+                
+                Text("\(vm.calculatedTotal)")
+                    .foregroundColor(.black)
+                
+                
+                
+                Spacer()
+                
+                
                 HStack(spacing: 15){
                     CustomButton(title: "Confirm Payment", action: {
                         showingPopover = true
@@ -96,7 +155,7 @@ struct PopUpWindow1: View {
                             }).buttonStyle(PlainButtonStyle())
                             
                             Button(action: {
-
+                                
                                 withAnimation(.linear(duration: 0.3)) {
                                     show = false
                                 }
@@ -187,5 +246,6 @@ struct BlurView1 : UIViewRepresentable {
 struct ReviewSummary_Previews: PreviewProvider {
     static var previews: some View {
         ReviewSummary()
+            .environmentObject(BookParkingDetailsModel())
     }
 }

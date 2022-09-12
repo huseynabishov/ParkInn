@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomDatePicker: View {
     
-    @Binding var currentDate: Date
+    @EnvironmentObject private var vm: BookParkingDetailsModel
     
     // Month update on arrow button clicks...
     @State var currentMonth: Int = 0
@@ -18,8 +18,7 @@ struct CustomDatePicker: View {
     //    @State var width1: CGFloat = 15
     var totalWidth = UIScreen.main.bounds.width - 45
     
-    @State private var pickinn = Date()
-    @State private var pickinn1 = Date()
+
     
     var body: some View {
         VStack(spacing: 0){
@@ -86,10 +85,10 @@ struct CustomDatePicker: View {
                                 .fill(Color("AccentColor"))
                                 .frame(width: 45, height: 45)
                                 .padding(.horizontal)
-                                .opacity(isSameDay(date1: value.date, date2: currentDate) ? 1 : 0)
+                                .opacity(isSameDay(date1: value.date, date2: vm.selectedDate) ? 1 : 0)
                         )
                         .onTapGesture {
-                            currentDate = value.date
+                            vm.selectedDate = value.date
                         }
                 }
             }
@@ -103,7 +102,7 @@ struct CustomDatePicker: View {
         .onChange(of: currentMonth) { newValue in
             
             // updating Month...
-            currentDate = getCurrentMonth()
+            vm.selectedDate = getCurrentMonth()
         }
         
         VStack(spacing: 3){
@@ -183,7 +182,7 @@ struct CustomDatePicker: View {
         Spacer()
         
         HStack{
-        DatePicker("", selection: $pickinn, displayedComponents: .hourAndMinute)
+            DatePicker("", selection: $vm.selectedStartHour, displayedComponents: .hourAndMinute)
             .labelsHidden()
             .transformEffect(.init(scaleX: 1.1, y: 1.0))
             .padding(.leading)
@@ -197,7 +196,7 @@ struct CustomDatePicker: View {
                 .padding(.trailing)
             
             
-            DatePicker("", selection: $pickinn1, displayedComponents: .hourAndMinute)
+            DatePicker("", selection: $vm.selectedEndHour, displayedComponents: .hourAndMinute)
                 .labelsHidden()
                 .transformEffect(.init(scaleX: 1.1, y: 1.0))
                 .padding(.leading)
@@ -237,11 +236,11 @@ struct CustomDatePicker: View {
                 
                 if let task = tasks.first(where: { task in
                     
-                    return isSameDay(date1: task.taskDate, date2: currentDate)
+                    return isSameDay(date1: task.taskDate, date2: vm.selectedDate)
                 }){
                     Text("\(value.day)")
                     //                        .font(.title3.bold())
-                        .foregroundColor(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : .primary)
+                        .foregroundColor(isSameDay(date1: task.taskDate, date2: vm.selectedDate) ? .white : .primary)
                         .frame(maxWidth: .infinity)
                     
                 }else{
@@ -249,7 +248,7 @@ struct CustomDatePicker: View {
                     
                     Text("\(value.day)")
                     //                        .font(.title3.bold())
-                        .foregroundColor(isSameDay(date1: value.date, date2: currentDate) ? .white : Color.black.opacity(0.6))
+                        .foregroundColor(isSameDay(date1: value.date, date2: vm.selectedDate) ? .white : Color.black.opacity(0.6))
                         .frame(maxWidth: .infinity)
                         .font(.system(size: 14))
                     
@@ -273,7 +272,7 @@ struct CustomDatePicker: View {
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY MMMM"
         
-        let date = formatter.string(from: currentDate)
+        let date = formatter.string(from: vm.selectedDate)
         
         return date.components(separatedBy: " ")
     }
@@ -325,7 +324,7 @@ struct CustomDatePicker: View {
 
 struct CustomDatePicker_Previews: PreviewProvider {
     static var previews: some View {
-        BookParkingDetails()
+        CustomDatePicker().environmentObject(BookParkingDetailsModel())
     }
 }
 

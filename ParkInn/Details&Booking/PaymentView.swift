@@ -19,6 +19,8 @@ struct PaymentView: View {
     
     @EnvironmentObject private var navigationStack: NavigationStack
     @State private var SelectedMethod: methods = .Paypal
+    @EnvironmentObject var vm: BookParkingDetailsModel
+
     
     @State var cardNumber: String = ""
     
@@ -77,7 +79,10 @@ struct PaymentView: View {
             
             HStack(spacing: 15){
                 CustomButton(title: "Continue", action: {
-                    self.navigationStack.push(ReviewSummary())
+                    self.navigationStack.push(
+                        ReviewSummary()
+                            .environmentObject(vm)
+                    )
                 })
             }
             .frame(maxWidth: .infinity, maxHeight: 130, alignment: .center)

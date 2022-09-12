@@ -11,7 +11,9 @@ import NavigationStack
 struct BookParkingDetails: View {
     
     @EnvironmentObject private var navigationStack: NavigationStack
-    @State var currentDate: Date = Date()
+    
+    @StateObject private var vm = BookParkingDetailsModel()
+    
 
     var body: some View {
         VStack(spacing: 0, content: {
@@ -26,17 +28,22 @@ struct BookParkingDetails: View {
             }
             VStack(spacing: 0) {
                 
-                CustomDatePicker(currentDate: $currentDate)
+                CustomDatePicker()
+                    .environmentObject(vm)
+                    
             }
 //            .padding(.vertical)
             
             HStack(spacing: 15){
                 
                 CustomButton(title: "Continue", action: {
-                    self.navigationStack.push(PickParkingSpot())
+                    self.navigationStack.push(
+                        PickParkingSpot()
+                            .environmentObject(vm)
+                            
+                    )
                 })
             }
-            
             .frame(maxWidth: .infinity, maxHeight: 130, alignment: .center)
             .overlay(RoundedRectangle(cornerRadius: 20)
                 .stroke(Color("ButtonColor"), lineWidth:2))
