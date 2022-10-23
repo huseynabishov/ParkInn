@@ -41,7 +41,7 @@ struct OnboardingScreenView: View {
            let description: String
            let buttonText: String
            @Binding var currentIndex: Int
-           @EnvironmentObject private var navigationStack: NavigationStack
+           @EnvironmentObject private var navigationStack: NavigationStackCompat
 
            var body: some View {
                VStack(){

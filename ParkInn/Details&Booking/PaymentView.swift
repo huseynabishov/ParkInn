@@ -17,7 +17,7 @@ enum methods {
 
 struct PaymentView: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     @State private var SelectedMethod: methods = .Paypal
     @EnvironmentObject var vm: BookParkingDetailsModel
 

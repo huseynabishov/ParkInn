@@ -12,7 +12,7 @@ struct SearchScreen: View {
     
     @State var searchText: String = ""
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     //    @State var showView: Bool = false
     
     @State private var showModal = false

@@ -10,7 +10,7 @@ import NavigationStack
 
 struct DetailsView: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     @State private var showModal = false
     
     var body: some View {

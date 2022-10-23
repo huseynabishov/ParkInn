@@ -10,7 +10,9 @@ import NavigationStack
 
 struct SearchButton: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
+    @Environment(\.colorScheme) var colorScheme
+
 
     let title: String
     let action: () -> Void
@@ -21,12 +23,12 @@ struct SearchButton: View {
             Button(action: action) {
             Circle()
                 .frame(width: 50, height: 50)
-                .foregroundColor(Color.white)
+                .foregroundColor(colorScheme == .light ? .white : .black)
 //                .padding()
                 .overlay(
                     Image(systemName: "magnifyingglass")
                         .font(.system(size:25))
-                        .foregroundColor(Color("AccentColor"))
+                        .foregroundColor(colorScheme == .light ? Color("AccentColor") : .white)
                 )
             }
         }.frame(width: 60, height: 60)

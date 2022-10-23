@@ -10,7 +10,7 @@ import NavigationStack
 
 struct MainMenu: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     private static let childID = "ForgetPasswordId"
     
     var body: some View {
@@ -77,7 +77,11 @@ struct MainMenu: View {
 
 struct MainMenu_Previews: PreviewProvider {
     static var previews: some View {
-        MainMenu()
-        //            .preferredColorScheme(.dark)
+        Group {
+            MainMenu()
+                .preferredColorScheme(.light)
+            MainMenu()
+                .preferredColorScheme(.dark)
+        }
     }
 }

@@ -10,7 +10,7 @@ import NavigationStack
 
 struct ReviewSummary: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     
     @State var customAlert = false
     @State private var showingPopover = false
@@ -56,7 +56,7 @@ struct ReviewSummary: View {
                     }
                     
                     HStack(){
-                        Text("Vehicle")
+                        Text("Vehicles")
                             .padding()
                             .font(.callout)
                         Spacer()
@@ -108,7 +108,7 @@ struct ReviewSummary: View {
 
 struct PopUpWindow1: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     
     let action: () -> Void
     

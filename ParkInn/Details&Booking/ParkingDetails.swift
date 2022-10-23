@@ -11,8 +11,9 @@ import NavigationStack
 
 struct ParkingDetails: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     @State private var currentIndex = 0
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         VStack(spacing: 0, content: {
@@ -21,7 +22,7 @@ struct ParkingDetails: View {
                     self.navigationStack.pop()
                 })
                 Text("Parking Details")
-                    .foregroundColor(.black)
+                    .foregroundColor(colorScheme == .light ? .black : .white)
                     .font(.system(size: 25, weight: .semibold, design: .rounded))
                 
                 Spacer()
@@ -98,12 +99,11 @@ struct ParkingDetails: View {
                 HStack(){
                     VStack(alignment: .leading, spacing: 10){
                         Text("Parking Lot of San Manolia")
-                            .foregroundColor(.black)
-                            .font(.system(size: 25, weight: .semibold, design: .rounded))
+                            .foregroundColor(colorScheme == .light ? .black : .white)                            .font(.system(size: 25, weight: .semibold, design: .rounded))
                         
                         
                         Text("9569, Trantow Courts, San Manolia")
-                            .foregroundColor(.black.opacity(0.6))
+                            .foregroundColor(colorScheme == .light ? .black.opacity(0.6) : .white.opacity(0.6))
                             .font(.system(size: 18, weight: .semibold, design: .rounded))
                             .multilineTextAlignment(.leading)
                         
@@ -144,12 +144,12 @@ struct ParkingDetails: View {
                         self.navigationStack.push(NotificationMenu())
                     })
                 }
-                .padding()
+                .padding([.trailing,.leading])
             }
             
             HStack{
                 Text("Description")
-                    .foregroundColor(.black)
+                    .foregroundColor(colorScheme == .light ? .black : .white)
                     .font(.system(size: 23, weight: .semibold, design: .rounded))
                 Spacer()
             }
@@ -157,10 +157,10 @@ struct ParkingDetails: View {
             
             HStack{
                 Text("Lorem ipsum dolar sit amet, consectetur adispiscing elit, sed do eiusmad tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolar in cillum pariatur. Duis aute irure dolar in cillum pariatur. Ut enim ad minim veriam, quis nastrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..." )
-                    .foregroundColor(.black.opacity(0.6))
+                    .foregroundColor(colorScheme == .light ? .black.opacity(0.6) : .white.opacity(0.6))
                     .font(.system(size: 15, weight: .semibold, design: .rounded))
                     .multilineTextAlignment(.leading)
-                    .padding()
+                    .padding([.leading,.trailing,.bottom])
             }
             
             Spacer()
@@ -170,12 +170,13 @@ struct ParkingDetails: View {
                     .foregroundColor(Color("AccentColor"))
                     .font(.system(size: 25, weight: .semibold, design: .rounded))
                 Text("per hour")
-                    .foregroundColor(.black.opacity(0.6))
+                    .foregroundColor(colorScheme == .light ? .black.opacity(0.6) : .white.opacity(0.6))
                     .font(.system(size: 15, weight: .semibold, design: .rounded))
             }
             .frame(maxWidth: 380, maxHeight: 80, alignment: .center)
             .overlay(RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.white, lineWidth:1))
+                .stroke(lineWidth:1)
+                .foregroundColor(colorScheme == .light ? .white : Color("AccentColorD")))
             .background(Color("ButtonColor").opacity(0.6).cornerRadius(20))
             
             Spacer()
@@ -203,7 +204,7 @@ struct ParkingDetails: View {
         let description: String
         let buttonText: String
         @Binding var currentIndex: Int
-        @EnvironmentObject private var navigationStack: NavigationStack
+        @EnvironmentObject private var navigationStack: NavigationStackCompat
         
         var body: some View {
             VStack(){
@@ -243,7 +244,7 @@ struct Fancy5DotsIndexView: View {
                     .transition(AnyTransition.opacity.combined(with: .scale))
                     .id(index)
             }
-        }.padding(.top, 140)
+        }.padding(.top, 120)
     }
 }
 

@@ -10,7 +10,9 @@ import NavigationStack
 
 struct NotificationButton: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
+    @Environment(\.colorScheme) var colorScheme
+    
     
     let title: String
     let action: () -> Void
@@ -19,14 +21,14 @@ struct NotificationButton: View {
     var body: some View {
         ZStack() {
             Button(action: action) {
-            Circle()
-                .frame(width: 60, height: 50)
-                .foregroundColor(Color.white)
-                .overlay(
-                    Image(systemName: "bell")
-                        .font(.system(size:25))
-                        .foregroundColor(Color("AccentColor"))
-                )
+                Circle()
+                    .frame(width: 60, height: 50)
+                    .foregroundColor(colorScheme == .light ? Color("AccentColor") : .black)
+                    .overlay(
+                        Image(systemName: "bell")
+                            .font(.system(size:25))
+                            .foregroundColor(colorScheme == .light ? Color("AccentColor") : .white)
+                    )
             }
         }.frame(width: 60, height: 60)
     }

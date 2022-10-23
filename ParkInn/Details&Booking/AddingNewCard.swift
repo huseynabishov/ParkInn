@@ -10,7 +10,7 @@ import NavigationStack
 
 struct AddingNewCard: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     @State var textFieldText: String = ""
     @State private var degrees: Double = 0
     @State private var flipped: Bool = false

@@ -10,7 +10,7 @@ import NavigationStack
 
 struct LocationPinButton: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     
     let title: String
     let action: () -> Void

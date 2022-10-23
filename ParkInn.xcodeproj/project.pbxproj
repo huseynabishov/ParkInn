@@ -13,13 +13,13 @@
 		5C02668A2858FDAF0026E462 /* GenderPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0266892858FDAF0026E462 /* GenderPick.swift */; };
 		5C0266962859167A0026E462 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0266952859167A0026E462 /* ForgotPassword.swift */; };
 		5C02669928591CD20026E462 /* ViaButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C02669828591CD20026E462 /* ViaButtons.swift */; };
-		5C039037286156A50023585A /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 5C039036286156A50023585A /* NavigationStack */; };
 		5C03903928615BC50023585A /* NotifWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03903828615BC50023585A /* NotifWall.swift */; };
 		5C03903C286168C60023585A /* SavedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03903B286168C60023585A /* SavedScreen.swift */; };
 		5C0390772863CB0D0023585A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0390762863CB0D0023585A /* MapView.swift */; };
 		5C0390792863D14A0023585A /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0390782863D14A0023585A /* TabBarPage.swift */; };
 		5C03907B2863E91A0023585A /* LocationPinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03907A2863E91A0023585A /* LocationPinButton.swift */; };
 		5C03907D2863F2720023585A /* LocationNameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03907C2863F2720023585A /* LocationNameButton.swift */; };
+		5C0EC5882904A3D1008EDB82 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 5C0EC5872904A3D1008EDB82 /* NavigationStack */; };
 		5C26357F2854004F003C68AD /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26357E2854004F003C68AD /* OnboardingScreenView.swift */; };
 		5C263584285405C4003C68AD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C263583285405C4003C68AD /* CustomButton.swift */; };
 		5C263586285408B8003C68AD /* CustomButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C263585285408B8003C68AD /* CustomButton2.swift */; };
@@ -199,7 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C039037286156A50023585A /* NavigationStack in Frameworks */,
+				5C0EC5882904A3D1008EDB82 /* NavigationStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +496,7 @@
 			);
 			name = ParkInn;
 			packageProductDependencies = (
-				5C039036286156A50023585A /* NavigationStack */,
+				5C0EC5872904A3D1008EDB82 /* NavigationStack */,
 			);
 			productName = ParkInn;
 			productReference = 5CE49C392836B00E0033D5CD /* ParkInn.app */;
@@ -527,7 +527,7 @@
 			);
 			mainGroup = 5CE49C302836B00E0033D5CD;
 			packageReferences = (
-				5C039035286156A50023585A /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
+				5C0EC5862904A3D1008EDB82 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 			);
 			productRefGroup = 5CE49C3A2836B00E0033D5CD /* Products */;
 			projectDirPath = "";
@@ -855,20 +855,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5C039035286156A50023585A /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
+		5C0EC5862904A3D1008EDB82 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				kind = exactVersion;
+				version = 1.0.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5C039036286156A50023585A /* NavigationStack */ = {
+		5C0EC5872904A3D1008EDB82 /* NavigationStack */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5C039035286156A50023585A /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
+			package = 5C0EC5862904A3D1008EDB82 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
 			productName = NavigationStack;
 		};
 /* End XCSwiftPackageProductDependency section */

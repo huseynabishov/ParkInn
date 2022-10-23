@@ -10,7 +10,7 @@ import NavigationStack
 
 struct FilterView: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     
     @Binding var isShowing: Bool
     

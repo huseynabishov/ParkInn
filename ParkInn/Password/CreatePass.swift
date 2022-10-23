@@ -10,7 +10,7 @@ import NavigationStack
 
 struct CreatePass: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     @State var password = ""
     @State private var isSecured: Bool = true
     @State var customAlert = false

@@ -11,7 +11,7 @@ import NavigationStack
 
 struct LoginView: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     
     var body: some View {
         

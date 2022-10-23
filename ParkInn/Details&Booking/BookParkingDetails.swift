@@ -10,7 +10,7 @@ import NavigationStack
 
 struct BookParkingDetails: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     
     @StateObject private var vm = BookParkingDetailsModel()
     
@@ -34,7 +34,7 @@ struct BookParkingDetails: View {
             }
 //            .padding(.vertical)
             
-            HStack(spacing: 15){
+            HStack(spacing: 0){
                 
                 CustomButton(title: "Continue", action: {
                     self.navigationStack.push(

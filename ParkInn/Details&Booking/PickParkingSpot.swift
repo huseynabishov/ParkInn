@@ -10,9 +10,11 @@ import NavigationStack
 
 struct PickParkingSpot: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     
     @EnvironmentObject var vm: BookParkingDetailsModel
+    
+    @Environment(\.colorScheme) var colorScheme
 
     
     var body: some View {
@@ -23,7 +25,7 @@ struct PickParkingSpot: View {
                     self.navigationStack.pop()
                 })
                 Text("Pick Parking Spot")
-                    .foregroundColor(.black)
+                    .foregroundColor(colorScheme == .light ? .black : .white)
                     .font(.system(size: 25, weight: .semibold, design: .rounded))
                 Spacer()
             }

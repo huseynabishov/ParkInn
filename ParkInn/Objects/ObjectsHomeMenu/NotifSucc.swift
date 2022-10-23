@@ -12,6 +12,9 @@ struct NotifCircle: View {
     let title: String
     let action: () -> Void
     
+    @Environment(\.colorScheme) var colorScheme
+
+    
     var body: some View {
         
         Button(action: action) {
@@ -108,7 +111,8 @@ struct NotifCircle: View {
             //                .padding(.trailing)
             .frame(maxWidth: 360, maxHeight: 115, alignment: .center)
             .overlay(RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.white, lineWidth:1))
+                .stroke(lineWidth:1)
+                .foregroundColor(colorScheme == .light ? .white : .black))
             .background(Color.white.cornerRadius(20))
 
             .shadow(

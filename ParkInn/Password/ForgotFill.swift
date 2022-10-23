@@ -10,7 +10,7 @@ import NavigationStack
 
 struct ForgotFill: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     
     
     var body: some View {

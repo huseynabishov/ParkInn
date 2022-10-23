@@ -12,7 +12,7 @@ import NavigationStack
 struct LoginAcc: View {
     
     @State var textFieldText: String = ""
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     private static let childID = "ForgetPasswordId"
 
     @State var email = ""

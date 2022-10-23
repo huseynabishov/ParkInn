@@ -17,7 +17,7 @@ enum vehicles {
 
 struct SelectYourVehicle: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     @State private var SelectedVehicle: vehicles = .Toyota
     
     var body: some View {

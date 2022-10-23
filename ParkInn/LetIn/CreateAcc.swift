@@ -12,7 +12,7 @@ import NavigationStack
 struct CreateAcc: View {
     
     @State var textFieldText: String = ""
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     
     @State var email = ""
     @State var password = ""

@@ -12,7 +12,7 @@ import NavigationStack
 struct DateofBirth: View {
     
     @State var textFieldText: String = ""
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     @State var birthday: Date?
     
     let startingDate: Date = Calendar.current.date(from: DateComponents(year: 1950)) ?? Date()

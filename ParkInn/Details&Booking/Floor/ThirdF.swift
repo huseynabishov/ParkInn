@@ -10,7 +10,7 @@ import NavigationStack
 
 struct ThirdF: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     @State var isSelected: Bool = false
     
 

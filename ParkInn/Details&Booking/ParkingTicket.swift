@@ -10,7 +10,7 @@ import NavigationStack
 
 struct ParkingTicket: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
 
     var body: some View {
         VStack(alignment: .center, spacing: 25, content: {

@@ -11,7 +11,7 @@ import NavigationStack
 struct GenderPick: View {
     
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     @State var textFieldText: String = ""
     @State var selection: String = "Gender"
     let filterOptions: [String] = [

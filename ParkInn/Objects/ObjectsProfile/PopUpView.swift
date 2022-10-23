@@ -13,7 +13,7 @@ struct PopUpView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State var textFieldText: String = ""
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     @State var showNewScreen: Bool = false
     
     @State var selectedDate: Date = Date()
@@ -53,7 +53,7 @@ struct PopUpView: View {
 
 struct letback: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
     
     var body: some View {
         

@@ -21,6 +21,8 @@ struct LocationNameButton: View {
     
     @State var styleIndex = 2
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         Button(action: action) {
             HStack{
@@ -32,7 +34,7 @@ struct LocationNameButton: View {
                         .background(Blur(style: .systemUltraThinMaterial).opacity(1))
                     Circle()
                         .frame(width: 6, height: 6)
-                        .foregroundColor(Color.white)
+                        .foregroundColor(colorScheme == .light ? .white : .black)
                         .padding(.bottom, 4)
                 }
                 Text(title)
@@ -44,7 +46,8 @@ struct LocationNameButton: View {
             .frame(maxWidth: .infinity, maxHeight: 40, alignment: .center)
             .overlay(RoundedRectangle(cornerRadius: 30)
                 .stroke(Color("AccentColor"), lineWidth:2))
-            .background(Blur(style: .systemUltraThinMaterial).opacity(1))
+            .background(Blur(style: .systemUltraThinMaterial).opacity(1)
+                .foregroundColor(colorScheme == .light ? Color("AccentColor") : .black))
             .cornerRadius(30)
         }
     }

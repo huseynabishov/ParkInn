@@ -12,6 +12,8 @@ struct PickPlaceButton: View {
     let title: String
     let action: () -> Void
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         Button(action: action) {
             Text(title)
