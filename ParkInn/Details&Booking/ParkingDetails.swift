@@ -42,7 +42,7 @@ struct ParkingDetails: View {
                         .cornerRadius(25)
                         .padding(.horizontal)
                         .tag(0)
-
+                    
                     
                     
                     RoundedRectangle(cornerRadius: 20)
@@ -54,7 +54,7 @@ struct ParkingDetails: View {
                         .cornerRadius(25)
                         .padding(.horizontal)
                         .tag(1)
-
+                    
                     
                     RoundedRectangle(cornerRadius: 20)
                         .overlay(
@@ -65,7 +65,7 @@ struct ParkingDetails: View {
                         .cornerRadius(25)
                         .padding(.horizontal)
                         .tag(2)
-
+                    
                     
                     RoundedRectangle(cornerRadius: 20)
                         .overlay(
@@ -76,7 +76,7 @@ struct ParkingDetails: View {
                         .cornerRadius(25)
                         .padding(.horizontal)
                         .tag(3)
-
+                    
                     
                     RoundedRectangle(cornerRadius: 20)
                         .overlay(
@@ -87,26 +87,21 @@ struct ParkingDetails: View {
                         .cornerRadius(25)
                         .padding(.horizontal)
                         .tag(4)
-
+                    
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 .overlay(Fancy5DotsIndexView(numberOfPages: 5, currentIndex: currentIndex)
                 )
-                
-                
-                
                 
                 HStack(){
                     VStack(alignment: .leading, spacing: 10){
                         Text("Parking Lot of San Manolia")
                             .foregroundColor(colorScheme == .light ? .black : .white)                            .font(.system(size: 25, weight: .semibold, design: .rounded))
                         
-                        
                         Text("9569, Trantow Courts, San Manolia")
                             .foregroundColor(colorScheme == .light ? .black.opacity(0.6) : .white.opacity(0.6))
                             .font(.system(size: 18, weight: .semibold, design: .rounded))
                             .multilineTextAlignment(.leading)
-                        
                     }
                     .padding()
                     Button(action: {}) {
@@ -114,39 +109,43 @@ struct ParkingDetails: View {
                             .font(.system(size: 27))
                     }
                 }
-                
-                
                 HStack(spacing: 7){
                     ZStack(){
                         HStack{
-                        ZStack{
-                            Image(systemName: "drop.fill")
-                                .foregroundColor(Color("AccentColor"))
-                                .rotationEffect(.degrees(180))
-                                .font(.system(size: 17))
-                            Circle()
-                                .frame(width: 6, height: 6)
-                                .foregroundColor(Color.white)
-                                .padding(.bottom, 4)
-                        }
-                        .padding()
+                            ZStack{
+                                Image(systemName: "drop.fill")
+                                    .foregroundColor(Color("AccentColor"))
+                                    .rotationEffect(.degrees(180))
+                                    .font(.system(size: 17))
+                                Circle()
+                                    .frame(width: 6, height: 6)
+                                    .foregroundColor(colorScheme == .light ? Color.white : .black)
+                                    .padding(.bottom, 4)
+                            }
+                            .padding()
                             Spacer()
                         }
-                        
-                        FilterKindButton(title: "2 km", action: {
+                        FilterKindButton(title: "    2 km", action: {
                             self.navigationStack.push(NotificationMenu())
                         })
                     }
-                    FilterKindButton(title: "8 AM - 10 PM", action: {
-                        self.navigationStack.push(NotificationMenu())
-                    })
+                    ZStack(){
+                        HStack(){
+                            Image(systemName: "stopwatch.fill")
+                                .foregroundColor(Color("AccentColor"))
+                                .padding()
+                            Spacer()
+                        }
+                        FilterKindButton(title: "       8 AM - 10 PM", action: {
+                            self.navigationStack.push(NotificationMenu())
+                        })
+                    }
                     FilterKindButton(title: "Valet", action: {
                         self.navigationStack.push(NotificationMenu())
                     })
                 }
                 .padding([.trailing,.leading])
             }
-            
             HStack{
                 Text("Description")
                     .foregroundColor(colorScheme == .light ? .black : .white)
@@ -162,10 +161,9 @@ struct ParkingDetails: View {
                     .multilineTextAlignment(.leading)
                     .padding([.leading,.trailing,.bottom])
             }
-            
             Spacer()
             
-            VStack(spacing: 7){
+            VStack(spacing: 5){
                 Text("$2.00")
                     .foregroundColor(Color("AccentColor"))
                     .font(.system(size: 25, weight: .semibold, design: .rounded))
@@ -176,8 +174,8 @@ struct ParkingDetails: View {
             .frame(maxWidth: 380, maxHeight: 80, alignment: .center)
             .overlay(RoundedRectangle(cornerRadius: 20)
                 .stroke(lineWidth:1)
-                .foregroundColor(colorScheme == .light ? .white : Color("AccentColorD")))
-            .background(Color("ButtonColor").opacity(0.6).cornerRadius(20))
+                .foregroundColor(colorScheme == .light ? .white : Color.black))
+            .background(Color("ButtonColor").opacity(0.2).cornerRadius(20))
             
             Spacer()
             
@@ -187,6 +185,7 @@ struct ParkingDetails: View {
                 })
                 .frame(width: 180, height: 70, alignment: .leading)
                 
+                
                 CustomButton(title: "Book Parking", action: {
                     self.navigationStack.push(SelectYourVehicle())
                 })
@@ -194,9 +193,11 @@ struct ParkingDetails: View {
             }
             .frame(maxWidth: .infinity, maxHeight: 130, alignment: .center)
             .overlay(RoundedRectangle(cornerRadius: 20)
-                .stroke(Color("ButtonColor"), lineWidth:2))
+                .stroke(colorScheme == .light ? Color("ButtonColor") : Color.white, lineWidth:2))
             
-        }).ignoresSafeArea(.all, edges: .bottom)
+        })
+        .ignoresSafeArea(.all, edges: .bottom)
+        
     }
     struct Boarding: View {
         let imageName: String
@@ -218,8 +219,6 @@ struct ParkingDetails: View {
             }
         }
     }
-    
-    
 }
 
 struct Fancy5DotsIndexView: View {

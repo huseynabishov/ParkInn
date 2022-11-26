@@ -16,6 +16,8 @@ struct CustomButton2: View {
     var iconPath: String?
     var iconBGColorOpacity: Double = 1
     
+    @Environment(\.colorScheme) var colorScheme
+    
     
     var body: some View {
         Button(action: action) {
@@ -32,14 +34,14 @@ struct CustomButton2: View {
                 Text(title)
                     .font(.system(size: 20, weight: .semibold, design: .rounded))
                     .fontWeight(.semibold)
-                    .foregroundColor(Color.accentColor)
+                    .foregroundColor(colorScheme == .light ? Color("AccentColor") : .white)
                     .frame(maxWidth: 370, maxHeight: 60, alignment: .center)
                     .cornerRadius(90)
                 
                 
             }
             .padding(8)
-            .background(buttonColor)
+            .background((colorScheme == .light ? buttonColor : .gray.opacity(0.35)))
             .cornerRadius(90)
             .frame(maxWidth: 370, maxHeight: 60, alignment: .center)
         }

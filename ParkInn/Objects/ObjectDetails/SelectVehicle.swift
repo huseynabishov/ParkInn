@@ -12,6 +12,8 @@ struct SelectVehicle: View {
     @Binding var SelectedVehicle: vehicles
     @State var CurrentVehicle: vehicles
     
+    @Environment(\.colorScheme) var colorScheme
+
     let title: String
     let title2: String
     let action: () -> Void
@@ -27,11 +29,11 @@ struct SelectVehicle: View {
                     .padding()
                 VStack(alignment: .leading,spacing: 10){
                     Text(String(SelectedVehicle == CurrentVehicle  ? (title) : title))
-                        .foregroundColor(.black)
+                        .foregroundColor(colorScheme == .light ? .black : .white.opacity(0.6))
                         .font(.system(size: 20, weight: .semibold, design: .rounded))
                     
                     Text(title2)
-                        .foregroundColor(.gray)
+                        .foregroundColor(colorScheme == .light ? .gray : .white.opacity(0.6))
                         .font(.system(size: 15, weight: .semibold, design: .rounded))
                 }
                 Spacer()
@@ -51,8 +53,8 @@ struct SelectVehicle: View {
         }
         .frame(maxWidth: 360, maxHeight: 100, alignment: .center)
         .overlay(RoundedRectangle(cornerRadius: 20)
-            .stroke(Color.white, lineWidth:4))
-        .background(Color.white.cornerRadius(20))
+            .stroke(Color("AccentColor"), lineWidth:4))
+        .background(colorScheme == .light ? .white : Color.black)
         
         .shadow(
             color: Color.gray.opacity(0.20),

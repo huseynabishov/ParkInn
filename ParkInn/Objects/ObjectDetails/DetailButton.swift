@@ -14,6 +14,8 @@ struct DetailButton: View {
     
     @State var styleIndex = 2
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         Button(action: action) {
             HStack{
@@ -21,9 +23,10 @@ struct DetailButton: View {
                     .foregroundColor(Color("AccentColor"))
                     .font(.system(size: 17, weight: .semibold, design: .rounded))
                     .fixedSize(horizontal: true, vertical: false)
+                    .padding([.leading, .trailing])
             }
             .padding()
-            .frame(maxWidth: .infinity, maxHeight: 40, alignment: .center)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             .overlay(RoundedRectangle(cornerRadius: 30)
                 .stroke(Color("AccentColor"), lineWidth:2))
             .cornerRadius(30)

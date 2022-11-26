@@ -63,6 +63,8 @@
 		5C9B3F5B288F21010005AE71 /* PickPlaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9B3F5A288F21010005AE71 /* PickPlaceButton.swift */; };
 		5C9B3F5D289003980005AE71 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9B3F5C289003980005AE71 /* PaymentView.swift */; };
 		5C9B3F5F289008D60005AE71 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9B3F5E289008D60005AE71 /* PaymentButton.swift */; };
+		5CAA0F2029327BB100A6A255 /* TriptoLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA0F1F29327BB100A6A255 /* TriptoLoc.swift */; };
+		5CAA0F2329327FD900A6A255 /* AlertPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA0F2229327FD900A6A255 /* AlertPopup.swift */; };
 		5CAE42C7287F4BF800FC7DFF /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE42C6287F4BF800FC7DFF /* DateValue.swift */; };
 		5CAEB85D288B574100D76E45 /* SpotScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEB85C288B574100D76E45 /* SpotScheme.swift */; };
 		5CB2E83A2858E48D00874F28 /* EmailFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E8392858E48D00874F28 /* EmailFill.swift */; };
@@ -156,6 +158,8 @@
 		5C9B3F5A288F21010005AE71 /* PickPlaceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceButton.swift; sourceTree = "<group>"; };
 		5C9B3F5C289003980005AE71 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		5C9B3F5E289008D60005AE71 /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
+		5CAA0F1F29327BB100A6A255 /* TriptoLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriptoLoc.swift; sourceTree = "<group>"; };
+		5CAA0F2229327FD900A6A255 /* AlertPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPopup.swift; sourceTree = "<group>"; };
 		5CAE42C6287F4BF800FC7DFF /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		5CAEB85C288B574100D76E45 /* SpotScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotScheme.swift; sourceTree = "<group>"; };
 		5CB2E8392858E48D00874F28 /* EmailFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFill.swift; sourceTree = "<group>"; };
@@ -325,6 +329,7 @@
 				5C7BC038285D321900C9DA72 /* ObjectsHomeMenu */,
 				5CFBE39F286C8E05007BF6FD /* ObjectSearch */,
 				5CB661372871DBEE001039C4 /* ObjectDetails */,
+				5CAA0F2129327FA000A6A255 /* ObjectParkingTime */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -361,6 +366,22 @@
 				5C26357E2854004F003C68AD /* OnboardingScreenView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		5CAA0F1C293273DE00A6A255 /* Parking Ticket & Extend Parking Time */ = {
+			isa = PBXGroup;
+			children = (
+				5CAA0F1F29327BB100A6A255 /* TriptoLoc.swift */,
+			);
+			path = "Parking Ticket & Extend Parking Time";
+			sourceTree = "<group>";
+		};
+		5CAA0F2129327FA000A6A255 /* ObjectParkingTime */ = {
+			isa = PBXGroup;
+			children = (
+				5CAA0F2229327FD900A6A255 /* AlertPopup.swift */,
+			);
+			path = ObjectParkingTime;
 			sourceTree = "<group>";
 		};
 		5CB6613228703841001039C4 /* Details&Booking */ = {
@@ -439,6 +460,7 @@
 				5C7BC032285D310900C9DA72 /* HomeMenu */,
 				5C03903A286168A00023585A /* Saved */,
 				5CB6613228703841001039C4 /* Details&Booking */,
+				5CAA0F1C293273DE00A6A255 /* Parking Ticket & Extend Parking Time */,
 				5C8B9E722836B64400B3757B /* Map */,
 				5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */,
 				5CE49C3E2836B00E0033D5CD /* ContentView.swift */,
@@ -566,6 +588,7 @@
 				5C55CE04285A7BA400C259E0 /* ViaEmail.swift in Sources */,
 				5C630C832857DD9F004C77BE /* LogosButton.swift in Sources */,
 				5C01A45128899A0700DBAFD7 /* FloorButton.swift in Sources */,
+				5CAA0F2329327FD900A6A255 /* AlertPopup.swift in Sources */,
 				5CD62B4228BEBBFB0033287E /* ParkingModel.swift in Sources */,
 				5C630C9528583C71004C77BE /* Nickname.swift in Sources */,
 				5C630C8A28582143004C77BE /* FillProfile.swift in Sources */,
@@ -607,6 +630,7 @@
 				5CB6613628703C64001039C4 /* ParkingDetails.swift in Sources */,
 				5C26358E28553F99003C68AD /* SignInButton.swift in Sources */,
 				5CB6613F28748688001039C4 /* SelectVehicle.swift in Sources */,
+				5CAA0F2029327BB100A6A255 /* TriptoLoc.swift in Sources */,
 				5CD62B3F28BE95A00033287E /* SearchBarView.swift in Sources */,
 				5C26359228554525003C68AD /* SignInApple.swift in Sources */,
 				5C9A3D212836D64F00A3D428 /* Welcome.swift in Sources */,

@@ -16,7 +16,7 @@ struct ReviewSummary: View {
     @State private var showingPopover = false
     
     @EnvironmentObject var vm: BookParkingDetailsModel
-    
+
     var body: some View {
         ZStack{
             VStack(spacing: 0, content: {
@@ -38,10 +38,10 @@ struct ReviewSummary: View {
                             .padding()
                             .font(.callout)
                         Spacer()
-                        Text("Parking Lot of San Manolia")
+                        Text("Parking Lot of San Jose")
                             .foregroundColor(.black)
                             .font(.system(size: 17).bold())
-
+                            .multilineTextAlignment(.leading)
                     }
                     
                     HStack(){
@@ -169,7 +169,9 @@ struct PopUpWindow1: View {
                                     .padding(.horizontal, 110)                        .background(Color("ButtonColor"))
                                     .cornerRadius(90)
                                     .onTapGesture{
-                                        self.navigationStack.pop()
+                                    action: do  {
+                                            self.navigationStack.push(TriptoLoc())
+                                        }
                                     }
                                 
                                 

@@ -20,6 +20,8 @@ struct SelectYourVehicle: View {
     @EnvironmentObject private var navigationStack: NavigationStackCompat
     @State private var SelectedVehicle: vehicles = .Toyota
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         
         VStack(spacing: 0, content: {
@@ -29,7 +31,7 @@ struct SelectYourVehicle: View {
                 })
                 .padding()
                 Text("Select Your Vehicle")
-                    .foregroundColor(.black)
+                    .foregroundColor(colorScheme == .light ? .black : .white)
                     .font(.system(size: 25, weight: .semibold, design: .rounded))
                 Spacer()
             }

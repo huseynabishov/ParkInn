@@ -23,7 +23,7 @@ struct NotificationButton: View {
             Button(action: action) {
                 Circle()
                     .frame(width: 60, height: 50)
-                    .foregroundColor(colorScheme == .light ? Color("AccentColor") : .black)
+                    .foregroundColor(colorScheme == .light ? .white : .black)
                     .overlay(
                         Image(systemName: "bell")
                             .font(.system(size:25))

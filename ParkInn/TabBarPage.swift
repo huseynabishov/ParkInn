@@ -13,6 +13,8 @@ struct TabBarView: View {
     @State var selectedTab = "Home"
     @Binding var pages: [TabBarPage]
     
+    @Environment(\.colorScheme) var colorScheme
+    
     init(pages: Binding<[TabBarPage]>) {
         UITabBar.appearance().isHidden = true
         self._pages = pages
@@ -55,7 +57,7 @@ struct TabBarView: View {
             
             .padding(20)
             .padding(.bottom, 10)
-            .background(Color.white)
+            .background(colorScheme == .light ? Color.white : .black)
             .cornerRadius(20)
         }
         .ignoresSafeArea()

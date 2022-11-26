@@ -34,7 +34,7 @@ struct LocationNameButton: View {
                         .background(Blur(style: .systemUltraThinMaterial).opacity(1))
                     Circle()
                         .frame(width: 6, height: 6)
-                        .foregroundColor(colorScheme == .light ? .white : .black)
+                        .foregroundColor(colorScheme == .light ? .white : .black.opacity(0.5))
                         .padding(.bottom, 4)
                 }
                 Text(title)
@@ -45,7 +45,7 @@ struct LocationNameButton: View {
             .padding()
             .frame(maxWidth: .infinity, maxHeight: 40, alignment: .center)
             .overlay(RoundedRectangle(cornerRadius: 30)
-                .stroke(Color("AccentColor"), lineWidth:2))
+                .stroke(Color("AccentColor"), lineWidth: 3))
             .background(Blur(style: .systemUltraThinMaterial).opacity(1)
                 .foregroundColor(colorScheme == .light ? Color("AccentColor") : .black))
             .cornerRadius(30)
