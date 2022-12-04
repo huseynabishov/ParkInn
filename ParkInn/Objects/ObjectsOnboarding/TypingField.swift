@@ -9,22 +9,23 @@ import SwiftUI
 
 struct TypingField: View {
     
-    @State var textFieldText: String = ""
+
     @State var email = ""
+    
     
     
     var body: some View {
         
 
             HStack() {
-            HStack {
-                Image(systemName: "envelope.fill")
-                    .opacity(0.3)
-
-                TextField("Email", text: self.$email)
-            }
-            .padding()
-            .background(Color.gray.opacity(0.06).cornerRadius(10))
+                HStack {
+                    Image(systemName: "envelope.fill")
+                        .opacity(0.3)
+                    
+                    TextField("Email", text: self.$email)
+                }
+                .padding()
+                .background(Color.gray.opacity(0.06).cornerRadius(10))
             }
             .padding(.leading)
             .padding(.trailing)

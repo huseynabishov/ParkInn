@@ -16,97 +16,182 @@ struct CreateAcc: View {
     
     @State var email = ""
     @State var password = ""
+    @State private var isSecured: Bool = true
     
+    var buttonColor: Color = Color("ButtonColor")
+    var typingcolor: Color = Color("typingcolor")
+    private var disable : Bool {
+        email.count < 7 || password.count < 5
+    }
+    @Environment(\.colorScheme) var colorScheme
+    
+    @EnvironmentObject var signupVM: SignUpViewModel
+
     var body: some View {
         
         ScrollView{
-            VStack(alignment: .center, content: {
-                HStack(){
-                    Arrow(title: "arrow.left", action: {
-                        self.navigationStack.push(LoginView())
-                    })
-                    Spacer()
-                        .frame(width: 350)
-                }
-                .padding()
-                HStack() {
-                    Text("Create your Account")
-                        .foregroundColor(.black)
-                        .font(.system(size: 50, weight: .semibold, design: .rounded))
-                        .frame(width: 300, alignment: .leading)
-                        .multilineTextAlignment(.leading)
-                        .minimumScaleFactor(0.1)
-                    //                    .padding(.top, 130)
-                        .padding(.leading, 20)
-                    Spacer()
-                }
-                //            .padding(.bottom,50)
-                .padding(.top,67)
-                VStack(alignment: .center, spacing: 0, content: {
-                    VStack() {
-                        TypingField()
-                        Spacer()
-                        TypingPass()
-                    }
+            VStack(content: {
+                
+                VStack(spacing: 36){
                     HStack(){
-                        CheckView(title: "")
-                        Text("Remember me")
-                        
+                        Arrow(title: "arrow.left", action: {
+                            self.navigationStack.push(LoginView())
+                        })
+                        Spacer()
+                            .frame(width: 330)
                     }
+                    
                     .padding()
-                    CustomButton(title: "Sign up", action: {
-                        self.navigationStack.push(FillProfile())
+                    Spacer()
+                    
+                    HStack() {
+                        Text("Create your Account")
+                            .foregroundColor(colorScheme == .light ? .black : .white)
+                            .font(.system(size: 50, weight: .semibold, design: .rounded))
+                            .frame(width: 300, alignment: .leading)
+                            .multilineTextAlignment(.leading)
+                            .minimumScaleFactor(0.1)
+                            .padding()
+                        Spacer()
+                    }
+                }
+                    
+                    
+                    VStack(spacing: 0, content: {
+                        VStack() {
+                            Section {
+                                HStack() {
+                                    HStack {
+                                        
+                                        Image(systemName: "envelope.fill")
+                                            .opacity(0.3)
+                                        
+                                        TextField("Email", text: self.$email)
+                                    }
+                                    .padding()
+                                    .background(Color.gray.opacity(0.06).cornerRadius(10))
+                                }
+                                .padding(.leading)
+                                .padding(.trailing)
+                                
+                                //                            Spacer()
+                                
+                                HStack() {
+                                    HStack {
+                                        
+                                        if isSecured{
+                                            Image(systemName: "lock.fill")
+                                                .opacity(0.3)
+                                                .padding(.leading, 05)
+                                            
+                                            SecureField("Password", text: self.$password)
+                                            
+                                            Button(action: {
+                                                isSecured.toggle()
+                                            }) {
+                                                Image(systemName: "eye.slash")
+                                                    .foregroundColor(.gray)
+                                                    .opacity(0.5)
+                                            }
+                                        } else {
+                                            Image(systemName: "lock.fill")
+                                                .opacity(0.3)
+                                                .padding(.leading, 05)
+                                            
+                                            TextField("Password", text: self.$password)
+                                            
+                                            Button(action: {
+                                                isSecured.toggle()
+                                            }) {
+                                                Image(systemName: "eye")
+                                                    .foregroundColor(.gray)
+                                            }
+                                        }
+                                    }
+                                    .padding()
+                                    .background(Color.gray.opacity(0.06).cornerRadius(10))
+                                }
+                                .padding(.leading)
+                                .padding(.trailing)
+                            }
+                        }
+                        HStack(){
+                            CheckView(title: "")
+                            Text("Remember me")
+                            
+                        }
+                        .padding()
+                        
+                        Section {
+                            if (email.count < 7 || password.count < 5) {
+                                CustomButton(title: "Sign up", action: {
+                                    self.navigationStack.push(FillProfile())
+                                }).disabled(disable)
+                                    .opacity(0.7)
+                            }
+                            else {
+                                CustomButton(title: "Sign up", action: {
+                                    self.navigationStack.push(FillProfile())
+                                })
+                            }
+                        }
+                        .padding()
+                        
+                        HStack() {
+                            Spacer()
+                                .frame(height: 1)
+                                .background(colorScheme == .light ? Color("ButtonColor") : .gray.opacity(0.3))
+                                .padding()
+                            Text("or continue with")
+                            Spacer()
+                                .frame(height: 1)
+                                .background(colorScheme == .light ? Color("ButtonColor") : .gray.opacity(0.3))
+                                .padding()
+                        }
+                        
+                        HStack() {
+                            ZStack(){
+                                LogosButton(title: "", action: {})
+                                Image("facebook")
+                                    .frame(width: 40, height: 70, alignment: .center)
+                            }
+                            
+                            ZStack(){
+                                LogosButton(title: "", action: {
+                                    signupVM.signUpWithGoogle()
+                                })
+                                Image("Google")
+                                    .frame(width: 40, height: 70, alignment: .center)
+                                
+                            }
+                            ZStack(){
+                                LogosButton(title: "", action: {})
+                                Image(systemName: "applelogo")
+                                    .font(.system(size:27))
+                                    .frame(width: 40, height: 70, alignment: .center)
+                                    
+                            }
+                        }
+                        .padding()
+                        HStack(){
+                            Text("Already have an account?")
+                                .opacity(0.3)
+                            
+                            Button(action: {
+                                self.navigationStack.push(LoginAcc())
+                            }) {
+                                Text("Sign in")
+                                    .font(.system(size: 16, weight: .semibold))
+                                    .foregroundColor(Color("AccentColor"))
+                            }
+                        }
+                        .padding()
                     })
-                    .opacity(0.7)
-                    .padding()
-                    HStack() {
-                        Spacer()
-                            .frame(height: 1)
-                            .background(Color("ButtonColor"))
-                            .padding()
-                        Text("or continue with")
-                        Spacer()
-                            .frame(height: 1)
-                            .background(Color("ButtonColor"))
-                            .padding()
-                    }
-                    .padding(.top, 50)
-                    HStack() {
-                        ZStack(){
-                            LogosButton(title: "", action: {})
-                            Image("facebook")
-                                .frame(width: 40, height: 70, alignment: .center)
-                        }
-                        ZStack(){
-                            LogosButton(title: "", action: {})
-                            Image("Google")
-                                .frame(width: 40, height: 70, alignment: .center)
-                        }
-                        ZStack(){
-                            LogosButton(title: "", action: {})
-                            Image("Apple")
-                                .frame(width: 40, height: 70, alignment: .center)
-                        }
-                    }
-                    .padding(.top, 30)
-                    HStack(){
-                        Text("Already have an account?")
-                            .opacity(0.3)
-                        
-                        Button(action: {
-                            self.navigationStack.push(LoginAcc())
-                        }) {
-                            Text("Sign in")
-                                .font(.system(size: 16, weight: .semibold))
-                                .foregroundColor(Color("AccentColor"))
-                        }
-                    }
-                    .padding(.top, 30)
-                })
-                .padding(.top, 20)
+                    .padding(.top)
+                
                 Spacer()
             })
-        }.scrollOnlyOnOverflow()
+        }
     }
 }
 

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TypingPass: View {
     
-    @State var textFieldText: String = ""
     @State var password = ""
     @State private var isSecured: Bool = true
     

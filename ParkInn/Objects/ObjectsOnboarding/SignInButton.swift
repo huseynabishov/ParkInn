@@ -22,13 +22,16 @@ struct LargeButtonStyle: ButtonStyle {
             .foregroundColor(currentForegroundColor)
             .background(isDisabled || configuration.isPressed ? backgroundColor.opacity(0.3) : backgroundColor)
             // This is the key part, we are using both an overlay as well as cornerRadius
-            .cornerRadius(6)
+            .cornerRadius(20)
             .overlay(
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(currentForegroundColor, lineWidth: 1)
         )
             .padding([.top, .bottom], 10)
             .font(Font.system(size: 19, weight: .semibold))
+            
+
+        
     }
 }
 
@@ -56,13 +59,15 @@ struct LargeButton: View {
         self.action = action
         self.disabled = disabled
     }
+    @Environment(\.colorScheme) var colorScheme
+
     
     var body: some View {
         HStack {
             Spacer(minLength: LargeButton.buttonHorizontalMargins)
             Button(action:self.action) {
                 Text(self.title)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(colorScheme == .light ? .black : .white)
                     .frame(maxWidth:.infinity)
             }
             .buttonStyle(LargeButtonStyle(backgroundColor: backgroundColor,

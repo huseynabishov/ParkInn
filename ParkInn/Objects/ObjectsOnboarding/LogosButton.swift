@@ -15,27 +15,31 @@ struct LogosButton: View {
     var iconPath: String?
     var iconBGColorOpacity: Double = 1
     
-    
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         Button(action: action) {
             HStack(){
                 if(iconPath != nil){
                     Image("facebook")
                         .frame(width: 290, height: 30, alignment: .leading)
+                        
                 }
                 
                 Text(title)
                     .frame(maxWidth: 90, maxHeight: 70, alignment: .center)
-                    .background(Color.white)
+                    .background(colorScheme == .light ? Color.white : .gray.opacity(0.3))
                     .overlay(RoundedRectangle(cornerRadius: 20)
+                             
                         .stroke(Color("ButtonColor"), lineWidth:1))
                 
                 
                 if(iconPath != nil){
                     Spacer(minLength: 20)
                 }
+                    
+            }.cornerRadius(20)
                 
-            }
         }
     }
     

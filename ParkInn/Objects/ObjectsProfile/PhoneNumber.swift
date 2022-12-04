@@ -20,13 +20,35 @@ struct PhoneNumber: View {
                 Image(systemName: "phone.fill")
                     .opacity(0.3)
                 
-                TextField("Phone Number", text: self.$textFieldText)
+                TextFieldWithCheck("Phone Number", text: self.$textFieldText,limit: 9, allowed: .decimalDigits)
+                    .keyboardType(.decimalPad)
             }
             .padding()
             .background(Color.gray.opacity(0.06).cornerRadius(10))
         }
         .padding(.leading)
         .padding(.trailing)
+    }
+}
+struct TextFieldWithCheck: View {
+    
+    let label: LocalizedStringKey
+    @Binding var text: String
+    let limit: Int
+    let allowed: CharacterSet
+    
+    init(_ label: LocalizedStringKey, text: Binding<String>, limit: Int = Int.max, allowed: CharacterSet = .alphanumerics) {
+        self.label = label
+        self._text = Binding(projectedValue: text)
+        self.limit = limit
+        self.allowed = allowed
+    }
+    
+    var body: some View {
+        TextField(label, text: $text)
+            .onChange(of: text) { _ in
+                text = String(text.prefix(limit).unicodeScalars.filter(allowed.contains))
+            }
     }
 }
 

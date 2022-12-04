@@ -19,14 +19,15 @@ struct EmailFill: View {
         HStack() {
             HStack {
                 TextField("Email", text: self.$email)
-                
+                    .padding(.horizontal)
                 
                 Image(systemName: "envelope.fill")
                     .font(.system(size: 25))
                     .opacity(0.3)
                     .foregroundColor(Color.gray)
+                    .padding()
             }
-            .padding()
+            
             .background(Color.gray.opacity(0.06).cornerRadius(10))
         }
         .padding(.leading)

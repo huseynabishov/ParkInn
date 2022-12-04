@@ -12,32 +12,38 @@ import NavigationStack
 struct LoginView: View {
     
     @EnvironmentObject private var navigationStack: NavigationStackCompat
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         
         
         VStack(alignment: .center, content: {
-            HStack(){
-                Arrow(title: "arrow.left", action: {
-                    self.navigationStack.push(OnboardingScreenView())
-                })
-                Spacer()
-                    .frame(width: 350)
+            VStack(spacing: 100){
+                HStack(){
+                    Arrow(title: "arrow.left", action: {
+                        self.navigationStack.push(OnboardingScreenView())
+                    })
+                    Spacer()
+                        .frame(width: 330)
+                }
+                
+                .padding()
+                
+                Text("Let's you in")
+                    .foregroundColor(colorScheme == .light ? .black : .white)
+                    .font(.system(size: 50, weight: .semibold, design: .rounded))
+                    .frame(width: 350, alignment: .top)
+                    .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.1)
+                    .padding()
             }
-            .padding()
-            Text("Let's you in")
-                .foregroundColor(.black)
-                .font(.system(size: 50, weight: .semibold, design: .rounded))
-                .frame(width: 350, alignment: .top)
-                .multilineTextAlignment(.center)
-                .minimumScaleFactor(0.1)
-                .padding(.top, 130)
             
             VStack(alignment: .center, spacing: 0, content: {
+                Spacer()
                 ZStack(){
                     LargeButton(title: "Continue with Facebook",
-                                backgroundColor: Color.white,
-                                foregroundColor: Color("ButtonColor")) {
+                                backgroundColor: (colorScheme == .light ? Color.white : .gray.opacity(0.3)),
+                                foregroundColor: (colorScheme == .light ? Color("ButtonColor") : .gray.opacity(0.5))) {
                         
                     }
                     Image("facebook")
@@ -45,16 +51,16 @@ struct LoginView: View {
                 }
                 ZStack() {
                     LargeButton(title: "Continue with Google",
-                                backgroundColor: Color.white,
-                                foregroundColor: Color("ButtonColor")) {
+                                backgroundColor: (colorScheme == .light ? Color.white : .gray.opacity(0.3)),
+                                foregroundColor: (colorScheme == .light ? Color("ButtonColor") : .gray.opacity(0.5))) {
                     }
                     Image("Google")
                         .frame(width: 265, height: 30, alignment: .leading)
                 }
                 ZStack(){
                     LargeButton(title: "Continue with Apple",
-                                backgroundColor: Color.white,
-                                foregroundColor: Color("ButtonColor")) {
+                                backgroundColor: (colorScheme == .light ? Color.white : .gray.opacity(0.3)),
+                                foregroundColor: (colorScheme == .light ? Color("ButtonColor") : .gray.opacity(0.5))) {
                     }
                     Image(systemName: "applelogo")
                         .font(.system(size: 27))
@@ -63,18 +69,18 @@ struct LoginView: View {
                 HStack() {
                     Spacer()
                         .frame(height: 1)
-                        .background(Color("ButtonColor"))
+                        .background(colorScheme == .light ? Color("ButtonColor") : .gray.opacity(0.3))
                     Text("or")
-                        .padding(20)
+                        .padding()
                     Spacer()
                         .frame(height: 1)
-                        .background(Color("ButtonColor"))
+                        .background(colorScheme == .light ? Color("ButtonColor") : .gray.opacity(0.3))
                 }
-                .padding()
                 CustomButton(title: "Sign in with password ", action: {
                     self.navigationStack.push(LoginAcc())
                     
                 })
+                .padding()
                 Spacer()
                 
                 HStack(){
@@ -91,7 +97,8 @@ struct LoginView: View {
                     }
                 }
             })
-            .padding(.top, 100)
+            
+            .padding()
             Spacer()
         })
     }

@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import NavigationStack
 
 struct MapDirect: View {
     
     let ButtonColor = Color("ButtonColor")
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         
@@ -21,7 +24,7 @@ struct MapDirect: View {
             
             
             Text("Find Parking Places Around You Easily")
-                .foregroundColor(.black)
+                .foregroundColor(colorScheme == .light ? .black : .white)
                 .font(.system(size: 30, weight: .semibold, design: .rounded))
                 .padding()
                 .multilineTextAlignment(.center)
@@ -29,7 +32,7 @@ struct MapDirect: View {
             
             VStack(alignment: .center, spacing: 40, content: {
             Text("Find your perfect parking space using our growing database of thousands of car parks, street and metered parking and even private garages!")
-                .foregroundColor(.black)
+                    .foregroundColor(colorScheme == .light ? .black : .white)
                 .font(.system(size: 18, weight: .regular, design: .rounded))
                 .padding()
                 .multilineTextAlignment(.center)
@@ -37,23 +40,15 @@ struct MapDirect: View {
             
             VStack(alignment: .center, spacing: 10, content: {
             
-                Text("Next")
-                .foregroundColor(.white)
-                .font(.system(size: 20, weight: .semibold, design: .rounded))
-                .fontWeight(.semibold)
-                .frame(maxWidth: 370, maxHeight: 60, alignment: .center)
-                .background(Color.accentColor)
-                .cornerRadius(90)
+                CustomButton(title: "Next", action: {
+                    self.navigationStack.push(BookPay())
+                })
             
 //                skipButton
                 
-            Text("Skip")
-                .font(.system(size: 20, weight: .semibold, design: .rounded))
-                .fontWeight(.semibold)
-                .foregroundColor(Color.accentColor)
-                .frame(maxWidth: 370, maxHeight: 60, alignment: .center)
-                .background(ButtonColor)
-                .cornerRadius(90)
+                CustomButton2(title: "Skip", action: {
+                    self.navigationStack.push(LoginView())
+                })
             })
             })
         })

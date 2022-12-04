@@ -42,7 +42,9 @@ struct OnboardingScreenView: View {
            let buttonText: String
            @Binding var currentIndex: Int
            @EnvironmentObject private var navigationStack: NavigationStackCompat
-
+           
+           @Environment(\.colorScheme) var colorScheme
+           
            var body: some View {
                VStack(){
                    Spacer()
@@ -53,14 +55,14 @@ struct OnboardingScreenView: View {
                            .frame(width: 300, height: 300, alignment: .center)
                        
                        Text(label)
-                           .foregroundColor(.black)
+                           .foregroundColor(colorScheme == .light ? .black : .white)
                            .font(.system(size: 30, weight: .semibold, design: .rounded))
                            .padding()
                            .multilineTextAlignment(.center)
                            .minimumScaleFactor(0.1)
                        VStack(alignment: .center, spacing: 50, content: {
                        Text(description)
-                           .foregroundColor(.black)
+                               .foregroundColor(colorScheme == .light ? .black : .white)
                            .font(.system(size: 18, weight: .regular, design: .rounded))
                            .padding()
                            .multilineTextAlignment(.center)

@@ -24,21 +24,24 @@ struct DateofBirth: View {
 //            Color.white.edgesIgnoringSafeArea(.all)
             LazyVStack(alignment: .leading, spacing: 0){
                 ZStack() {
-                    DatePickerTextField(placeholder: "Date of Birth", date: $birthday)
-                        .font(.title)
-                        .padding(.horizontal,16)
-                        .frame(height:54)
-                        .background(Color.gray.opacity(0.06).cornerRadius(10))
-                        .cornerRadius(10)
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "calendar")
-                            .font(.system(size: 25))
-                            .opacity(0.3)
-                            .foregroundColor(Color.gray)
-                            .padding(.leading, 316)
+                    HStack{
+                        DatePickerTextField(placeholder: "Date of Birth", date: $birthday)
+                            .font(.title)
+                            .padding(.horizontal)
+                            .frame(height:54)
+                            
+                            .cornerRadius(10)
+                        Button(action: {
+                            
+                        }) {
+                            Image(systemName: "calendar")
+                                .font(.system(size: 25))
+                                .opacity(0.3)
+                                .foregroundColor(Color.gray)
+                                .padding()
+                        }
                     }
+                    .background(Color.gray.opacity(0.06).cornerRadius(10))
                 }
             }
             .padding(.leading)

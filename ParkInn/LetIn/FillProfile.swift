@@ -16,55 +16,61 @@ struct FillProfile: View {
     
     @State var email = ""
     @State var password = ""
+    @Environment(\.colorScheme) var colorScheme
+
     
     var body: some View {
-        VStack(alignment: .center, content: {
-            HStack(){
-                Arrow(title: "arrow.left", action: {
-                    self.navigationStack.push(LoginAcc())
-                })
-                Text("Fill Your Profile")
-                    .foregroundColor(.black)
-                    .font(.system(size: 30, weight: .semibold, design: .rounded))
-                    .multilineTextAlignment(.leading)
-                    .minimumScaleFactor(0.1)
-                Spacer()
-                    .frame(width: 142)
-            }
-            
-            .padding(.top,11)
-            VStack(alignment: .center, spacing: 0, content: {
-                Group {
-                    ImageUpload()
+        ScrollView{
+            VStack(alignment: .center, content: {
+                HStack(){
+                    Arrow(title: "arrow.left", action: {
+                        self.navigationStack.push(LoginAcc())
+                    })
+                    .padding(.top)
+                    Text("Fill Your Profile")
+                        .foregroundColor(colorScheme == .light ? .black : .white)
+                        .font(.system(size: 30, weight: .semibold, design: .rounded))
+                        .multilineTextAlignment(.leading)
+                        .minimumScaleFactor(0.1)
+                        .padding(.top)
                     Spacer()
-                    UsernameObj()
-                    Spacer()
-                    Nickname()
-                    Spacer()
-                    DateofBirth()
-                    Spacer()
-                    EmailFill()
-                    Spacer()
+                        .frame(width: 142)
+                        
                 }
-                Group {
-                    PhoneNumber()
-                    Spacer()
-                    GenderPick()
-                    
-                    Spacer()
-                }
-                CustomButton(title: "Continue", action: {
-                    self.navigationStack.push(LoginView())
-                })
-                .opacity(0.7)
-                .padding()
                 
-                .padding(.top, 30)
+                
+                VStack(alignment: .center, spacing: 5, content: {
+                    Group {
+                        ImageUpload()
+                            .padding()
+                        Spacer()
+                            .padding()
+                        UsernameObj()
+                        Spacer()
+                        Nickname()
+                        Spacer()
+                        DateofBirth()
+                        Spacer()
+                        EmailFill()
+                        Spacer()
+                    }
+                    Group {
+                        PhoneNumber()
+                        Spacer()
+
+                    }
+                    CustomButton(title: "Continue", action: {
+                        self.navigationStack.push(LoginView())
+                    })
+//                    .opacity(0.7)
+                    .padding()
+                    
+                    .padding(.top)
+                })
+                .padding(.top)
+                Spacer()
             })
-            .padding(.top, 20)
-            Spacer()
-        })
-        
+        }
     }
 }
 

@@ -41,7 +41,7 @@ struct CustomButton: View {
                 }
                 
             }
-            .padding(8)
+            .padding()
             .background(buttonColor)
             .cornerRadius(90)
             .frame(maxWidth: 370, maxHeight: 60, alignment: .center)

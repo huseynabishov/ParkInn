@@ -27,6 +27,7 @@ struct GenderPick: View {
                             HStack {
                     Text("Gender")
                         .frame(width: 300)
+                    Spacer()
                 }.frame(width: 300),
                         content: {
                     ForEach(filterOptions, id: \.self) { option in
@@ -34,8 +35,11 @@ struct GenderPick: View {
                             .tag(option)
                             .frame(width: 300)
                     }.frame(width: 300)
+                        
                 })
-                .frame(width: 300)
+                .frame(width: 290, height: 25)
+                .padding(.trailing)
+                
                 .pickerStyle(MenuPickerStyle())
                 
                 
@@ -48,14 +52,14 @@ struct GenderPick: View {
                         .font(.system(size: 17))
                         .opacity(0.3)
                         .foregroundColor(Color.gray)
-                        .padding(.trailing, 6)
+                        .padding(.trailing)
                 }
             }
-//            .padding()
+            .padding()
             .background(Color.gray.opacity(0.06).cornerRadius(10))
         }
-//        .padding(.leading)
-//        .padding(.trailing)
+        .padding(.leading)
+        .padding(.trailing)
     }
 }
 

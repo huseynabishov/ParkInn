@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct Welcome: View {
+    
+
+
+    
     var body: some View {
         ZStack {
             Image("Onboarding")
@@ -42,10 +46,12 @@ struct Welcome: View {
                 .minimumScaleFactor(0.1)
             
         }
+
     }
 }
 
 struct Welcome_Previews: PreviewProvider {
+    
     static var previews: some View {
         Welcome()
     }

@@ -63,6 +63,11 @@
 		5C9B3F5B288F21010005AE71 /* PickPlaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9B3F5A288F21010005AE71 /* PickPlaceButton.swift */; };
 		5C9B3F5D289003980005AE71 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9B3F5C289003980005AE71 /* PaymentView.swift */; };
 		5C9B3F5F289008D60005AE71 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9B3F5E289008D60005AE71 /* PaymentButton.swift */; };
+		5C9EED42293D427600F2DBB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C9EED41293D427600F2DBB0 /* GoogleService-Info.plist */; };
+		5C9EED45293D442300F2DBB0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5C9EED44293D442300F2DBB0 /* FirebaseAuth */; };
+		5C9EED48293D44FB00F2DBB0 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 5C9EED47293D44FB00F2DBB0 /* GoogleSignIn */; };
+		5C9EED4B293D474F00F2DBB0 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EED4A293D474F00F2DBB0 /* SignUpVM.swift */; };
+		5C9EED4E293D488F00F2DBB0 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EED4D293D488F00F2DBB0 /* Application.swift */; };
 		5CAA0F2029327BB100A6A255 /* TriptoLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA0F1F29327BB100A6A255 /* TriptoLoc.swift */; };
 		5CAA0F2329327FD900A6A255 /* AlertPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA0F2229327FD900A6A255 /* AlertPopup.swift */; };
 		5CAE42C7287F4BF800FC7DFF /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE42C6287F4BF800FC7DFF /* DateValue.swift */; };
@@ -77,6 +82,7 @@
 		5CB66141287BCE8A001039C4 /* BookParkingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB66140287BCE89001039C4 /* BookParkingDetails.swift */; };
 		5CB66143287BD1FF001039C4 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB66142287BD1FF001039C4 /* CustomDatePicker.swift */; };
 		5CBC7E3928560C7100746072 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC7E3828560C7100746072 /* Arrow.swift */; };
+		5CC27A91293C43520044F177 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC27A90293C43520044F177 /* ContentView.swift */; };
 		5CD62B3F28BE95A00033287E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD62B3E28BE95A00033287E /* SearchBarView.swift */; };
 		5CD62B4228BEBBFB0033287E /* ParkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD62B4128BEBBFB0033287E /* ParkingModel.swift */; };
 		5CD62B4428C0FBC20033287E /* AlertPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD62B4328C0FBC20033287E /* AlertPopUp.swift */; };
@@ -87,7 +93,7 @@
 		5CD6E6612836F44100C6E592 /* ExtendTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E6602836F44100C6E592 /* ExtendTime.swift */; };
 		5CDFF59828CEA34700AE658F /* BookParkingDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFF59728CEA34700AE658F /* BookParkingDetailsModel.swift */; };
 		5CE49C3D2836B00E0033D5CD /* ParkInnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */; };
-		5CE49C3F2836B00E0033D5CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE49C3E2836B00E0033D5CD /* ContentView.swift */; };
+		5CE49C3F2836B00E0033D5CD /* ContentView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE49C3E2836B00E0033D5CD /* ContentView1.swift */; };
 		5CE49C412836B00F0033D5CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE49C402836B00F0033D5CD /* Assets.xcassets */; };
 		5CE49C442836B00F0033D5CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE49C432836B00F0033D5CD /* Preview Assets.xcassets */; };
 		5CF50ADB28BBEE2200890696 /* ThirdF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF50ADA28BBEE2200890696 /* ThirdF.swift */; };
@@ -158,6 +164,9 @@
 		5C9B3F5A288F21010005AE71 /* PickPlaceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceButton.swift; sourceTree = "<group>"; };
 		5C9B3F5C289003980005AE71 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		5C9B3F5E289008D60005AE71 /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
+		5C9EED41293D427600F2DBB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5C9EED4A293D474F00F2DBB0 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
+		5C9EED4D293D488F00F2DBB0 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		5CAA0F1F29327BB100A6A255 /* TriptoLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriptoLoc.swift; sourceTree = "<group>"; };
 		5CAA0F2229327FD900A6A255 /* AlertPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPopup.swift; sourceTree = "<group>"; };
 		5CAE42C6287F4BF800FC7DFF /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
@@ -172,6 +181,7 @@
 		5CB66140287BCE89001039C4 /* BookParkingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookParkingDetails.swift; sourceTree = "<group>"; };
 		5CB66142287BD1FF001039C4 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		5CBC7E3828560C7100746072 /* Arrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
+		5CC27A90293C43520044F177 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5CD62B3E28BE95A00033287E /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		5CD62B4128BEBBFB0033287E /* ParkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingModel.swift; sourceTree = "<group>"; };
 		5CD62B4328C0FBC20033287E /* AlertPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPopUp.swift; sourceTree = "<group>"; };
@@ -183,7 +193,7 @@
 		5CDFF59728CEA34700AE658F /* BookParkingDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookParkingDetailsModel.swift; sourceTree = "<group>"; };
 		5CE49C392836B00E0033D5CD /* ParkInn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkInn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkInnApp.swift; sourceTree = "<group>"; };
-		5CE49C3E2836B00E0033D5CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5CE49C3E2836B00E0033D5CD /* ContentView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView1.swift; sourceTree = "<group>"; };
 		5CE49C402836B00F0033D5CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CE49C432836B00F0033D5CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5CF50ADA28BBEE2200890696 /* ThirdF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdF.swift; sourceTree = "<group>"; };
@@ -204,6 +214,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C0EC5882904A3D1008EDB82 /* NavigationStack in Frameworks */,
+				5C9EED45293D442300F2DBB0 /* FirebaseAuth in Frameworks */,
+				5C9EED48293D44FB00F2DBB0 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +380,23 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		5C9EED49293D473400F2DBB0 /* AccountModel */ = {
+			isa = PBXGroup;
+			children = (
+				5C9EED4C293D487800F2DBB0 /* Utilities */,
+				5C9EED4A293D474F00F2DBB0 /* SignUpVM.swift */,
+			);
+			path = AccountModel;
+			sourceTree = "<group>";
+		};
+		5C9EED4C293D487800F2DBB0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5C9EED4D293D488F00F2DBB0 /* Application.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		5CAA0F1C293273DE00A6A255 /* Parking Ticket & Extend Parking Time */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +454,7 @@
 		5CD62B4028BEBBDD0033287E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5C9EED49293D473400F2DBB0 /* AccountModel */,
 				5CD62B4128BEBBFB0033287E /* ParkingModel.swift */,
 				5CDFF59728CEA34700AE658F /* BookParkingDetailsModel.swift */,
 			);
@@ -450,6 +480,7 @@
 		5CE49C3B2836B00E0033D5CD /* ParkInn */ = {
 			isa = PBXGroup;
 			children = (
+				5C9EED41293D427600F2DBB0 /* GoogleService-Info.plist */,
 				5CD62B4028BEBBDD0033287E /* Models */,
 				5C7BC035285D314500C9DA72 /* Objects */,
 				5C26357B2853FFFB003C68AD /* LaunchScreeen */,
@@ -463,7 +494,8 @@
 				5CAA0F1C293273DE00A6A255 /* Parking Ticket & Extend Parking Time */,
 				5C8B9E722836B64400B3757B /* Map */,
 				5CE49C3C2836B00E0033D5CD /* ParkInnApp.swift */,
-				5CE49C3E2836B00E0033D5CD /* ContentView.swift */,
+				5CC27A90293C43520044F177 /* ContentView.swift */,
+				5CE49C3E2836B00E0033D5CD /* ContentView1.swift */,
 				5C0390782863D14A0023585A /* TabBarPage.swift */,
 				5CE49C402836B00F0033D5CD /* Assets.xcassets */,
 				5CE49C422836B00F0033D5CD /* Preview Content */,
@@ -519,6 +551,8 @@
 			name = ParkInn;
 			packageProductDependencies = (
 				5C0EC5872904A3D1008EDB82 /* NavigationStack */,
+				5C9EED44293D442300F2DBB0 /* FirebaseAuth */,
+				5C9EED47293D44FB00F2DBB0 /* GoogleSignIn */,
 			);
 			productName = ParkInn;
 			productReference = 5CE49C392836B00E0033D5CD /* ParkInn.app */;
@@ -550,6 +584,8 @@
 			mainGroup = 5CE49C302836B00E0033D5CD;
 			packageReferences = (
 				5C0EC5862904A3D1008EDB82 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
+				5C9EED43293D442300F2DBB0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5C9EED46293D44FB00F2DBB0 /* XCRemoteSwiftPackageReference "GoogleSignIn-IOS" */,
 			);
 			productRefGroup = 5CE49C3A2836B00E0033D5CD /* Products */;
 			projectDirPath = "";
@@ -567,6 +603,7 @@
 			files = (
 				5CE49C442836B00F0033D5CD /* Preview Assets.xcassets in Resources */,
 				5CE49C412836B00F0033D5CD /* Assets.xcassets in Resources */,
+				5C9EED42293D427600F2DBB0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +637,7 @@
 				5C02668A2858FDAF0026E462 /* GenderPick.swift in Sources */,
 				5C7BC03C285D335500C9DA72 /* NotificationScreen.swift in Sources */,
 				5C68A35B288C5FBB00FDE457 /* WayLine.swift in Sources */,
+				5CC27A91293C43520044F177 /* ContentView.swift in Sources */,
 				5C26357F2854004F003C68AD /* OnboardingScreenView.swift in Sources */,
 				5C01A458288A009500DBAFD7 /* SecondF.swift in Sources */,
 				5C03903928615BC50023585A /* NotifWall.swift in Sources */,
@@ -608,7 +646,7 @@
 				5C41A70B2891FED80048896D /* AddingNewCard.swift in Sources */,
 				5C7BC034285D313500C9DA72 /* MainMenu.swift in Sources */,
 				5C9B3F5F289008D60005AE71 /* PaymentButton.swift in Sources */,
-				5CE49C3F2836B00E0033D5CD /* ContentView.swift in Sources */,
+				5CE49C3F2836B00E0033D5CD /* ContentView1.swift in Sources */,
 				5C0390792863D14A0023585A /* TabBarPage.swift in Sources */,
 				5C630C932858399F004C77BE /* UsernameObj.swift in Sources */,
 				5C55CE08285A8FEF00C259E0 /* Verification.swift in Sources */,
@@ -620,9 +658,11 @@
 				5C7BC02F285BE43800C9DA72 /* AlertPass.swift in Sources */,
 				5CE49C3D2836B00E0033D5CD /* ParkInnApp.swift in Sources */,
 				5CF50ADB28BBEE2200890696 /* ThirdF.swift in Sources */,
+				5C9EED4B293D474F00F2DBB0 /* SignUpVM.swift in Sources */,
 				5CB661342870387C001039C4 /* DetailsView.swift in Sources */,
 				5CB66143287BD1FF001039C4 /* CustomDatePicker.swift in Sources */,
 				5CFBE3A4286C8EA2007BF6FD /* FilterView.swift in Sources */,
+				5C9EED4E293D488F00F2DBB0 /* Application.swift in Sources */,
 				5C9B3F5B288F21010005AE71 /* PickPlaceButton.swift in Sources */,
 				5C630C7B2857B426004C77BE /* CreateAcc.swift in Sources */,
 				5CD6E6612836F44100C6E592 /* ExtendTime.swift in Sources */,
@@ -887,6 +927,22 @@
 				version = 1.0.5;
 			};
 		};
+		5C9EED43293D442300F2DBB0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		5C9EED46293D44FB00F2DBB0 /* XCRemoteSwiftPackageReference "GoogleSignIn-IOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-IOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -894,6 +950,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5C0EC5862904A3D1008EDB82 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
 			productName = NavigationStack;
+		};
+		5C9EED44293D442300F2DBB0 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C9EED43293D442300F2DBB0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5C9EED47293D44FB00F2DBB0 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C9EED46293D44FB00F2DBB0 /* XCRemoteSwiftPackageReference "GoogleSignIn-IOS" */;
+			productName = GoogleSignIn;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
