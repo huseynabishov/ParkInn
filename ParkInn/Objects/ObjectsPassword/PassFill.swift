@@ -22,6 +22,7 @@ struct PassFill: View {
                             .padding(.leading, 05)
                         
                         SecureField("Password", text: self.$password)
+                            
                         
                         Button(action: {
                             isSecured.toggle()
@@ -36,6 +37,7 @@ struct PassFill: View {
                             .padding(.leading, 05)
                         
                         TextField("Password", text: self.$password)
+                            
                         
                         Button(action: {
                             isSecured.toggle()
@@ -47,46 +49,44 @@ struct PassFill: View {
                 }
                 .padding()
                 .background(Color.gray.opacity(0.06).cornerRadius(10))
-            }
-            .padding(.leading)
-            .padding(.trailing)
+            }            
             
-            Spacer()
-                .frame(height: 20)
-            HStack() {
-                HStack {
-                    if isSecured{
-                        Image(systemName: "lock.fill")
-                            .opacity(0.3)
-                            .padding(.leading, 05)
-                        
-                        SecureField("Password", text: self.$password)
-                        
-                        Button(action: {
-                            isSecured.toggle()
-                        }) {
-                            Image(systemName: "eye.slash")
-                                .foregroundColor(.gray)
-                                .opacity(0.5)
-                        }
-                    } else {
-                        Image(systemName: "lock.fill")
-                            .opacity(0.3)
-                            .padding(.leading, 05)
-                        
-                        TextField("Password", text: self.$password)
-                        
-                        Button(action: {
-                            isSecured.toggle()
-                        }) {
-                            Image(systemName: "eye")
-                                .foregroundColor(.gray)
-                        }
-                    }
-                }
-                .padding()
-                .background(Color.gray.opacity(0.06).cornerRadius(10))
-            }
+//            Spacer()
+//                .frame(height: 20)
+//            HStack() {
+//                HStack {
+//                    if isSecured{
+//                        Image(systemName: "lock.fill")
+//                            .opacity(0.3)
+//                            .padding(.leading, 05)
+//
+//                        SecureField("Password", text: self.$password)
+//
+//                        Button(action: {
+//                            isSecured.toggle()
+//                        }) {
+//                            Image(systemName: "eye.slash")
+//                                .foregroundColor(.gray)
+//                                .opacity(0.5)
+//                        }
+//                    } else {
+//                        Image(systemName: "lock.fill")
+//                            .opacity(0.3)
+//                            .padding(.leading, 05)
+//
+//                        TextField("Password", text: self.$password)
+//
+//                        Button(action: {
+//                            isSecured.toggle()
+//                        }) {
+//                            Image(systemName: "eye")
+//                                .foregroundColor(.gray)
+//                        }
+//                    }
+//                }
+//                .padding()
+//                .background(Color.gray.opacity(0.06).cornerRadius(10))
+//            }
             .padding(.leading)
             .padding(.trailing)
         }

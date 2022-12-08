@@ -19,6 +19,8 @@
 		5C0390792863D14A0023585A /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0390782863D14A0023585A /* TabBarPage.swift */; };
 		5C03907B2863E91A0023585A /* LocationPinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03907A2863E91A0023585A /* LocationPinButton.swift */; };
 		5C03907D2863F2720023585A /* LocationNameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03907C2863F2720023585A /* LocationNameButton.swift */; };
+		5C0A90D62941D5C900CB0DE1 /* AppleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A90D52941D5C900CB0DE1 /* AppleLogin.swift */; };
+		5C0A90D82941D64600CB0DE1 /* AppleLoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A90D72941D64600CB0DE1 /* AppleLoginVM.swift */; };
 		5C0EC5882904A3D1008EDB82 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 5C0EC5872904A3D1008EDB82 /* NavigationStack */; };
 		5C26357F2854004F003C68AD /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26357E2854004F003C68AD /* OnboardingScreenView.swift */; };
 		5C263584285405C4003C68AD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C263583285405C4003C68AD /* CustomButton.swift */; };
@@ -121,6 +123,8 @@
 		5C0390782863D14A0023585A /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
 		5C03907A2863E91A0023585A /* LocationPinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPinButton.swift; sourceTree = "<group>"; };
 		5C03907C2863F2720023585A /* LocationNameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNameButton.swift; sourceTree = "<group>"; };
+		5C0A90D52941D5C900CB0DE1 /* AppleLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLogin.swift; sourceTree = "<group>"; };
+		5C0A90D72941D64600CB0DE1 /* AppleLoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginVM.swift; sourceTree = "<group>"; };
 		5C26357E2854004F003C68AD /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		5C263583285405C4003C68AD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5C263585285408B8003C68AD /* CustomButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton2.swift; sourceTree = "<group>"; };
@@ -385,6 +389,8 @@
 			children = (
 				5C9EED4C293D487800F2DBB0 /* Utilities */,
 				5C9EED4A293D474F00F2DBB0 /* SignUpVM.swift */,
+				5C0A90D52941D5C900CB0DE1 /* AppleLogin.swift */,
+				5C0A90D72941D64600CB0DE1 /* AppleLoginVM.swift */,
 			);
 			path = AccountModel;
 			sourceTree = "<group>";
@@ -646,6 +652,7 @@
 				5C41A70B2891FED80048896D /* AddingNewCard.swift in Sources */,
 				5C7BC034285D313500C9DA72 /* MainMenu.swift in Sources */,
 				5C9B3F5F289008D60005AE71 /* PaymentButton.swift in Sources */,
+				5C0A90D62941D5C900CB0DE1 /* AppleLogin.swift in Sources */,
 				5CE49C3F2836B00E0033D5CD /* ContentView1.swift in Sources */,
 				5C0390792863D14A0023585A /* TabBarPage.swift in Sources */,
 				5C630C932858399F004C77BE /* UsernameObj.swift in Sources */,
@@ -702,6 +709,7 @@
 				5CFBE3A2286C8E92007BF6FD /* FilterObservableObject.swift in Sources */,
 				5CBC7E3928560C7100746072 /* Arrow.swift in Sources */,
 				5C03907B2863E91A0023585A /* LocationPinButton.swift in Sources */,
+				5C0A90D82941D64600CB0DE1 /* AppleLoginVM.swift in Sources */,
 				5CAE42C7287F4BF800FC7DFF /* DateValue.swift in Sources */,
 				5C0266962859167A0026E462 /* ForgotPassword.swift in Sources */,
 				5C03903C286168C60023585A /* SavedScreen.swift in Sources */,

@@ -12,6 +12,8 @@ struct ViaButtons: View {
     let title: String
     let action: () -> Void
     
+    @Environment(\.colorScheme) var colorScheme
+    
     
     var body: some View {
         Button(action: action) {
@@ -51,8 +53,7 @@ struct ViaButtons: View {
                         .multilineTextAlignment(.leading)
                     
                     Text("+1 111 ******99")
-                        .foregroundColor(.black)
-                        .font(.system(size: 17, weight: .semibold, design: .rounded))
+                        .foregroundColor(colorScheme == .light ? .black : .white)                        .font(.system(size: 17, weight: .semibold, design: .rounded))
                         .padding(.top,1)
                 }
                 Spacer()

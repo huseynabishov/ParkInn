@@ -19,7 +19,7 @@ struct ParkInnApp: App {
         WindowGroup {
             NavigationStackView(transitionType: .custom(AnyTransition.opacity.animation(.easeInOut(duration:0.7)))){
                 
-                FillProfile()
+                CreateAcc()
                     
                 
             }

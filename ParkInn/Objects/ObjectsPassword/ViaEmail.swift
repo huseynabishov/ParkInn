@@ -12,6 +12,8 @@ struct ViaEmail: View {
     let title: String
     let action: () -> Void
     
+    @Environment(\.colorScheme) var colorScheme
+
     
     var body: some View {
         Button(action: action) {
@@ -37,8 +39,7 @@ struct ViaEmail: View {
                         .multilineTextAlignment(.leading)
                     
                     Text(String("and***ey@yourdomain.com"))
-                        .foregroundColor(.black)
-                        .font(.system(size: 17, weight: .semibold, design: .rounded))
+                        .foregroundColor(colorScheme == .light ? .black : .white)                         .font(.system(size: 17, weight: .semibold, design: .rounded))
                         .padding(.top,1)
                 }
                 Spacer()

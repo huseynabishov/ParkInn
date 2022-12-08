@@ -11,9 +11,11 @@ import NavigationStack
 struct ForgotFill: View {
     
     @EnvironmentObject private var navigationStack: NavigationStackCompat
-    
+    @Environment(\.colorScheme) var colorScheme
+
     
     var body: some View {
+        
         VStack(alignment: .center, content: {
             HStack(){
                 Arrow(title: "arrow.left", action: {
@@ -21,7 +23,7 @@ struct ForgotFill: View {
                 })
                 .padding(.trailing,4)
                 Text("Forgot Password")
-                    .foregroundColor(.black)
+                    .foregroundColor(colorScheme == .light ? .black : .white)
                     .font(.system(size: 25, weight: .semibold, design: .rounded))
                 Spacer()
                     .frame(width: 148)
@@ -29,14 +31,14 @@ struct ForgotFill: View {
             .padding(.top, 14)
             Spacer()
             Text("Code has been send to +1 111 ******99")
-                .foregroundColor(.black)
+                .foregroundColor(colorScheme == .light ? .black : .white)
                 .font(.system(size: 17, weight: .light, design: .rounded))
                 .multilineTextAlignment(.leading)
                 .padding(.bottom, 50)
             Verification()
             HStack(alignment: .center, spacing: 5) {
                 Text("Resend code in")
-                    .foregroundColor(.black)
+                    .foregroundColor(colorScheme == .light ? .black : .white)
                     .font(.system(size: 17, weight: .light, design: .rounded))
                     .multilineTextAlignment(.leading)
                 Text("53")
@@ -44,7 +46,7 @@ struct ForgotFill: View {
                     .font(.system(size: 17, weight: .semibold, design: .rounded))
                     .multilineTextAlignment(.leading)
                 Text("s")
-                    .foregroundColor(.black)
+                    .foregroundColor(colorScheme == .light ? .black : .white)
                     .font(.system(size: 17, weight: .light, design: .rounded))
                     .multilineTextAlignment(.leading)
             }
