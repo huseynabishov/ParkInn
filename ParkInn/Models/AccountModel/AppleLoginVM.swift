@@ -10,7 +10,7 @@ import CryptoKit
 import AuthenticationServices
 
 public class SignInWithAppleObject: NSObject {
-    private var currentNonce: String?
+    private var currentNonce: String? 
     
     
     public func signInWithApple() {
